@@ -1,0 +1,322 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025国庆中秋假期数据报告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000000;
+            overflow-x: hidden;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(200px, auto);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .bento-item {
+            background: rgba(255, 107, 0, 0.05);
+            border: 1px solid rgba(255, 107, 0, 0.3);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6B00 0%, #FF8E00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid #FF6B00;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .news-card:hover {
+            background: rgba(255, 107, 0, 0.1);
+            transform: translateX(5px);
+        }
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FF6B00 0%, #FF8E00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .tech-line {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #FF6B00, transparent);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="text-white">
+    <div class="bento-grid">
+        <!-- 标题区域 -->
+        <div class="bento-item col-span-12 row-span-1 relative overflow-hidden">
+            <div class="tech-line top-1/4"></div>
+            <div class="tech-line top-1/2"></div>
+            <div class="tech-line top-3/4"></div>
+            <h1 class="text-5xl md:text-7xl font-black mb-4 gradient-text">国庆中秋双节数据报告</h1>
+            <p class="text-xl text-orange-200 opacity-80">2025 National Day & Mid-Autumn Festival Insights</p>
+            <div class="absolute bottom-4 right-4 text-orange-300 opacity-40">
+                <i class="fas fa-chart-line text-3xl"></i>
+            </div>
+        </div>
+
+        <!-- 核心数据统计 -->
+        <div class="bento-item col-span-12 md:col-span-6 row-span-2 scroll-reveal">
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-chart-bar mr-3 text-orange-500"></i>
+                核心数据统计
+                <span class="text-sm font-normal ml-3 text-orange-300">Key Statistics</span>
+            </h2>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="text-center">
+                    <div class="stat-number">8.88亿</div>
+                    <p class="text-orange-300 text-sm mt-2">国内出游人次</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">1913万</div>
+                    <p class="text-orange-300 text-sm mt-2">民航运输旅客</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">18.35亿</div>
+                    <p class="text-orange-300 text-sm mt-2">国庆档电影票房</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">2700+</div>
+                    <p class="text-orange-300 text-sm mt-2">大型活动场次</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 旅游热点分析 -->
+        <div class="bento-item col-span-12 md:col-span-6 row-span-2 scroll-reveal">
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-map-marked-alt mr-3 text-orange-500"></i>
+                旅游热点分析
+                <span class="text-sm font-normal ml-3 text-orange-300">Tourism Hotspots</span>
+            </h2>
+            <canvas id="tourismChart" height="200"></canvas>
+        </div>
+
+        <!-- 新闻动态 -->
+        <div class="bento-item col-span-12 md:col-span-8 row-span-3 scroll-reveal">
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-newspaper mr-3 text-orange-500"></i>
+                最新新闻动态
+                <span class="text-sm font-normal ml-3 text-orange-300">Latest News</span>
+            </h2>
+            <div class="space-y-4 max-h-96 overflow-y-auto pr-4">
+                <a href="https://finance.sina.com.cn/tech/roll/2025-10-08/doc-infteyfh1490492.shtml" target="_blank" class="news-card block">
+                    <h3 class="font-bold text-lg mb-2">国庆利好盘点暨10.9热点板块、热点强股预测</h3>
+                    <p class="text-orange-200 text-sm">财经频道 · 1小时前</p>
+                </a>
+                <a href="https://www.ctnews.com.cn/jujiao/content/2025-10/09/content_179591.html" target="_blank" class="news-card block">
+                    <h3 class="font-bold text-lg mb-2">2025年国庆中秋假期国内出游8.88亿人次</h3>
+                    <p class="text-orange-200 text-sm">中国旅游报 · 3小时前</p>
+                </a>
+                <a href="https://www.bjnews.com.cn/detail/1759972932129585.html" target="_blank" class="news-card block">
+                    <h3 class="font-bold text-lg mb-2">国庆中秋假期全国民航累计运输旅客超1913万人次</h3>
+                    <p class="text-orange-200 text-sm">北京新闻 · 5小时前</p>
+                </a>
+                <a href="http://www.ce.cn/xwzx/shgj/gdxw/202510/t20251009_2507678.shtml" target="_blank" class="news-card block">
+                    <h3 class="font-bold text-lg mb-2">18.35亿元！2025国庆档收官电影+助推多元消费增长</h3>
+                    <p class="text-orange-200 text-sm">中国经济网 · 7小时前</p>
+                </a>
+                <a href="http://jjckb.xinhuanet.com/20251010/ad950ed6b00242298f31837e60600cc9/c.html" target="_blank" class="news-card block">
+                    <h3 class="font-bold text-lg mb-2">2025年国庆中秋"双节"假期国内出游达8.88亿人次</h3>
+                    <p class="text-orange-200 text-sm">新华财经 · 9小时前</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 消费趋势 -->
+        <div class="bento-item col-span-12 md:col-span-4 row-span-2 scroll-reveal">
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-shopping-bag mr-3 text-orange-500"></i>
+                消费趋势
+                <span class="text-sm font-normal ml-3 text-orange-300">Consumption Trends</span>
+            </h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between p-3 bg-orange-500 bg-opacity-10 rounded-lg">
+                    <span>电影票房</span>
+                    <span class="font-bold text-orange-400">18.35亿元</span>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-orange-500 bg-opacity-10 rounded-lg">
+                    <span>文旅消费</span>
+                    <span class="font-bold text-orange-400">同比增长23%</span>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-orange-500 bg-opacity-10 rounded-lg">
+                    <span>县域旅游</span>
+                    <span class="font-bold text-orange-400">增长45%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 特色活动 -->
+        <div class="bento-item col-span-12 md:col-span-4 row-span-2 scroll-reveal">
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-calendar-alt mr-3 text-orange-500"></i>
+                特色活动
+                <span class="text-sm font-normal ml-3 text-orange-300">Featured Events</span>
+            </h2>
+            <ul class="space-y-3">
+                <li class="flex items-center">
+                    <i class="fas fa-star text-orange-400 mr-3"></i>
+                    <span>全国文化和旅游消费月</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-star text-orange-400 mr-3"></i>
+                    <span>反向旅游新趋势</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-star text-orange-400 mr-3"></i>
+                    <span>大型文化活动2700+场</span>
+                </li>
+                <li class="flex items-center">
+                    <i class="fas fa-star text-orange-400 mr-3"></i>
+                    <span>地方特色庆典</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 地区表现 -->
+        <div class="bento-item col-span-12 md:col-span-4 row-span-2 scroll-reveal">
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                <i class="fas fa-globe-asia mr-3 text-orange-500"></i>
+                地区表现
+                <span class="text-sm font-normal ml-3 text-orange-300">Regional Performance</span>
+            </h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-3 bg-orange-500 bg-opacity-5 rounded-lg">
+                    <div class="text-2xl font-bold text-orange-400">北京</div>
+                    <div class="text-sm text-orange-300">活动安全顺利</div>
+                </div>
+                <div class="text-center p-3 bg-orange-500 bg-opacity-5 rounded-lg">
+                    <div class="text-2xl font-bold text-orange-400">上海</div>
+                    <div class="text-sm text-orange-300">创新高</div>
+                </div>
+                <div class="text-center p-3 bg-orange-500 bg-opacity-5 rounded-lg">
+                    <div class="text-2xl font-bold text-orange-400">广州</div>
+                    <div class="text-sm text-orange-300">文旅新高</div>
+                </div>
+                <div class="text-center p-3 bg-orange-500 bg-opacity-5 rounded-lg">
+                    <div class="text-2xl font-bold text-orange-400">大连</div>
+                    <div class="text-sm text-orange-300">多彩魅力</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // 图表初始化
+        const tourismCtx = document.getElementById('tourismChart').getContext('2d');
+        new Chart(tourismCtx, {
+            type: 'bar',
+            data: {
+                labels: ['传统热门', '反向旅游', '县域旅游', '文化体验'],
+                datasets: [{
+                    label: '热度指数',
+                    data: [85, 65, 70, 60],
+                    backgroundColor: [
+                        'rgba(255, 107, 0, 0.8)',
+                        'rgba(255, 107, 0, 0.6)',
+                        'rgba(255, 107, 0, 0.7)',
+                        'rgba(255, 107, 0, 0.5)'
+                    ],
+                    borderColor: 'rgba(255, 107, 0, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: 'rgba(255, 255, 255, 0.7)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: 'rgba(255, 255, 255, 0.7)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // 鼠标跟随效果
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.bento-item');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
+```
