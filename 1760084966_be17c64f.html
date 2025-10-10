@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI资讯摘要 - 最新人工智能动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        gradient: 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .bento-hover {
+            transition: all 0.3s ease;
+        }
+        .bento-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12 animate-fade-in-up">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">人工智能<span class="text-primary">动态摘要</span></h1>
+            <p class="text-lg text-gray-600">Latest AI Developments • 24小时精选资讯</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-blue-300 mx-auto mt-4"></div>
+        </div>
+
+        <!-- Bento Grid 布局 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- 卡片 1：政策战略 -->
+            <div class="bento-hover gradient-bg rounded-2xl p-6 border border-gray-100 animate-fade-in-up" style="animation-delay: 0.1s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-landmark text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">政策战略</h2>
+                </div>
+                <a href="http://world.people.com.cn/n1/2025/1009/c1002-40577832.html" class="block mb-3 hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">欧盟发布两项战略加快人工智能应用</h3>
+                    <p class="text-sm text-gray-600">欧盟积极推进AI技术落地，制定双重战略框架</p>
+                </a>
+                <a href="http://paper.people.com.cn/rmrb/pc/content/202510/09/content_30108337.html" class="block hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">用人工智能打开文旅新空间</h3>
+                    <p class="text-sm text-gray-600">人民日报时评：AI赋能文化旅游产业升级</p>
+                </a>
+            </div>
+
+            <!-- 卡片 2：科技创新 -->
+            <div class="bento-hover gradient-bg rounded-2xl p-6 border border-gray-100 animate-fade-in-up" style="animation-delay: 0.2s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-microchip text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">科技创新</h2>
+                </div>
+                <a href="https://www.stdaily.com/web/gdxw/2025-10/09/content_412708.html" class="block mb-3 hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">我国在等离子体智能控制领域取得重要进展</h3>
+                    <p class="text-sm text-gray-600">突破性技术推动智能控制新发展</p>
+                </a>
+                <a href="https://finance.sina.com.cn/stock/t/2025-10-09/doc-infthsqh9641453.shtml" class="block hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">小鹏汽车将举行AI科技日</h3>
+                    <p class="text-sm text-gray-600">宣布在物理AI领域取得新突破</p>
+                </a>
+            </div>
+
+            <!-- 卡片 3：产业发展 -->
+            <div class="bento-hover gradient-bg rounded-2xl p-6 border border-gray-100 animate-fade-in-up" style="animation-delay: 0.3s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-line text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">产业发展</h2>
+                </div>
+                <a href="https://www.cac.gov.cn/2025-10/10/c_1761817935543713.htm" class="block mb-3 hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">从"世界工厂"到"世界脑厂"</h3>
+                    <p class="text-sm text-gray-600">中国积蓄AI发展新动能</p>
+                </a>
+                <a href="http://www.news.cn/tech/20251010/73f5ec2ede6f408aa5c2e5eec3e145c1/c.html" class="block hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">科技强国：从夯实根基到勇攀高峰</h3>
+                    <p class="text-sm text-gray-600">AI技术助力国家科技实力提升</p>
+                </a>
+            </div>
+
+            <!-- 卡片 4：金融投资 -->
+            <div class="bento-hover gradient-bg rounded-2xl p-6 border border-gray-100 animate-fade-in-up" style="animation-delay: 0.4s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-coins text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">金融投资</h2>
+                </div>
+                <a href="https://finance.sina.com.cn/stock/stockzmt/2025-10-10/doc-inftkers1450026.shtml" class="block mb-3 hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">全球巨头密集加码AI</h3>
+                    <p class="text-sm text-gray-600">人工智能月报显示投资热度持续</p>
+                </a>
+                <a href="https://finance.sina.com.cn/money/fund/aiassistant/etffebh/2025-10-10/doc-inftkert9946367.shtml" class="block hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">科创板人工智能ETF份额变动</h3>
+                    <p class="text-sm text-gray-600">市场资金流向反映AI板块热度</p>
+                </a>
+            </div>
+
+            <!-- 卡片 5：国际合作 -->
+            <div class="bento-hover gradient-bg rounded-2xl p-6 border border-gray-100 animate-fade-in-up" style="animation-delay: 0.5s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-globe text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">国际合作</h2>
+                </div>
+                <a href="http://intl.ce.cn/sjjj/qy/202510/t20251010_2509993.shtml" class="block mb-3 hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">外媒：数字中国建设成就令人印象深刻</h3>
+                    <p class="text-sm text-gray-600">国际社会关注中国AI发展成果</p>
+                </a>
+                <a href="http://yqb.gxzf.gov.cn/zwdt123/dszx/t26030076.shtml" class="block hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">南A中心成为面向东盟的AI合作桥梁</h3>
+                    <p class="text-sm text-gray-600">区域合作推动人工智能技术交流</p>
+                </a>
+            </div>
+
+            <!-- 卡片 6：数据治理 -->
+            <div class="bento-hover gradient-bg rounded-2xl p-6 border border-gray-100 animate-fade-in-up" style="animation-delay: 0.6s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-database text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">数据治理</h2>
+                </div>
+                <a href="https://finance.sina.com.cn/jjxw/2025-10-09/doc-inftfzss2421120.shtml" class="block mb-3 hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">国家数据局发布高质量数据集典型案例</h3>
+                    <p class="text-sm text-gray-600">104个案例展示数据资源建设成果</p>
+                </a>
+                <a href="http://www.news.cn/politics/20251009/d212774c00824c23b0d5d966a110bc10/c.html" class="block hover:text-primary transition-colors">
+                    <h3 class="text-lg font-semibold mb-2">关注AI造假与信息安全</h3>
+                    <p class="text-sm text-gray-600">新华视点聚焦AI技术规范发展</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 底部统计 -->
+        <div class="text-center mt-12 animate-fade-in-up" style="animation-delay: 0.7s">
+            <div class="inline-flex items-center space-x-8 text-gray-600">
+                <div>
+                    <div class="text-2xl font-bold text-primary">32</div>
+                    <div class="text-sm">资讯总量</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-primary">6</div>
+                    <div class="text-sm">分类领域</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-primary">24</div>
+                    <div class="text-sm">小时更新</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有bento卡片添加观察
+        document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // 悬停效果增强
+        document.querySelectorAll('.bento-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.08) 100%)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%)';
+            });
+        });
+    </script>
+</body>
+</html>
