@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于AI的IDC运维管理服务产品体系研究</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#4080FF',
+                        accent: '#0FC6C2',
+                        dark: '#1D2129',
+                        light: '#F2F3F5',
+                        'gray-light': '#C9CDD4',
+                        'gray-medium': '#86909C',
+                        'gray-dark': '#4E5969'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(22, 93, 255, 0.1);
+            }
+            .nav-active {
+                border-bottom: 2px solid #165DFF;
+                color: #165DFF;
+                font-weight: 500;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-dark font-sans">
+    <!-- 顶部导航栏 -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <div class="flex items-center">
+                    <i class="fa fa-server text-primary text-2xl mr-3"></i>
+                    <h1 class="text-lg md:text-xl font-semibold">IDC运维管理研究</h1>
+                </div>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#intro" class="nav-link text-sm md:text-base hover:text-primary transition-colors duration-200">引言</a>
+                    <a href="#market" class="nav-link text-sm md:text-base hover:text-primary transition-colors duration-200">市场需求</a>
+                    <a href="#tech" class="nav-link text-sm md:text-base hover:text-primary transition-colors duration-200">技术架构</a>
+                    <a href="#product" class="nav-link text-sm md:text-base hover:text-primary transition-colors duration-200">产品体系</a>
+                    <a href="#competition" class="nav-link text-sm md:text-base hover:text-primary transition-colors duration-200">竞争格局</a>
+                    <a href="#business" class="nav-link text-sm md:text-base hover:text-primary transition-colors duration-200">商业模式</a>
+                    <a href="#trends" class="nav-link text-sm md:text-base hover:text-primary transition-colors duration-200">发展趋势</a>
+                    <a href="#conclusion" class="nav-link text-sm md:text-base hover:text-primary transition-colors duration-200">结论建议</a>
+                </nav>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menuBtn" class="md:hidden text-dark hover:text-primary">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-md">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="#intro" class="block py-2 text-sm hover:text-primary transition-colors duration-200">引言</a>
+                <a href="#market" class="block py-2 text-sm hover:text-primary transition-colors duration-200">市场需求</a>
+                <a href="#tech" class="block py-2 text-sm hover:text-primary transition-colors duration-200">技术架构</a>
+                <a href="#product" class="block py-2 text-sm hover:text-primary transition-colors duration-200">产品体系</a>
+                <a href="#competition" class="block py-2 text-sm hover:text-primary transition-colors duration-200">竞争格局</a>
+                <a href="#business" class="block py-2 text-sm hover:text-primary transition-colors duration-200">商业模式</a>
+                <a href="#trends" class="block py-2 text-sm hover:text-primary transition-colors duration-200">发展趋势</a>
+                <a href="#conclusion" class="block py-2 text-sm hover:text-primary transition-colors duration-200">结论建议</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 md:px-6 lg:px-8 pt-24 md:pt-28 pb-16">
+        <!-- 标题区域 -->
+        <div class="mb-12 text-center">
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-dark">基于AI的IDC可视化、自动化、工具化和国产化运维管理服务产品体系研究</h1>
+            <div class="flex items-center justify-center text-gray-medium text-sm">
+                <span class="flex items-center"><i class="fa fa-calendar-o mr-2"></i> 2025年研究报告</span>
+                <span class="mx-3">|</span>
+                <span class="flex items-center"><i class="fa fa-tag mr-2"></i> AI运维 · IDC · 国产化</span>
+            </div>
+        </div>
+        
+        <!-- 目录卡片 -->
+        <div class="bg-light rounded-xl p-6 mb-12 shadow-sm">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fa fa-list-ul text-primary mr-2"></i> 目录
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-primary font-medium mr-2">1.</span>
+                            <a href="#intro" class="hover:text-primary transition-colors duration-200">引言：AI驱动IDC运维管理的时代背景与市场机遇</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary font-medium mr-2">2.</span>
+                            <a href="#market" class="hover:text-primary transition-colors duration-200">IDC运维管理服务产品体系的市场需求分析</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary font-medium mr-2">3.</span>
+                            <a href="#tech" class="hover:text-primary transition-colors duration-200">技术架构与核心能力分析</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary font-medium mr-2">4.</span>
+                            <a href="#product" class="hover:text-primary transition-colors duration-200">产品体系架构与功能设计</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-primary font-medium mr-2">5.</span>
+                            <a href="#competition" class="hover:text-primary transition-colors duration-200">竞争格局与市场机会分析</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary font-medium mr-2">6.</span>
+                            <a href="#business" class="hover:text-primary transition-colors duration-200">商业模式与投资回报分析</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary font-medium mr-2">7.</span>
+                            <a href="#trends" class="hover:text-primary transition-colors duration-200">发展趋势与风险评估</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary font-medium mr-2">8.</span>
+                            <a href="#conclusion" class="hover:text-primary transition-colors duration-200">结论与战略建议</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第一章：引言 -->
+        <section id="intro" class="mb-16 scroll-mt-24 md:scroll-mt-28">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                    <i class="fa fa-lightbulb-o text-primary"></i>
+                </div>
+                <h2 class="text-2xl font-bold">一、引言：AI驱动IDC运维管理的时代背景与市场机遇</h2>
+            </div>
+            
+            <!-- 1.1 IDC行业发展现状 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">1.1</span>
+                    IDC行业发展现状与数字化转型需求
+                </h3>
+                <div class="pl-8">
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        中国IDC行业正经历前所未有的高速发展期，市场规模呈现爆发式增长态势。根据最新行业数据，2025年中国数据中心市场规模预计将突破5200亿元，较2024年增长26.7%，而到2030年，这一数字有望达到1.2万亿元，年复合增长率保持在19%左右。
+                    </p>
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        与此同时，第三方IDC市场同样表现强劲，2024年中国第三方IDC行业整体市场规模达到2773亿元人民币，较2023年增长约26.0%，预计到2025年将达到3180亿元人民币。
+                    </p>
+                    
+                    <!-- 市场规模图表 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 md:p-6 mt-6 mb-6 border border-gray-100">
+                        <h4 class="text-lg font-medium mb-4 text-center">中国IDC市场规模增长预测 (2024-2030)</h4>
+                        <div class="h-64 md:h-80">
+                            <canvas id="idcMarketChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-dark leading-relaxed">
+                        随着数字化转型的深入推进，企业对数据中心运维服务的需求日益增长，尤其是在云计算、大数据和人工智能等新兴技术的推动下，运维服务市场迎来了新的发展机遇。传统的人工运维模式已难以满足企业对高效、稳定、安全的IT基础设施管理需求，迫切需要通过智能化技术实现运维体系的全面升级。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 1.2 AI技术应用价值 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">1.2</span>
+                    AI技术在IDC运维领域的应用价值与前景
+                </h3>
+                <div class="pl-8">
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        AI技术在IDC运维领域展现出巨大的应用价值，正在重塑整个运维行业的技术架构和服务模式。根据IDC预测，到2026年边缘节点运维复杂度将增长300%，这对分布式AI推理框架提出更高要求。
+                    </p>
+                    
+                    <!-- AI技术价值卡片 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-6 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100 card-hover">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                                <i class="fa fa-line-chart text-primary"></i>
+                            </div>
+                            <h4 class="font-medium mb-2">故障预测与诊断</h4>
+                            <p class="text-sm text-gray-medium">通过机器学习算法对海量运维数据进行分析，提前预测设备故障、性能瓶颈，如阿里云已实现80%的磁盘故障提前72小时预警。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100 card-hover">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                                <i class="fa fa-tachometer text-primary"></i>
+                            </div>
+                            <h4 class="font-medium mb-2">提升效率降低成本</h4>
+                            <p class="text-sm text-gray-medium">实现运维效率提升40%，故障响应时间缩短至分钟级，资源利用率从58%提升至82%，同时降低15%的能源消耗。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100 card-hover">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                                <i class="fa fa-shield text-primary"></i>
+                            </div>
+                            <h4 class="font-medium mb-2">国产化转型支撑</h4>
+                            <p class="text-sm text-gray-medium">在信创政策推动下，帮助企业构建自主可控的运维体系，实现对国产硬件、软件的智能化管理和优化。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 1.3 四大核心能力 -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">1.3</span>
+                    可视化、自动化、工具化、国产化四大核心能力的战略意义
+                </h3>
+                <div class="pl-8">
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        "可视化、自动化、工具化、国产化"四大核心能力构成了AI驱动IDC运维管理服务产品体系的技术基础和战略支撑。
+                    </p>
+                    
+                    <!-- 四大核心能力表格 -->
+                    <div class="overflow-x-auto mt-6 mb-6">
+                        <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">核心能力</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">战略意义</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">关键技术</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">可视化能力</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">实现智能化运维的基础，提升故障定位和决策效率</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">3D建模、数字孪生、数据可视化</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">自动化能力</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">提升运维效率的关键，减少人工干预，降低成本</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">自动化部署、自动化巡检、故障自愈</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">工具化能力</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">构建完整运维体系的基础，提升协作效率</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">标准化监控工具、运维工具、分析工具</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">国产化能力</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">保障信息安全和技术自主的重要支撑</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">国产硬件适配、国产软件兼容、自主算法</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 第二章：市场需求分析 -->
+        <section id="market" class="mb-16 scroll-mt-24 md:scroll-mt-28">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                    <i class="fa fa-bar-chart text-primary"></i>
+                </div>
+                <h2 class="text-2xl font-bold">二、IDC运维管理服务产品体系的市场需求分析</h2>
+            </div>
+            
+            <!-- 2.1 市场规模与增长趋势 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">2.1</span>
+                    IDC运维市场规模与增长趋势
+                </h3>
+                <div class="pl-8">
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        IDC运维服务市场呈现出强劲的增长态势，市场规模持续扩大。根据最新行业数据，2024年中国数据中心IT基础设施第三方服务市场规模达到540亿元人民币，同比增长11.8%，预计2025年将达到605亿元人民币，同比增长12.0%。
+                    </p>
+                    
+                    <!-- 运维市场细分图表 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 md:p-6 border border-gray-100">
+                            <h4 class="text-lg font-medium mb-4 text-center">IDC运维细分市场规模 (2024)</h4>
+                            <div class="h-64">
+                                <canvas id="idcSegmentChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 md:p-6 border border-gray-100">
+                            <h4 class="text-lg font-medium mb-4 text-center">各地区IDC运维软件市场 (2024)</h4>
+                            <div class="h-64">
+                                <canvas id="idcRegionChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-dark leading-relaxed">
+                        从细分市场来看，IDC运维软件市场同样表现活跃。2024年，支持边缘计算的运维软件市场规模为31.6亿元人民币，同比增长21.4%，具备AI能力的运维平台市场规模为49.3亿元人民币，同比增长19.7%。这些数据表明，具备智能化、自动化、边缘计算等先进技术能力的运维产品正成为市场增长的主要驱动力。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 2.2 传统IDC运维痛点 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">2.2</span>
+                    传统IDC运维面临的核心痛点与挑战
+                </h3>
+                <div class="pl-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-4 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-users text-red-500"></i>
+                                </div>
+                                <h4 class="font-medium">人力依赖度高，运维效率低下</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium">传统运维模式严重依赖人工经验，告警误报、故障定位依赖人工判断。据统计，6成数据中心缺乏合格运维人员，设备巡检占用大量人力，成本高涨。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-bolt text-yellow-500"></i>
+                                </div>
+                                <h4 class="font-medium">资源浪费严重，能耗管理粗放</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium">传统运维模式下，设备能耗、空间利用率缺乏动态优化。传统架构每个环节产生2-5%的能效损耗，累积下来总损耗可能达到15%以上。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-exclamation-triangle text-orange-500"></i>
+                                </div>
+                                <h4 class="font-medium">风险不可控，被动式运维模式</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium">传统运维模式难以预测潜在故障，业务连续性面临挑战。运维人员往往在故障发生后才进行处理，缺乏主动性和预防性。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                    <i class="fa fa-database text-purple-500"></i>
+                                </div>
+                                <h4 class="font-medium">多系统割裂，数据孤岛问题严重</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium">监控、管理、分析工具分散，数据孤岛导致决策滞后。资产全生命周期数据割裂，难以评估设备故障率与使用年限的关联。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2.3 国产化需求分析 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">2.3</span>
+                    信创政策推动下的国产化需求分析
+                </h3>
+                <div class="pl-8">
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        信创政策的深入实施为IDC运维管理服务产品体系的国产化转型提供了强劲动力和明确方向。根据"十四五"规划，2025年行政办公及电子政务系统需完成100%国产化替代；国资委79号文要求2027年央企信息化系统实现100%信创替代。
+                    </p>
+                    
+                    <!-- 国产化政策时间线 -->
+                    <div class="relative mt-6 mb-6 pl-8 border-l-2 border-primary/30">
+                        <div class="mb-8 relative">
+                            <div class="absolute -left-[33px] w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-xs">2024</div>
+                            <h4 class="font-medium mb-2">超长期特别国债支持</h4>
+                            <p class="text-sm text-gray-medium">2024年超长期特别国债的发行规模达1万亿元，重点支持科技创新与信创产业，为国产化提供资金保障。</p>
+                        </div>
+                        <div class="mb-8 relative">
+                            <div class="absolute -left-[33px] w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-xs">2025</div>
+                            <h4 class="font-medium mb-2">行政办公系统国产化</h4>
+                            <p class="text-sm text-gray-medium">2025年行政办公及电子政务系统需完成100%国产化替代，信创产业规模预计突破2.34万亿元。</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[33px] w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-xs">2027</div>
+                            <h4 class="font-medium mb-2">央企系统全面替代</h4>
+                            <p class="text-sm text-gray-medium">国资委79号文要求2027年央企信息化系统实现100%信创替代，信创应用从党政领域向八大行业扩展。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 国产化具体需求 -->
+                    <div class="bg-light rounded-lg p-4 md:p-6 mt-6">
+                        <h4 class="font-medium mb-3">IDC运维国产化的具体需求</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-white rounded p-3 shadow-sm">
+                                <h5 class="text-sm font-medium mb-2 flex items-center">
+                                    <i class="fa fa-desktop text-primary mr-2"></i>硬件国产化
+                                </h5>
+                                <ul class="text-sm text-gray-medium space-y-1">
+                                    <li>• 国产服务器（华为鲲鹏、浪潮）</li>
+                                    <li>• 国产存储设备</li>
+                                    <li>• 国产网络设备</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white rounded p-3 shadow-sm">
+                                <h5 class="text-sm font-medium mb-2 flex items-center">
+                                    <i class="fa fa-code text-primary mr-2"></i>软件国产化
+                                </h5>
+                                <ul class="text-sm text-gray-medium space-y-1">
+                                    <li>• 国产操作系统（麒麟OS）</li>
+                                    <li>• 国产数据库（达梦）</li>
+                                    <li>• 国产中间件</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white rounded p-3 shadow-sm">
+                                <h5 class="text-sm font-medium mb-2 flex items-center">
+                                    <i class="fa fa-cogs text-primary mr-2"></i>技术自主化
+                                </h5>
+                                <ul class="text-sm text-gray-medium space-y-1">
+                                    <li>• 核心AI算法自主研发</li>
+                                    <li>• 运维平台代码自主可控</li>
+                                    <li>• 避免依赖国外开源框架</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2.4 客户核心诉求 -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">2.4</span>
+                    客户对智能化运维的核心诉求
+                </h3>
+                <div class="pl-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-4 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100 text-center card-hover">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-eye text-primary text-xl"></i>
+                            </div>
+                            <h4 class="font-medium text-sm mb-2">智能化监控与预警</h4>
+                            <p class="text-xs text-gray-medium">提前预测潜在故障，提升预警准确率</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100 text-center card-hover">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-refresh text-primary text-xl"></i>
+                            </div>
+                            <h4 class="font-medium text-sm mb-2">自动化运维与优化</h4>
+                            <p class="text-xs text-gray-medium">减少人工干预，提升运维效率</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100 text-center card-hover">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-pie-chart text-primary text-xl"></i>
+                            </div>
+                            <h4 class="font-medium text-sm mb-2">可视化管理与决策</h4>
+                            <p class="text-xs text-gray-medium">直观展示运行状态，支持快速决策</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100 text-center card-hover">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-lock text-primary text-xl"></i>
+                            </div>
+                            <h4 class="font-medium text-sm mb-2">国产化适配与安全</h4>
+                            <p class="text-xs text-gray-medium">确保系统自主可控和安全可靠</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100 text-center card-hover">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-money text-primary text-xl"></i>
+                            </div>
+                            <h4 class="font-medium text-sm mb-2">成本控制与ROI优化</h4>
+                            <p class="text-xs text-gray-medium">降低人力、设备、能耗成本</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 第三章：技术架构与核心能力 -->
+        <section id="tech" class="mb-16 scroll-mt-24 md:scroll-mt-28">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                    <i class="fa fa-cogs text-primary"></i>
+                </div>
+                <h2 class="text-2xl font-bold">三、技术架构与核心能力分析</h2>
+            </div>
+            
+            <!-- 3.1 AI技术架构 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">3.1</span>
+                    AI技术架构设计与实现路径
+                </h3>
+                <div class="pl-8">
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        AI驱动的IDC运维管理服务产品体系采用分层架构设计，主要包括数据层、算法层、平台层和应用层，各层协同工作，实现运维数据的采集、分析、处理和应用。
+                    </p>
+                    
+                    <!-- AI架构图 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 md:p-6 mt-6 mb-6 border border-gray-100">
+                        <h4 class="text-lg font-medium mb-6 text-center">AI驱动IDC运维管理系统分层架构</h4>
+                        <div class="relative">
+                            <!-- 应用层 -->
+                            <div class="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-4">
+                                <h5 class="text-center font-medium text-primary mb-2">应用层</h5>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-center text-sm">
+                                    <div class="bg-white rounded p-2 shadow-sm">智能监控中心</div>
+                                    <div class="bg-white rounded p-2 shadow-sm">故障自愈系统</div>
+                                    <div class="bg-white rounded p-2 shadow-sm">容量规划工具</div>
+                                </div>
+                            </div>
+                            
+                            <!-- 平台层 -->
+                            <div class="bg-secondary/5 border border-secondary/20 rounded-lg p-4 mb-4">
+                                <h5 class="text-center font-medium text-secondary mb-2">平台层</h5>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-center text-sm">
+                                    <div class="bg-white rounded p-2 shadow-sm">数据管理平台</div>
+                                    <div class="bg-white rounded p-2 shadow-sm">模型管理平台</div>
+                                    <div class="bg-white rounded p-2 shadow-sm">流程编排平台</div>
+                                </div>
+                            </div>
+                            
+                            <!-- 算法层 -->
+                            <div class="bg-accent/5 border border-accent/20 rounded-lg p-4 mb-4">
+                                <h5 class="text-center font-medium text-accent mb-2">算法层</h5>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-center text-sm">
+                                    <div class="bg-white rounded p-2 shadow-sm">异常检测算法</div>
+                                    <div class="bg-white rounded p-2 shadow-sm">故障诊断算法</div>
+                                    <div class="bg-white rounded p-2 shadow-sm">预测算法</div>
+                                </div>
+                            </div>
+                            
+                            <!-- 数据层 -->
+                            <div class="bg-primary/5 border border-primary/20 rounded-lg p-4">
+                                <h5 class="text-center font-medium text-primary mb-2">数据层</h5>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-center text-sm">
+                                    <div class="bg-white rounded p-2 shadow-sm">数据采集</div>
+                                    <div class="bg-white rounded p-2 shadow-sm">数据清洗</div>
+                                    <div class="bg-white rounded p-2 shadow-sm">数据存储</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-database text-primary mr-2"></i>数据层核心功能
+                            </h4>
+                            <ul class="space-y-2 text-sm text-gray-medium">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>多源数据采集：通过Agent、传感器、API接口采集各类运维数据</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>数据清洗处理：去除噪声、填补缺失值、纠正错误数据</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>分层存储架构：时序数据库存储指标数据，分布式文件系统存储日志数据</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-line-chart text-primary mr-2"></i>算法层核心技术
+                            </h4>
+                            <ul class="space-y-2 text-sm text-gray-medium">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>异常检测：建立正常行为模型，及时发现异常情况</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>故障诊断：通过关联分析快速定位故障根源</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>预测分析：基于历史数据预测系统未来状态</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3.2 可视化技术方案 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">3.2</span>
+                    可视化技术实现方案与应用场景
+                </h3>
+                <div class="pl-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-4 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                                <i class="fa fa-cube text-primary"></i>
+                            </div>
+                            <h4 class="font-medium mb-2">数字孪生技术</h4>
+                            <p class="text-sm text-gray-medium mb-3">构建物理数据中心的虚拟副本，实现对实体状态、性能和行为的实时监控与优化。</p>
+                            <ul class="text-xs text-gray-medium space-y-1">
+                                <li>• 物联感知体系搭建</li>
+                                <li>• 数据资产可视配置</li>
+                                <li>• 数字孪生机房管理</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                                <i class="fa fa-picture-o text-primary"></i>
+                            </div>
+                            <h4 class="font-medium mb-2">3D建模与渲染</h4>
+                            <p class="text-sm text-gray-medium mb-3">通过高精度建模、动态数据集成与交互设计，还原机房物理结构，实现设备状态监控。</p>
+                            <ul class="text-xs text-gray-medium space-y-1">
+                                <li>• 精准数据基础建模</li>
+                                <li>• 设备寿命预测分析</li>
+                                <li>• 虚拟协作功能</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                                <i class="fa fa-desktop text-primary"></i>
+                            </div>
+                            <h4 class="font-medium mb-2">仪表板与大屏</h4>
+                            <p class="text-sm text-gray-medium mb-3">提供告警概览、资源概览、指标概览、定制化大屏概览，自动生成多维度运维报告。</p>
+                            <ul class="text-xs text-gray-medium space-y-1">
+                                <li>• 一屏掌控全局状态</li>
+                                <li>• 数据驱动运营决策</li>
+                                <li>• 多维度报告生成</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- 可视化应用场景 -->
+                    <div class="bg-light rounded-lg p-4 md:p-6 mt-6">
+                        <h4 class="font-medium mb-4">可视化技术主要应用场景</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                            <div class="bg-white rounded p-3 shadow-sm text-center">
+                                <i class="fa fa-thermometer-half text-primary text-xl mb-2"></i>
+                                <p class="text-sm">机房环境监控</p>
+                            </div>
+                            <div class="bg-white rounded p-3 shadow-sm text-center">
+                                <i class="fa fa-server text-primary text-xl mb-2"></i>
+                                <p class="text-sm">设备状态展示</p>
+                            </div>
+                            <div class="bg-white rounded p-3 shadow-sm text-center">
+                                <i class="fa fa-exchange text-primary text-xl mb-2"></i>
+                                <p class="text-sm">业务流量分析</p>
+                            </div>
+                            <div class="bg-white rounded p-3 shadow-sm text-center">
+                                <i class="fa fa-bell text-primary text-xl mb-2"></i>
+                                <p class="text-sm">故障告警定位</p>
+                            </div>
+                            <div class="bg-white rounded p-3 shadow-sm text-center">
+                                <i class="fa fa-cubes text-primary text-xl mb-2"></i>
+                                <p class="text-sm">容量规划分析</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3.3 自动化运维能力 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">3.3</span>
+                    自动化运维能力架构与技术实现
+                </h3>
+                <div class="pl-8">
+                    <div class="overflow-x-auto mt-4 mb-6">
+                        <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">自动化能力模块</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">核心技术</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">关键功能</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">预期效果</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">自动化部署</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">基础设施即代码(IaC)、容器化技术</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">环境一致性保障、并行部署、版本控制</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">部署效率提升80%、错误率降低90%</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">智能巡检系统</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">多维度数据采集、规则引擎、机器学习</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">硬件状态检测、服务指标监控、日志分析</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">巡检效率提升70%、故障发现提前</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">故障自愈</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">自动修复脚本、故障树分析、重试机制</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">标准故障修复、服务重启、备节点切换</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">MTTR降低60%、人工干预减少</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">事件驱动架构</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">消息队列、事件总线、优先级调度</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">模块协同、事件响应、资源调度</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">响应延迟降低50%、系统可靠性提升</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3.4 工具化平台架构 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">3.4</span>
+                    工具化平台架构与标准化工具集
+                </h3>
+                <div class="pl-8">
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        工具化是AI驱动IDC运维管理服务产品体系的基础支撑，通过标准化的工具集和平台架构，实现运维工作的规范化和统一化。
+                    </p>
+                    
+                    <!-- 工具集分类 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-eye text-primary mr-2"></i>监控工具集
+                            </h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• Prometheus:</span>
+                                    <span class="text-gray-medium">云原生环境监控，灵活性高</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• Grafana:</span>
+                                    <span class="text-gray-medium">数据可视化工具，与Prometheus配合</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• Zabbix:</span>
+                                    <span class="text-gray-medium">分布式监控系统，功能全面</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• Nagios:</span>
+                                    <span class="text-gray-medium">开源网络/系统监控工具</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-wrench text-primary mr-2"></i>运维工具集
+                            </h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• Ansible:</span>
+                                    <span class="text-gray-medium">基于YAML的自动化工具，无代理模式</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• Puppet:</span>
+                                    <span class="text-gray-medium">基于Ruby的配置管理工具</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• ELK Stack:</span>
+                                    <span class="text-gray-medium">日志管理工具链，实时分析</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• Jenkins:</span>
+                                    <span class="text-gray-medium">自动化部署和持续集成工具</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-bar-chart text-primary mr-2"></i>分析工具集
+                            </h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• 数据采集:</span>
+                                    <span class="text-gray-medium">性能、日志、配置数据采集</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• 数据处理:</span>
+                                    <span class="text-gray-medium">数据清洗、转换和分析</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• 数据分析:</span>
+                                    <span class="text-gray-medium">故障预测、性能优化</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-medium mr-2">• 可视化:</span>
+                                    <span class="text-gray-medium">分析结果直观展示</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3.5 国产化技术适配 -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">3.5</span>
+                    国产化技术适配与生态整合方案
+                </h3>
+                <div class="pl-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 mb-6">
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-microchip text-primary mr-2"></i>国产硬件生态适配
+                            </h4>
+                            <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                                <ul class="space-y-3 text-sm">
+                                    <li class="flex items-start">
+                                        <span class="font-medium mr-2">• 鲲鹏:</span>
+                                        <span class="text-gray-medium">基于ARM架构，具备华为云+昇腾AI芯片联动优势</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="font-medium mr-2">• 海光:</span>
+                                        <span class="text-gray-medium">基于x86授权架构，兼容Windows/Linux生态</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="font-medium mr-2">• 飞腾:</span>
+                                        <span class="text-gray-medium">基于ARM v8指令集，纯自主可控</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="font-medium mr-2">• 龙芯:</span>
+                                        <span class="text-gray-medium">采用自主指令集架构，完全自主可控</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-code text-primary mr-2"></i>国产软件生态适配
+                            </h4>
+                            <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                                <ul class="space-y-3 text-sm">
+                                    <li class="flex items-start">
+                                        <span class="font-medium mr-2">• 操作系统:</span>
+                                        <span class="text-gray-medium">统信UOS、麒麟操作系统，支持国产CPU平台</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="font-medium mr-2">• 数据库:</span>
+                                        <span class="text-gray-medium">达梦、人大金仓、南大通用、神舟通用</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="font-medium mr-2">• 中间件:</span>
+                                        <span class="text-gray-medium">东方通、金蝶、普元、中创，通过Java EE认证</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 国产化技术栈 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 md:p-6 mt-6 border border-gray-100">
+                        <h4 class="font-medium mb-4 text-center">国产化技术栈整合方案</h4>
+                        <div class="relative">
+                            <!-- 应用层 -->
+                            <div class="bg-primary/5 border border-primary/20 rounded-lg p-3 mb-2">
+                                <h5 class="text-center text-sm font-medium text-primary">应用层</h5>
+                                <p class="text-center text-xs text-gray-medium">基于国产化平台开发的业务应用</p>
+                            </div>
+                            
+                            <!-- 中间件层 -->
+                            <div class="bg-secondary/5 border border-secondary/20 rounded-lg p-3 mb-2">
+                                <h5 class="text-center text-sm font-medium text-secondary">中间件层</h5>
+                                <p class="text-center text-xs text-gray-medium">东方通、金蝶、普元等国产中间件</p>
+                            </div>
+                            
+                            <!-- 数据库层 -->
+                            <div class="bg-accent/5 border border-accent/20 rounded-lg p-3 mb-2">
+                                <h5 class="text-center text-sm font-medium text-accent">数据库层</h5>
+                                <p class="text-center text-xs text-gray-medium">达梦、人大金仓等国产数据库</p>
+                            </div>
+                            
+                            <!-- 操作系统层 -->
+                            <div class="bg-primary/5 border border-primary/20 rounded-lg p-3 mb-2">
+                                <h5 class="text-center text-sm font-medium text-primary">操作系统层</h5>
+                                <p class="text-center text-xs text-gray-medium">统信UOS、麒麟操作系统</p>
+                            </div>
+                            
+                            <!-- 硬件层 -->
+                            <div class="bg-secondary/5 border border-secondary/20 rounded-lg p-3">
+                                <h5 class="text-center text-sm font-medium text-secondary">硬件层</h5>
+                                <p class="text-center text-xs text-gray-medium">华为TaiShan、浪潮等国产服务器</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 第四章：产品体系架构与功能设计 -->
+        <section id="product" class="mb-16 scroll-mt-24 md:scroll-mt-28">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                    <i class="fa fa-cube text-primary"></i>
+                </div>
+                <h2 class="text-2xl font-bold">四、产品体系架构与功能设计</h2>
+            </div>
+            
+            <!-- 4.1 整体架构设计理念 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">4.1</span>
+                    产品体系整体架构设计理念
+                </h3>
+                <div class="pl-8">
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        AI驱动的IDC可视化、自动化、工具化和国产化运维管理服务产品体系采用"平台+工具+服务"的整体架构设计理念，构建覆盖IDC运维全生命周期的一体化解决方案。
+                    </p>
+                    
+                    <!-- 架构设计原则 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-layer-group text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">分层架构设计原则</h4>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-medium pl-11">
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span><strong>基础设施层:</strong> 服务器、存储、网络等硬件设备</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span><strong>平台服务层:</strong> 虚拟化、容器化、云计算等基础服务</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span><strong>应用集成层:</strong> 各类运维工具和管理系统集成</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span><strong>业务管理层:</strong> 面向业务的运维管理功能</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-puzzle-piece text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">模块化设计理念</h4>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-medium pl-11">
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>标准化接口实现资源即插即用</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>微服务架构划分核心功能模块</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>预留20%弹性扩展空间</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>RESTful API网关+服务总线架构</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-brain text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">智能化集成架构</h4>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-medium pl-11">
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>分布式架构提高扩展性和容错能力</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>微服务架构便于维护和升级</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>自动化工具实现资源自动化部署</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>自动化运维降低成本提高效率</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-shield text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">国产化适配架构</h4>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-medium pl-11">
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>全栈国产化技术路线设计</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>与国产硬件、软件深度适配</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>全面监控和管理国产化IT环境</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                    <span>满足信创政策各项要求</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 4.2 核心产品模块 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">4.2</span>
+                    核心产品模块与功能模块设计
+                </h3>
+                <div class="pl-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 card-hover">
+                            <div class="bg-primary/5 p-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                        <i class="fa fa-eye text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium">智能监控平台模块</h4>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-medium mb-3">
+                                    智能监控平台是产品体系的基础模块，负责对IDC基础设施进行全方位监控。
+                                </p>
+                                <h5 class="text-xs font-medium text-gray-dark mb-2">核心功能：</h5>
+                                <ul class="text-xs text-gray-medium space-y-1">
+                                    <li>• 7×24小时实时监控基础设施状态</li>
+                                    <li>• 提前预警设备故障与性能瓶颈</li>
+                                    <li>• 提升异常告警准确率</li>
+                                    <li>• 故障响应时间缩短至秒级</li>
+                                    <li>• 规避业务中断风险</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 card-hover">
+                            <div class="bg-primary/5 p-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                        <i class="fa fa-refresh text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium">自动化运维平台模块</h4>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-medium mb-3">
+                                    自动化运维平台是产品体系的核心模块，负责实现运维流程的自动化和智能化。
+                                </p>
+                                <h5 class="text-xs font-medium text-gray-dark mb-2">核心功能：</h5>
+                                <ul class="text-xs text-gray-medium space-y-1">
+                                    <li>• 支持任务调度、批量操作及流程自动化</li>
+                                    <li>• 覆盖日常巡检、补丁升级、资源配置</li>
+                                    <li>• 减少人工操作，降低人为失误</li>
+                                    <li>• 运维效率提升，解放人力资源</li>
+                                    <li>• 聚焦高价值创新工作</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 card-hover">
+                            <div class="bg-primary/5 p-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                        <i class="fa fa-pie-chart text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium">可视化管理平台模块</h4>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-medium mb-3">
+                                    可视化管理平台是产品体系的重要模块，负责实现IDC运维的可视化展示和管理。
+                                </p>
+                                <h5 class="text-xs font-medium text-gray-dark mb-2">核心功能：</h5>
+                                <ul class="text-xs text-gray-medium space-y-1">
+                                    <li>• 提供告警概览、资源概览、指标概览</li>
+                                    <li>• 定制化大屏概览展示</li>
+                                    <li>• 自动生成多维度运维报告</li>
+                                    <li>• 提升管理层决策效率</li>
+                                    <li>• 运维数据价值深度挖掘</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 card-hover">
+                            <div class="bg-primary/5 p-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                        <i class="fa fa-ticket text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium">IT服务管理平台模块</h4>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-medium mb-3">
+                                    IT服务管理平台是产品体系的支撑模块，负责实现运维服务的标准化和流程化。
+                                </p>
+                                <h5 class="text-xs font-medium text-gray-dark mb-2">核心功能：</h5>
+                                <ul class="text-xs text-gray-medium space-y-1">
+                                    <li>• 包含工单系统、知识库</li>
+                                    <li>• 实现运维服务全流程标准化</li>
+                                    <li>• 提升服务请求处理效率</li>
+                                    <li>• 让问题解决更高效</li>
+                                    <li>• 打造高效、透明的IT服务体系</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 card-hover">
+                            <div class="bg-primary/5 p-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                        <i class="fa fa-shield text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium">国产化适配模块</h4>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-sm text-gray-medium mb-3">
+                                    国产化适配模块是产品体系的特色模块，负责实现对国产软硬件环境的全面适配和管理。
+                                </p>
+                                <h5 class="text-xs font-medium text-gray-dark mb-2">核心功能：</h5>
+                                <ul class="text-xs text-gray-medium space-y-1">
+                                    <li>• 全面适配统信操作系统</li>
+                                    <li>• 构建安全可控的运维体系</li>
+                                    <li>• 国产CPU适配支持</li>
+                                    <li>• 国产数据库适配支持</li>
+                                    <li>• 国产中间件适配支持</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 4.3 服务模式设计 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">4.3</span>
+                    服务模式设计与交付方式
+                </h3>
+                <div class="pl-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-calendar-check-o text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">订阅制服务模式</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium mb-3">
+                                锐捷网络创新性地提出基于订阅模式的智能运维服务新理念，推出乐享订阅模式，通过"全栈工具+云端值守+专家研判"，为客户持续提供省心有效、专业专属的运维管家服务。
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-medium">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>云端7×24小时值守服务</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>首次投入低，可按需订阅</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>产品升级无需二次投入</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>整体测算TCO下降40%以上</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-cloud text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">SaaS化服务模式</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium mb-3">
+                                SaaS化服务模式是产品体系的重要服务模式。SREWorks专注于以应用为中心的开发模式，提供一站式云原生数智化运维SaaS管理套件。
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-medium">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>提供"数据采集、实时计算、数据服务、数据应用"全链路</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>基于"感知、决策、执行"智能运维框架</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>异常检测/日志聚类/根因分析等核心智能算法</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>构筑无人值守的智能运维体系</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-server text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">本地化部署模式</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium mb-3">
+                                本地化部署模式是产品体系针对对数据安全有严格要求的客户提供的服务模式。该模式将运维管理系统部署在客户本地数据中心，确保数据的安全性和可控性。
+                            </p>
+                            <div class="bg-light rounded p-3 text-sm">
+                                <p class="font-medium mb-1">适用客户群体：</p>
+                                <p class="text-gray-medium">金融、政府、能源等对数据安全要求较高的行业客户</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-cloud-download text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">混合云交付模式</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium mb-3">
+                                混合云交付模式是产品体系结合SaaS化和本地化部署优势的服务模式。该模式将部分非敏感数据和功能部署在云端，将敏感数据和关键功能部署在本地。
+                            </p>
+                            <div class="bg-light rounded p-3 text-sm">
+                                <p class="font-medium mb-1">适用客户群体：</p>
+                                <p class="text-gray-medium">对数据安全有一定要求但又希望享受云端服务便利性的客户</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 4.4 集成能力与开放生态 -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">4.4</span>
+                    集成能力与开放生态设计
+                </h3>
+                <div class="pl-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 mb-6">
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-plug text-primary mr-2"></i>API集成能力设计
+                            </h4>
+                            <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                                <ul class="space-y-2 text-sm text-gray-medium">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>采用标准化的API接口设计，支持RESTful和事件驱动协议</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>统一数据格式为JSON，便于数据交换和处理</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>API设计遵循以需求为中心、标准化、容错性、可扩展性、监控性原则</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>灵活且高度定制化，满足不同系统的集成需求</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-exchange text-primary mr-2"></i>标准化协议支持
+                            </h4>
+                            <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                                <ul class="space-y-2 text-sm text-gray-medium">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>支持SNMP、WMI、SSH、Telnet等多种标准化协议</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>确保能够与各种厂商的设备和系统进行集成</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>支持JSON、XML、CSV等标准化数据格式</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>提供协议适配层，简化第三方系统集成难度</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-puzzle-piece text-primary mr-2"></i>第三方系统集成能力
+                            </h4>
+                            <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                                <p class="text-sm text-gray-medium mb-3">
+                                    产品体系具备强大的第三方系统集成能力，能够与主流的监控系统、配置管理系统、IT服务管理系统等进行集成。
+                                </p>
+                                <div class="bg-light rounded p-3 text-sm">
+                                    <p class="font-medium mb-1">典型集成案例：</p>
+                                    <p class="text-gray-medium">WeOps运维平台一体机支持对接第三方监控系统，如Zabbix/Prometheus/阿里/腾讯等，提供多种事件联动场景</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-globe text-primary mr-2"></i>开放生态平台设计
+                            </h4>
+                            <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                                <p class="text-sm text-gray-medium mb-3">
+                                    产品体系采用开放的生态平台设计，支持与硬件厂商、软件厂商、系统集成商、云服务商等各类合作伙伴进行深度合作。
+                                </p>
+                                <div class="bg-light rounded p-3 text-sm">
+                                    <p class="font-medium mb-1">生态合作模式：</p>
+                                    <p class="text-gray-medium">通过开放的API接口和标准化的集成协议，构建完整的生态系统，为客户提供一站式的IDC运维解决方案</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 第五章：竞争格局与市场机会 -->
+        <section id="competition" class="mb-16 scroll-mt-24 md:scroll-mt-28">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                    <i class="fa fa-users text-primary"></i>
+                </div>
+                <h2 class="text-2xl font-bold">五、竞争格局与市场机会分析</h2>
+            </div>
+            
+            <!-- 5.1 市场竞争格局 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">5.1</span>
+                    IDC运维市场竞争格局分析
+                </h3>
+                <div class="pl-8">
+                    <p class="mb-4 text-gray-dark leading-relaxed">
+                        中国IDC运维市场呈现出明显的竞争格局分化，主要厂商在技术能力、市场份额、客户群体等方面存在显著差异。
+                    </p>
+                    
+                    <!-- 市场份额图表 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 md:p-6 border border-gray-100">
+                            <h4 class="text-lg font-medium mb-4 text-center">机房运维系统市场份额 (2024)</h4>
+                            <div class="h-64">
+                                <canvas id="marketShareChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 md:p-6 border border-gray-100">
+                            <h4 class="text-lg font-medium mb-4 text-center">云服务市场份额 (2024)</h4>
+                            <div class="h-64">
+                                <canvas id="cloudMarketChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 三梯队竞争格局 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 md:p-6 mt-6 mb-6 border border-gray-100">
+                        <h4 class="font-medium mb-4">三梯队竞争格局分析</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-primary/5 rounded-lg p-4 border border-primary/20">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-2">1</div>
+                                    <h5 class="font-medium">第一梯队</h5>
+                                </div>
+                                <p class="text-sm text-gray-medium mb-2">华为、阿里云、腾讯云等具备全栈能力的云服务商</p>
+                                <p class="text-sm font-medium">2024年合计市占率：37.2%</p>
+                            </div>
+                            <div class="bg-secondary/5 rounded-lg p-4 border border-secondary/20">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white mr-2">2</div>
+                                    <h5 class="font-medium">第二梯队</h5>
+                                </div>
+                                <p class="text-sm text-gray-medium mb-2">北塔软件、广通优云、云智慧等垂直领域专业厂商</p>
+                                <p class="text-sm font-medium">2024年合计市占率：29.8%</p>
+                            </div>
+                            <div class="bg-accent/5 rounded-lg p-4 border border-accent/20">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white mr-2">3</div>
+                                    <h5 class="font-medium">第三梯队</h5>
+                                </div>
+                                <p class="text-sm text-gray-medium mb-2">区域性服务商与开源解决方案集成商</p>
+                                <p class="text-sm font-medium">2024年合计占比：33.0%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 5.2 竞争对手产品能力对比 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">5.2</span>
+                    主要竞争对手产品能力对比
+                </h3>
+                <div class="pl-8">
+                    <div class="overflow-x-auto mt-4 mb-6">
+                        <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">厂商</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">核心产品能力</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">技术优势</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-dark">关键指标</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">华为</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">ICT运维服务方案，"智能、可视、易用、开放"数字化运维</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">ICT基础设施领域深厚积累，全栈技术能力</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">2024年运维服务收入410亿元，市占率19.6%</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">阿里云</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">智能运维平台，自动扩容、回滚、负载均衡</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">云计算和大数据平台优势，强化学习资源调度</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">P0级故障MTTR从4.2小时降至19分钟，人均管理服务器1000台+</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">腾讯云</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">TCE平台，多智能体DDPG模型，混合云资源调度</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">混合云环境资源协同调度，数据中心服务台联动</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">资源利用率从58%提升至82%，降低15%能源消耗</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium">博睿数据</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">Bonree ONE一体化智能可观测平台</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">全栈监控、智能分析和自动化运维能力</td>
+                                    <td class="py-3 px-4 text-sm text-gray-medium">支持30万+监测节点，跨平台、多云环境统一视图</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 5.3 市场机会与差异化策略 -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">5.3</span>
+                    市场机会与差异化竞争策略
+                </h3>
+                <div class="pl-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-lightbulb-o text-primary mr-2"></i>市场机会分析
+                            </h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="text-sm font-medium mb-1">信创政策驱动机会</h5>
+                                    <p class="text-xs text-gray-medium">2025年行政办公系统100%国产化，2027年央企系统100%信创替代，2024年1万亿元特别国债支持</p>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-medium mb-1">智能化转型需求机会</h5>
+                                    <p class="text-xs text-gray-medium">传统运维痛点凸显，到2026年边缘节点运维复杂度将增长300%，智能化需求迫切</p>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-medium mb-1">细分市场增长机会</h5>
+                                    <p class="text-xs text-gray-medium">边缘计算运维软件市场增长21.4%，AI能力运维平台增长19.7%，西部地区市场增长18.3%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fa fa-chess text-primary mr-2"></i>差异化竞争策略
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs mr-2 mt-0.5">1</div>
+                                    <div>
+                                        <h5 class="text-sm font-medium mb-1">技术差异化</h5>
+                                        <p class="text-xs text-gray-medium">AI深度应用，构建智能故障预测、根因分析、自动化运维核心能力</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs mr-2 mt-0.5">2</div>
+                                    <div>
+                                        <h5 class="text-sm font-medium mb-1">国产化差异化</h5>
+                                        <p class="text-xs text-gray-medium">全栈国产化解决方案，与国产厂商深度合作，形成生态优势</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs mr-2 mt-0.5">3</div>
+                                    <div>
+                                        <h5 class="text-sm font-medium mb-1">服务差异化</h5>
+                                        <p class="text-xs text-gray-medium">订阅制、SaaS化创新服务模式，"平台+工具+服务"一体化方案</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 第六章：商业模式与投资回报 -->
+        <section id="business" class="mb-16 scroll-mt-24 md:scroll-mt-28">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                    <i class="fa fa-money text-primary"></i>
+                </div>
+                <h2 class="text-2xl font-bold">六、商业模式与投资回报分析</h2>
+            </div>
+            
+            <!-- 6.1 商业模式设计 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-dark flex items-center">
+                    <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm mr-2">6.1</span>
+                    商业模式设计与盈利机制
+                </h3>
+                <div class="pl-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 mb-6">
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-calendar-check-o text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">订阅制服务商业模式</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium mb-3">
+                                订阅制服务是产品体系的核心商业模式。通过"全栈工具+云端值守+专家研判"的服务模式，为客户提供持续的运维管理服务。
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-medium">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>客户按年订阅，降低一次性投入风险</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>持续现金流收入，增强客户粘性</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>降低销售成本，提高客户生命周期价值</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
+                            <div class="flex items-center mb-3">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                    <i class="fa fa-cloud text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">SaaS化服务商业模式</h4>
+                            </div>
+                            <p class="text-sm text-gray-medium mb-3">
+                                SaaS化服务模式通过云端部署，将软件以在线服务的形式提供给客户，客户无需购买硬件或安装程序。
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-medium">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>按周期（月/季/年）支付订阅费用</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>即开即用，快速部署，降低客户实施成本</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-50
