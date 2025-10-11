@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDC市场动态摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .bento-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        .news-link {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            height: 100%;
+        }
+        .news-link:hover {
+            color: inherit;
+        }
+        .highlight-blue {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        .date-badge {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">IDC<span class="text-blue-600">市场动态</span></h1>
+            <p class="text-lg text-gray-600">Latest Industry Reports & Market Insights</p>
+            <div class="mt-4">
+                <span class="date-badge">最近一周动态</span>
+            </div>
+        </div>
+
+        <div class="bento-grid">
+            <!-- PC市场报告 -->
+            <div class="bento-item highlight-blue">
+                <a href="https://tech.gmw.cn/2025-10/10/content_38333326.htm" class="news-link" target="_blank">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-laptop-code text-blue-600 text-xl mr-3"></i>
+                        <span class="date-badge">10月10日</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">全球PC市场报告</h3>
+                    <p class="text-gray-700 mb-3">联想增速领跑行业，市场份额达25.5%</p>
+                    <div class="text-sm text-gray-500">
+                        <p>Q3全球出货量7580万台，同比增长9.4%</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 服务器市场 -->
+            <div class="bento-item">
+                <a href="https://m.c114.com.cn/w16-1298260.html" class="news-link" target="_blank">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-server text-blue-600 text-xl mr-3"></i>
+                        <span class="date-badge">10月10日</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">加速服务器市场爆发</h3>
+                    <p class="text-gray-700 mb-3">浪潮、新华三、联想领跑中国市场</p>
+                    <div class="text-sm text-gray-500">
+                        <p>上半年市场规模达160亿美元</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- AI服务器 -->
+            <div class="bento-item highlight-blue">
+                <a href="https://my.idc.com/getdoc.jsp?containerId=prCHC53858025" class="news-link" target="_blank">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-brain text-blue-600 text-xl mr-3"></i>
+                        <span class="date-badge">10月10日</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">AI服务器增长</h3>
+                    <p class="text-gray-700 mb-3">同比增长超一倍，本土化进程深化</p>
+                    <div class="text-sm text-gray-500">
+                        <p>市场环境持续优化</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 工业大模型 -->
+            <div class="bento-item">
+                <a href="https://news.ca168.com/202510/140783.html" class="news-link" target="_blank">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-industry text-blue-600 text-xl mr-3"></i>
+                        <span class="date-badge">10月10日</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">工业大模型进展</h3>
+                    <p class="text-gray-700 mb-3">中控技术获评IDC中国工业大模型标杆</p>
+                    <div class="text-sm text-gray-500">
+                        <p>智能体技术应用突破</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 市场预测 -->
+            <div class="bento-item highlight-blue">
+                <a href="https://m.c114.com.cn/w51-1290204.html" class="news-link" target="_blank">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-chart-line text-blue-600 text-xl mr-3"></i>
+                        <span class="date-badge">10月10日</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">2025年市场预测</h3>
+                    <p class="text-gray-700 mb-3">全球传统PC出货量预计2.74亿台</p>
+                    <div class="text-sm text-gray-500">
+                        <p>同比增长4.1%，换机需求持续释放</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- AI Agent市场 -->
+            <div class="bento-item">
+                <a href="https://finance.sina.com.cn/roll/2025-10-10/doc-inftkkxr9900144.shtml" class="news-link" target="_blank">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-robot text-blue-600 text-xl mr-3"></i>
+                        <span class="date-badge">10月10日</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">AI Agent市场概览</h3>
+                    <p class="text-gray-700 mb-3">爱数入选IDC中国AI Agent市场报告</p>
+                    <div class="text-sm text-gray-500">
+                        <p>技术创新驱动增长</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化ScrollReveal
+        ScrollReveal().reveal('.bento-item', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            interval: 100,
+            easing: 'ease-in-out'
+        });
+
+        // 悬停效果增强
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
