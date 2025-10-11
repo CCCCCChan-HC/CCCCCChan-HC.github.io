@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDC 一周资讯摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .bento-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        .news-item {
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .gradient-highlight {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">IDC 一周资讯</h1>
+            <p class="text-lg text-gray-600">Latest IDC Market Insights & Reports</p>
+        </div>
+
+        <!-- Bento Grid 布局 -->
+        <div class="bento-grid">
+            <!-- PC 市场报告 -->
+            <div class="bento-card gradient-highlight col-span-2">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-laptop text-3xl text-blue-500 mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">全球PC市场动态</h2>
+                </div>
+                <div class="space-y-4">
+                    <a href="https://www.ithome.com/0/888/540.htm" class="news-item block hover:bg-blue-50 p-3 rounded-lg transition-colors">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">2025年Q3全球PC出货量7580万台</h3>
+                        <p class="text-gray-600 text-sm">同比增长9.4%，市场呈现稳健复苏态势</p>
+                    </a>
+                    <a href="https://finance.sina.com.cn/tech/digi/2025-10-10/doc-inftmhcf9545519.shtml" class="news-item block hover:bg-blue-50 p-3 rounded-lg transition-colors">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">联想领跑PC市场</h3>
+                        <p class="text-gray-600 text-sm">市场份额达25.5%，增速行业领先</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 服务器市场 -->
+            <div class="bento-card">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-server text-2xl text-blue-500 mr-3"></i>
+                    <h2 class="text-xl font-bold text-gray-900">服务器市场</h2>
+                </div>
+                <a href="https://m.c114.com.cn/w16-1298260.html" class="news-item block hover:bg-blue-50 p-3 rounded-lg transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">加速服务器市场爆发</h3>
+                    <p class="text-gray-600 text-sm">上半年市场规模达160亿美元，浪潮、新华三、联想领跑</p>
+                </a>
+            </div>
+
+            <!-- AI 与技术创新 -->
+            <div class="bento-card gradient-highlight">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-robot text-2xl text-blue-500 mr-3"></i>
+                    <h2 class="text-xl font-bold text-gray-900">AI技术创新</h2>
+                </div>
+                <a href="https://finance.sina.com.cn/roll/2025-10-10/doc-inftkkxr9900144.shtml" class="news-item block hover:bg-blue-50 p-3 rounded-lg transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">AI Agent市场概览</h3>
+                    <p class="text-gray-600 text-sm">爱数入选IDC Market Glance报告</p>
+                </a>
+            </div>
+
+            <!-- 行业活动 -->
+            <div class="bento-card col-span-2">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-calendar-alt text-2xl text-blue-500 mr-3"></i>
+                    <h2 class="text-xl font-bold text-gray-900">行业活动</h2>
+                </div>
+                <a href="https://my.idc.com/cn/events/72009-2025-idc-cio" class="news-item block hover:bg-blue-50 p-3 rounded-lg transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">2025 IDC中国CIO峰会</h3>
+                    <p class="text-gray-600 text-sm">数字化转型年度颁奖盛典即将举行</p>
+                </a>
+            </div>
+
+            <!-- 市场预测 -->
+            <div class="bento-card gradient-highlight">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-line text-2xl text-blue-500 mr-3"></i>
+                    <h2 class="text-xl font-bold text-gray-900">市场预测</h2>
+                </div>
+                <a href="https://m.c114.com.cn/w51-1290204.html" class="news-item block hover:bg-blue-50 p-3 rounded-lg transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">2025全球PC出货预测</h3>
+                    <p class="text-gray-600 text-sm">传统PC出货量预计2.74亿台，同比增长4.1%</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        ScrollReveal().reveal('.bento-card', {
+            duration: 1000,
+            distance: '50px',
+            origin: 'bottom',
+            interval: 200
+        });
+
+        // 悬停效果增强
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+                this.style.boxShadow = '0 25px 50px -12px rgba(59, 130, 246, 0.25)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>
