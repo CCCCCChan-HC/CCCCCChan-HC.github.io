@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDC政策动态摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': '#60A5FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        .news-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12 animate-fade-in-up">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">AIDC政策动态</h1>
+            <p class="text-lg text-primary-light">Policy Updates in Artificial Intelligence Data Centers</p>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-primary-light mx-auto mt-4"></div>
+        </div>
+
+        <!-- 新闻网格布局 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- 新闻卡片 1 -->
+            <a href="https://wap.eastmoney.com/a/202501273308632693.html" 
+               class="news-card gradient-bg rounded-2xl p-6 block animate-fade-in-up" 
+               style="animation-delay: 0.1s;">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-chart-line text-primary text-xl mr-3 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">2025年AIDC投建狂潮延续</h3>
+                        <p class="text-sm text-primary-light">中金公司最新研报</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">预计2025年海内外科技厂商将继续加大AIDC基础设施投资建设力度，推动算力市场快速发展。</p>
+            </a>
+
+            <!-- 新闻卡片 2 -->
+            <a href="https://www.stcn.com/article/detail/3344756.html" 
+               class="news-card gradient-bg rounded-2xl p-6 block animate-fade-in-up" 
+               style="animation-delay: 0.2s;">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-server text-primary text-xl mr-3 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">算力市场火热AIDC成竞赛"新节点"</h3>
+                        <p class="text-sm text-primary-light">证券时报网报道</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">AIDC作为人工智能基础设施核心，正成为科技竞赛的关键节点，市场关注度持续升温。</p>
+            </a>
+
+            <!-- 新闻卡片 3 -->
+            <a href="https://www.stcn.com/article/detail/3344858.html" 
+               class="news-card gradient-bg rounded-2xl p-6 block animate-fade-in-up" 
+               style="animation-delay: 0.3s;">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-rocket text-primary text-xl mr-3 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">未来十年算力总量将增长10万倍</h3>
+                        <p class="text-sm text-primary-light">产业标准规范发布</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">最新产业标准规范出台，预计未来十年算力需求将呈现指数级增长，AIDC建设迎来黄金期。</p>
+            </a>
+
+            <!-- 新闻卡片 4 -->
+            <a href="https://pdf.dfcfw.com/pdf/H3_AP202506091687766604_1.pdf?1749501651000.pdf" 
+               class="news-card gradient-bg rounded-2xl p-6 block animate-fade-in-up" 
+               style="animation-delay: 0.4s;">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-file-alt text-primary text-xl mr-3 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">AIDC 研究报告2025</h3>
+                        <p class="text-sm text-primary-light">专业研究报告</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">2025年度AIDC行业深度研究报告，全面分析市场趋势、政策环境和技术发展路径。</p>
+            </a>
+
+            <!-- 新闻卡片 5 -->
+            <a href="https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion" 
+               class="news-card gradient-bg rounded-2xl p-6 block animate-fade-in-up" 
+               style="animation-delay: 0.5s;">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-globe text-primary text-xl mr-3 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">AI扩散框架发布</h3>
+                        <p class="text-sm text-primary-light">国际政策动态</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">美国发布人工智能扩散框架，为AIDC国际合作和标准制定提供政策指导。</p>
+            </a>
+
+            <!-- 新闻卡片 6 -->
+            <a href="https://www.hsfkramer.com/notes/tmt/2025-posts/China-Releases-Laws-to-Mandate-Labelling-of-AIGC" 
+               class="news-card gradient-bg rounded-2xl p-6 block animate-fade-in-up" 
+               style="animation-delay: 0.6s;">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-balance-scale text-primary text-xl mr-3 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">中国发布AIGC标识法规</h3>
+                        <p class="text-sm text-primary-light">监管政策更新</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">中国出台AIGC内容标识强制性法规，为AIDC应用场景提供法律保障和规范指引。</p>
+            </a>
+        </div>
+
+        <!-- 底部统计信息 -->
+        <div class="gradient-bg rounded-2xl p-8 text-center animate-fade-in-up" style="animation-delay: 0.7s;">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-2">6+</div>
+                    <div class="text-sm text-primary-light">政策动态</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-2">10万倍</div>
+                    <div class="text-sm text-primary-light">算力增长预期</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-2">2025</div>
+                    <div class="text-sm text-primary-light">关键发展年份</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-2">全球</div>
+                    <div class="text-sm text-primary-light">政策覆盖范围</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有动画元素添加观察
+        document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 页面加载完成后触发初始动画
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.animate-fade-in-up').forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.1}s`;
+                el.style.animationPlayState = 'running';
+            });
+        });
+    </script>
+</body>
+</html>
