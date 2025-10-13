@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDC行业动态摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .bento-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+        .news-date {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+        .news-link {
+            display: inline-flex;
+            align-items: center;
+            color: #3b82f6;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .news-link:hover {
+            color: #1d4ed8;
+        }
+        .gradient-highlight {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-2 text-gray-900">AIDC行业动态</h1>
+        <p class="text-lg text-center mb-8 text-gray-600">Latest Policy Updates & Industry Trends</p>
+        
+        <div class="bento-grid">
+            <!-- 新闻卡片 1 -->
+            <div class="bento-card gradient-highlight">
+                <div class="news-date">2025-09</div>
+                <h2 class="news-title">未来十年算力总量将增长10万倍！这一产业标准规范来了</h2>
+                <div class="news-source">证券时报网</div>
+                <a href="https://www.stcn.com/article/detail/3344858.html" class="news-link">
+                    阅读全文 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 2 -->
+            <div class="bento-card">
+                <div class="news-date">2025-09</div>
+                <h2 class="news-title">科技、通信行业头部企业加码AIDC建设</h2>
+                <div class="news-source">新浪财经</div>
+                <a href="https://finance.sina.com.cn/jjxw/2025-09-17/doc-infqvthc1251920.shtml" class="news-link">
+                    阅读全文 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 3 -->
+            <div class="bento-card gradient-highlight">
+                <div class="news-date">2025-09</div>
+                <h2 class="news-title">共促数据中心高质量建设智赢AI时代</h2>
+                <div class="news-source">华为数字能源</div>
+                <a href="https://digitalpower.huawei.com/cn/news/activity/hc2025-win-the-ai-era" class="news-link">
+                    阅读全文 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 4 -->
+            <div class="bento-card">
+                <div class="news-date">2025-09</div>
+                <h2 class="news-title">新华社：国资央企加力布局人工智能赛道</h2>
+                <div class="news-source">国资委官网</div>
+                <a href="http://www.sasac.gov.cn/n2588025/n2588139/c34234915/content.html" class="news-link">
+                    阅读全文 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 5 -->
+            <div class="bento-card gradient-highlight">
+                <div class="news-date">2025-09</div>
+                <h2 class="news-title">巨头混战AIDC储能！谁在布局未来战场？</h2>
+                <div class="news-source">IDEESZ</div>
+                <a href="https://www.ideesz.com/zhdt/hyzx1/202509/t20250920_1150.html" class="news-link">
+                    阅读全文 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 6 -->
+            <div class="bento-card">
+                <div class="news-date">2025-08</div>
+                <h2 class="news-title">中报业绩保持强劲，全面布局AIDC电源</h2>
+                <div class="news-source">东方财富研报</div>
+                <a href="https://pdf.dfcfw.com/pdf/H3_AP202508271735273577_1.pdf?1756293360000.pdf" class="news-link">
+                    阅读全文 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 7 -->
+            <div class="bento-card gradient-highlight">
+                <div class="news-date">2025-07</div>
+                <h2 class="news-title">2025年中国AIDC产业发展白皮书</h2>
+                <div class="news-source">行业研究报告</div>
+                <a href="https://pdf.dfcfw.com/pdf/H3_AP202507101706460530_1.pdf?1752177028000.pdf" class="news-link">
+                    阅读全文 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 8 -->
+            <div class="bento-card">
+                <div class="news-date">2025-06</div>
+                <h2 class="news-title">AIDC研究报告2025</h2>
+                <div class="news-source">东方财富研报</div>
+                <a href="https://pdf.dfcfw.com/pdf/H3_AP202506091687766604_1.pdf?1749501651000.pdf" class="news-link">
+                    阅读全文 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化ScrollReveal
+        ScrollReveal().reveal('.bento-card', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            interval: 100,
+            easing: 'ease-in-out'
+        });
+
+        // 添加卡片悬停效果
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
