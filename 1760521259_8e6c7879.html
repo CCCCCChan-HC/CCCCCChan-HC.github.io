@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智算中心最新动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .bento-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+        .news-date {
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+        .highlight-blue {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">智算中心动态摘要</h1>
+            <p class="text-lg text-gray-600">最新一周的智算中心建设与发展资讯</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- 新闻卡片 1 -->
+            <a href="https://www.chinanews.com.cn/cj/2025/09-27/10490606.shtml" class="bento-card highlight-blue" target="_blank">
+                <div class="news-title">超节点智算应用"北京方案"发布，支持多数业界主流大模型</div>
+                <div class="news-source">中国新闻网</div>
+                <div class="news-date">2025-09-27</div>
+                <div class="mt-2 text-sm text-gray-600">2025人工智能计算大会在京举办，发布重要智算应用方案</div>
+            </a>
+
+            <!-- 新闻卡片 2 -->
+            <a href="https://finance.sina.com.cn/stock/t/2025-10-01/doc-infskfeu1683386.shtml" class="bento-card" target="_blank">
+                <div class="news-title">超节点智算应用"北京方案"正式发布</div>
+                <div class="news-source">新浪财经</div>
+                <div class="news-date">2025-10-01</div>
+                <div class="mt-2 text-sm text-gray-600">支持多数业界主流大模型，推动智算产业发展</div>
+            </a>
+
+            <!-- 新闻卡片 3 -->
+            <a href="https://www.infoq.cn/article/6cyndmiotzqhyy6l3yl0" class="bento-card highlight-blue" target="_blank">
+                <div class="news-title">2025人工智能计算大会：超节点智算应用"北京方案"发布</div>
+                <div class="news-source">InfoQ</div>
+                <div class="news-date">2025-09-27</div>
+                <div class="mt-2 text-sm text-gray-600">人工智能计算领域的重要技术突破</div>
+            </a>
+
+            <!-- 新闻卡片 4 -->
+            <a href="https://home.wuhan.gov.cn/mtbd/202510/t20251007_2656401.shtml" class="bento-card" target="_blank">
+                <div class="news-title">智驱未来算赋新生：我国算力产业迈向高质量发展新阶段</div>
+                <div class="news-source">武汉市人民政府</div>
+                <div class="news-date">2025-10-07</div>
+                <div class="mt-2 text-sm text-gray-600">算力产业转型升级的重要里程碑</div>
+            </a>
+
+            <!-- 新闻卡片 5 -->
+            <a href="https://home.wuhan.gov.cn/mtbd/202510/t20251014_2660184.shtml" class="bento-card highlight-blue" target="_blank">
+                <div class="news-title">"人工智能+"引领数字产业创新发展</div>
+                <div class="news-source">武汉市人民政府</div>
+                <div class="news-date">2025-10-14</div>
+                <div class="mt-2 text-sm text-gray-600">人工智能与各产业深度融合的新趋势</div>
+            </a>
+
+            <!-- 新闻卡片 6 -->
+            <a href="https://www.dtdata.cn/news/show/3498.html" class="bento-card" target="_blank">
+                <div class="news-title">264.79亿元！8省20个智算中心/算力项目已备案！</div>
+                <div class="news-source">DT数据</div>
+                <div class="news-date">2025-10-08</div>
+                <div class="mt-2 text-sm text-gray-600">大规模智算中心建设投资的最新进展</div>
+            </a>
+
+            <!-- 新闻卡片 7 -->
+            <a href="https://www.dtdata.cn/news/show/3834.html" class="bento-card highlight-blue" target="_blank">
+                <div class="news-title">总投资2亿元！广州智算产业赋能中心项目备案获批</div>
+                <div class="news-source">DT数据</div>
+                <div class="news-date">2025-10-10</div>
+                <div class="mt-2 text-sm text-gray-600">地方智算中心建设的具体案例</div>
+            </a>
+
+            <!-- 新闻卡片 8 -->
+            <a href="https://www.stcn.com/article/detail/3344858.html" class="bento-card" target="_blank">
+                <div class="news-title">未来十年算力总量将增长10万倍！这一产业标准规范来了</div>
+                <div class="news-source">证券时报</div>
+                <div class="news-date">2025-10-12</div>
+                <div class="mt-2 text-sm text-gray-600">算力产业发展的长期规划与标准制定</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 初始化 ScrollReveal
+        ScrollReveal().reveal('.bento-card', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            interval: 100,
+            easing: 'ease-in-out'
+        });
+
+        // 添加卡片悬停效果
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
