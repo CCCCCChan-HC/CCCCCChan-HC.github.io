@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年人工智能趋势摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .bento-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        .news-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .highlight-gradient {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+        }
+        
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .icon-wrapper {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .icon-wrapper i {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                人工智能<span class="text-blue-600">趋势摘要</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                2025年最新人工智能发展动态与政策解读
+            </p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- 政策动态 -->
+            <div class="bento-item scroll-animation">
+                <div class="icon-wrapper">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h2 class="news-title">国务院发布“人工智能+”行动意见</h2>
+                <p class="text-gray-700 leading-relaxed">推动人工智能与实体经济深度融合，加快形成新质生产力</p>
+                <div class="highlight-gradient">
+                    <p class="text-sm text-blue-800">政策引领 · 产业升级 · 技术创新</p>
+                </div>
+                <div class="news-source">来源：中国政府网</div>
+                <a href="https://www.gov.cn/zhengce/content/202508/content_7037861.htm" 
+                   class="inline-block mt-3 text-blue-600 hover:text-blue-800 transition-colors">
+                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 技术前沿 -->
+            <div class="bento-item scroll-animation">
+                <div class="icon-wrapper">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h2 class="news-title">AI技术前沿：从通用智能到实体智能</h2>
+                <p class="text-gray-700 leading-relaxed">2025年10月技术速览，重点关注实体智能的突破性进展</p>
+                <div class="highlight-gradient">
+                    <p class="text-sm text-blue-800">技术突破 · 实体智能 · 前沿研究</p>
+                </div>
+                <div class="news-source">来源：新浪科技</div>
+                <a href="https://t.cj.sina.cn/articles/view/2610664157/9b9b92dd001018rz2" 
+                   class="inline-block mt-3 text-blue-600 hover:text-blue-800 transition-colors">
+                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 产业报告 -->
+            <div class="bento-item scroll-animation">
+                <div class="icon-wrapper">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h2 class="news-title">全球AI创造力发展报告2025</h2>
+                <p class="text-gray-700 leading-relaxed">智能浪潮下的创新模式变革与企业转型路径分析</p>
+                <div class="highlight-gradient">
+                    <p class="text-sm text-blue-800">全球视野 · 创新趋势 · 发展报告</p>
+                </div>
+                <div class="news-source">来源：新华网财经</div>
+                <a href="http://www.news.cn/finance/20250704/11e58a01cf7f4383bf7a4fa6f6287bfe/c.html" 
+                   class="inline-block mt-3 text-blue-600 hover:text-blue-800 transition-colors">
+                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 应用实践 -->
+            <div class="bento-item scroll-animation">
+                <div class="icon-wrapper">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h2 class="news-title">AI智能体平台Eureka发布</h2>
+                <p class="text-gray-700 leading-relaxed">智慧芽推出近20个专业化AI智能体，推动行业应用落地</p>
+                <div class="highlight-gradient">
+                    <p class="text-sm text-blue-800">平台发布 · 专业应用 · 行业落地</p>
+                </div>
+                <div class="news-source">来源：医药魔方</div>
+                <a href="https://bydrug.pharmcube.com/news/detail/ad625c29a0da09bdb6a0cd87c5fee191" 
+                   class="inline-block mt-3 text-blue-600 hover:text-blue-800 transition-colors">
+                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 教育应用 -->
+            <div class="bento-item scroll-animation">
+                <div class="icon-wrapper">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h2 class="news-title">AI重塑小学课堂新生态</h2>
+                <p class="text-gray-700 leading-relaxed">智慧教育推动教学模式创新，实现个性化学习体验</p>
+                <div class="highlight-gradient">
+                    <p class="text-sm text-blue-800">教育创新 · 课堂变革 · 个性化学习</p>
+                </div>
+                <div class="news-source">来源：北京市门头沟区政府</div>
+                <a href="https://www.bjmtg.gov.cn/bjmtg/c102696/202504/bece83894d584f3e8704cff9d3cb926c.shtml" 
+                   class="inline-block mt-3 text-blue-600 hover:text-blue-800 transition-colors">
+                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- 司法应用 -->
+            <div class="bento-item scroll-animation">
+                <div class="icon-wrapper">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h2 class="news-title">DeepSeek打造“智法审”智能体</h2>
+                <p class="text-gray-700 leading-relaxed">市司法局强化AI在法制审核场景的应用实践</p>
+                <div class="highlight-gradient">
+                    <p class="text-sm text-blue-800">司法智能 · 场景应用 · 审核效率</p>
+                </div>
+                <div class="news-source">来源：郑州市司法局</div>
+                <a href="https://zzsfj.zhengzhou.gov.cn/zfdwjy/9488797.jhtml" 
+                   class="inline-block mt-3 text-blue-600 hover:text-blue-800 transition-colors">
+                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        function checkScroll() {
+            const elements = document.querySelectorAll('.scroll-animation');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('animate');
+                }
+            });
+        }
+
+        // 初始检查
+        checkScroll();
+        
+        // 滚动时检查
+        window.addEventListener('scroll', checkScroll);
+        
+        // 防抖处理
+        let scrollTimer;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(checkScroll, 10);
+        });
+    </script>
+</body>
+</html>
