@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Weekly Digest - 人工智能周报摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)',
+                        'primary-dark': 'rgba(59, 130, 246, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+        .bento-item {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+        .news-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+            border-left: 4px solid #3B82F6;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, rgba(59, 130, 246, 0.8) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4 gradient-text">AI Weekly Digest</h1>
+            <p class="text-lg text-gray-600">人工智能领域最新动态 · 过去一周精选要闻</p>
+            <div class="flex justify-center items-center mt-4 space-x-2 text-primary">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="text-sm">2025年10月第二周</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="bento-grid">
+            <!-- Industry Trends -->
+            <div class="bento-item news-card col-span-2 fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-line text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">行业趋势</h2>
+                </div>
+                <a href="http://www.news.cn/tech/20251016/481af781ce4b43cfa1938a6845e44efb/c.html" 
+                   class="block mb-3 p-4 hover:bg-primary-light rounded-lg transition-colors">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">电子信息制造业全面拥抱AI</h3>
+                    <p class="text-gray-600 text-sm">制造业加速智能化转型，AI技术深度融入生产流程</p>
+                </a>
+                <a href="https://tech.gmw.cn/2025-07/01/content_38127440.htm" 
+                   class="block p-4 hover:bg-primary-light rounded-lg transition-colors">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">AI产业迈入规模化应用新阶段</h3>
+                    <p class="text-gray-600 text-sm">从技术探索到商业落地，AI应用进入爆发期</p>
+                </a>
+            </div>
+
+            <!-- Policy & Governance -->
+            <div class="bento-item news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-landmark text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">政策规范</h2>
+                </div>
+                <a href="https://tech.gmw.cn/2025-10/11/content_38334792.htm" 
+                   class="block p-4 hover:bg-primary-light rounded-lg transition-colors">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">政务领域AI大模型部署应用指引发布</h3>
+                    <p class="text-gray-600 text-sm">两部门联合推动政务AI规范化发展</p>
+                </a>
+            </div>
+
+            <!-- Technology Innovation -->
+            <div class="bento-item news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-microchip text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">技术创新</h2>
+                </div>
+                <a href="https://www.hubei.gov.cn/hbfb/rdgz/202510/t20251016_5791070.shtml" 
+                   class="block mb-3 p-4 hover:bg-primary-light rounded-lg transition-colors">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">AI算法大幅提升制衣效率</h3>
+                    <p class="text-gray-600 text-sm">湖北智造实现制衣耗时从3天减至4小时</p>
+                </a>
+                <a href="https://tech.gmw.cn/2025-10/12/content_38336508.htm" 
+                   class="block p-4 hover:bg-primary-light rounded-lg transition-colors">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">机器学习提升卫星土壤水分监测精度</h3>
+                    <p class="text-gray-600 text-sm">我国科学家实现技术突破</p>
+                </a>
+            </div>
+
+            <!-- Enterprise Dynamics -->
+            <div class="bento-item news-card col-span-2 fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-building text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">企业动态</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="https://news.dayoo.com/finance/202510/15/171077_54884002.htm" 
+                       class="block p-4 hover:bg-primary-light rounded-lg transition-colors">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">华为商业市场AI赋能大会</h3>
+                        <p class="text-gray-600 text-xs">携手伙伴共赢数智未来</p>
+                    </a>
+                    <a href="https://www.cls.cn/detail/2165550" 
+                       class="block p-4 hover:bg-primary-light rounded-lg transition-colors">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">亚马逊推出Agentic AI应用套件</h3>
+                        <p class="text-gray-600 text-xs">Quick Suite助力AI应用开发</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Infrastructure -->
+            <div class="bento-item news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-server text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">基础设施</h2>
+                </div>
+                <a href="https://www.cls.cn/detail/2117155" 
+                   class="block mb-3 p-4 hover:bg-primary-light rounded-lg transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">AI基建资本开支处于爆发拐点</h3>
+                    <p class="text-gray-600 text-xs">多个环节将深度受益</p>
+                </a>
+                <a href="http://guangxi.china.com.cn/2025-10/14/content_43248893.html" 
+                   class="block p-4 hover:bg-primary-light rounded-lg transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">超互联联盟签署AI新基建合作协议</h3>
+                    <p class="text-gray-600 text-xs">推动产业协同发展</p>
+                </a>
+            </div>
+
+            <!-- Applications -->
+            <div class="bento-item news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-mobile-alt text-primary text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">应用场景</h2>
+                </div>
+                <a href="https://www.cls.cn/detail/2120109" 
+                   class="block mb-3 p-4 hover:bg-primary-light rounded-lg transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">淘宝测试AI万能搜</h3>
+                    <p class="text-gray-600 text-xs">电商搜索开始学会"思考"</p>
+                </a>
+                <a href="https://flashcat.cloud/blog/ai-oncall/" 
+                   class="block p-4 hover:bg-primary-light rounded-lg transition-colors">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">AI加速可观测性</h3>
+                    <p class="text-gray-600 text-xs">为工程师打造智能Oncall分身</p>
+                </a>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-6 border-t border-gray-200">
+            <p class="text-gray-600 text-sm">数据更新至2025年10月16日 · 人工智能周报摘要</p>
+            <div class="flex justify-center space-x-4 mt-3">
+                <span class="text-primary text-xs">#AI周报</span>
+                <span class="text-primary text-xs">#人工智能</span>
+                <span class="text-primary text-xs">#科技动态</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Scroll Reveal Animation
+        ScrollReveal().reveal('.fade-in', {
+            delay: 200,
+            distance: '50px',
+            duration: 1000,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            interval: 100
+        });
+
+        // Hover effects
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Page load animation
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
