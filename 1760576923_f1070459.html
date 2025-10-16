@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新能源汽车最新动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen gradient-bg">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12 fade-in">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">新能源汽车动态</h1>
+            <p class="text-lg text-gray-600">Latest News of New Energy Vehicles</p>
+            <div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Bento Grid 布局 -->
+        <div class="bento-grid">
+            <!-- 卡片1：市场数据 -->
+            <div class="news-card fade-in col-span-2">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-line text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">市场表现</h2>
+                </div>
+                <a href="https://www.gov.cn/yaowen/liebiao/202510/content_7044296.htm" 
+                   class="block hover:text-primary transition-colors">
+                    <p class="text-4xl font-bold text-gray-900 mb-2">前9个月双破千万辆</p>
+                    <p class="text-gray-600 text-sm">新能源汽车产销两旺，9月汽车产销历史同期首超300万辆</p>
+                </a>
+            </div>
+
+            <!-- 卡片2：出口数据 -->
+            <div class="news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-globe text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">出口增长</h2>
+                </div>
+                <a href="https://companies.caixin.com/2025-10-15/102372061.html" 
+                   class="block hover:text-primary transition-colors">
+                    <p class="text-3xl font-bold text-gray-900 mb-2">同比增长89.4%</p>
+                    <p class="text-gray-600 text-sm">前九个月新能源汽车出口大幅增长，比亚迪贡献约四成</p>
+                </a>
+            </div>
+
+            <!-- 卡片3：政策动态 -->
+            <div class="news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-file-invoice-dollar text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">政策支持</h2>
+                </div>
+                <a href="https://finance.sina.com.cn/roll/2025-10-15/doc-inftxuqp1245286.shtml" 
+                   class="block hover:text-primary transition-colors">
+                    <p class="text-3xl font-bold text-gray-900 mb-2">国补恢复继续</p>
+                    <p class="text-gray-600 text-sm">新能源汽车购置税明年退坡，车企及消费者抢搭红利</p>
+                </a>
+            </div>
+
+            <!-- 卡片4：充电设施 -->
+            <div class="news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-charging-station text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">基础设施</h2>
+                </div>
+                <a href="http://www.ce.cn/xwzx/gnsz/gdxw/202510/t20251015_2518899.shtml" 
+                   class="block hover:text-primary transition-colors">
+                    <p class="text-3xl font-bold text-gray-900 mb-2">2800万充电设施</p>
+                    <p class="text-gray-600 text-sm">中国将在2027年底建成完善的电动汽车充电网络</p>
+                </a>
+            </div>
+
+            <!-- 卡片5：企业动态 -->
+            <div class="news-card fade-in col-span-2">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-industry text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">企业进展</h2>
+                </div>
+                <a href="https://finance.sina.com.cn/jjxw/2025-10-15/doc-inftxuqp1260821.shtml" 
+                   class="block hover:text-primary transition-colors">
+                    <p class="text-3xl font-bold text-gray-900 mb-2">乐道第10万台量产车下线</p>
+                    <p class="text-gray-600 text-sm">蔚来十年技术创新成就纯电智造新速度</p>
+                </a>
+            </div>
+
+            <!-- 卡片6：技术升级 -->
+            <div class="news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-cogs text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">产业升级</h2>
+                </div>
+                <a href="http://finance.people.com.cn/n1/2025/1016/c1004-40583386.html" 
+                   class="block hover:text-primary transition-colors">
+                    <p class="text-3xl font-bold text-gray-900 mb-2">技术门槛提高</p>
+                    <p class="text-gray-600 text-sm">助推新能源汽车产业向高质量方向发展</p>
+                </a>
+            </div>
+
+            <!-- 卡片7：北京市场 -->
+            <div class="news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-city text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">区域市场</h2>
+                </div>
+                <a href="https://www.chinanews.com.cn/cj/2025/10-15/10498954.shtml" 
+                   class="block hover:text-primary transition-colors">
+                    <p class="text-3xl font-bold text-gray-900 mb-2">120万辆保有量</p>
+                    <p class="text-gray-600 text-sm">北京新能源汽车市场持续领先发展</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="text-center mt-12 fade-in">
+            <p class="text-gray-500 text-sm">数据更新时间：2025年10月15日</p>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // 鼠标移动效果
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.news-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
