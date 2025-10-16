@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>低空经济新闻摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': '#60A5FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        
+        .gradient-highlight {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">
+                低空经济<span class="text-primary">新闻摘要</span>
+            </h1>
+            <p class="text-lg text-gray-600">Latest Low-altitude Economy News Updates</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-primary-light mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- 新闻网格 -->
+        <div class="bento-grid">
+            <!-- 主要新闻卡片 -->
+            <div class="news-card gradient-highlight col-span-2 row-span-2">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-rocket text-primary text-2xl mr-3"></i>
+                    <span class="text-sm text-primary font-semibold">重点报道</span>
+                </div>
+                <a href="https://m.autohome.com.cn/xqyol-xpOS/main.pdf" class="block hover:no-underline">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                        广西首个“低空经济+智慧物流”项目首飞开启新篇章
+                    </h2>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        该项目标志着低空经济在物流领域的重大突破，通过无人机技术实现高效智能配送，为区域经济发展注入新动能。
+                    </p>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-primary text-sm font-medium">阅读全文 →</span>
+                        <span class="text-gray-400 text-xs">今日更新</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 政策动态 -->
+            <div class="news-card">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-file-alt text-primary mr-2"></i>
+                    <span class="text-xs text-gray-500">政策动态</span>
+                </div>
+                <a href="http://www.eeo.com.cn/2025/1015/758880.shtml" class="block hover:no-underline">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">上海推动智能终端产业发展</h3>
+                    <p class="text-gray-600 text-sm">到2027年实现三个“一千”目标...</p>
+                </a>
+            </div>
+
+            <!-- 场景创新 -->
+            <div class="news-card">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-lightbulb text-primary mr-2"></i>
+                    <span class="text-xs text-gray-500">创新应用</span>
+                </div>
+                <a href="https://cczx.wuhu.gov.cn/cxzx/cxyw/8875065.html" class="block hover:no-underline">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">场景创新绘就产业进阶升级新图景</h3>
+                    <p class="text-gray-600 text-sm">低空经济应用场景不断拓展...</p>
+                </a>
+            </div>
+
+            <!-- 展会信息 -->
+            <div class="news-card">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-calendar-alt text-primary mr-2"></i>
+                    <span class="text-xs text-gray-500">行业展会</span>
+                </div>
+                <a href="https://www.hxdsb.com/dgzp833447/" class="block hover:no-underline">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">4100+品牌、71国参展！这场国家级展会...</h3>
+                    <p class="text-gray-600 text-sm">低空经济相关技术成果展示...</p>
+                </a>
+            </div>
+
+            <!-- 旅行商视角 -->
+            <div class="news-card">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-plane text-primary mr-2"></i>
+                    <span class="text-xs text-gray-500">行业观点</span>
+                </div>
+                <a href="https://www.chinaqw.com/vjst/202509293936407" class="block hover:no-underline">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">戴斌：没有一流旅行商</h3>
+                    <p class="text-gray-600 text-sm">旅游业与低空经济融合发展...</p>
+                </a>
+            </div>
+
+            <!-- 科技改革 -->
+            <div class="news-card">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-cogs text-primary mr-2"></i>
+                    <span class="text-xs text-gray-500">体制改革</span>
+                </div>
+                <a href="https://finance.sina.cn/2025-10-15/detail-inftxuqk6538249.d.html" class="block hover:no-underline">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">山东深化科技体制机制改革</h3>
+                    <p class="text-gray-600 text-sm">推出一系列政策举措...</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="text-center mt-12 pt-8 border-t border-gray-100">
+            <p class="text-gray-500 text-sm">数据更新时间: <span class="text-primary">今日</span> • 信息来源: 各大新闻媒体</p>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        function checkScroll() {
+            const elements = document.querySelectorAll('.scroll-animation');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('animate-in');
+                }
+            });
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为所有新闻卡片添加动画类
+            const newsCards = document.querySelectorAll('.news-card');
+            newsCards.forEach((card, index) => {
+                card.classList.add('scroll-animation');
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // 初始检查
+            checkScroll();
+            
+            // 滚动时检查
+            window.addEventListener('scroll', checkScroll);
+        });
+    </script>
+</body>
+</html>
