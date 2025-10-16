@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI新闻摘要 | 最新动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        }
+        
+        .news-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12 fade-in">
+            <h1 class="text-5xl font-bold gradient-text mb-4">AI动态速览</h1>
+            <p class="text-lg text-gray-600">Latest Artificial Intelligence News Updates</p>
+            <div class="flex items-center justify-center mt-4 space-x-2 text-primary">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="font-semibold">2025年10月16日</span>
+            </div>
+        </div>
+
+        <!-- Bento Grid 布局 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- 卡片 1：重大发布 -->
+            <a href="https://www.apple.com.cn/newsroom/2025/10/apple-unleashes-m5-a-big-leap-in-ai/" 
+               class="news-card bg-white rounded-2xl p-6 col-span-1 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-microchip text-primary text-xl"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-primary bg-primary-light px-3 py-1 rounded-full">硬件突破</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Apple发布M5芯片</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">实现AI性能新跃升，为下一代智能设备提供强大算力支持</p>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-xs text-gray-500">Apple官方</span>
+                    <i class="fas fa-arrow-right text-primary"></i>
+                </div>
+            </a>
+
+            <!-- 卡片 2：中国AI进展 -->
+            <a href="http://www.news.cn/liangzi/20251015/72a13ce968b54bad8a14802402791a7e/c.html" 
+               class="news-card bg-white rounded-2xl p-6 col-span-1 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-robot text-primary text-xl"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-primary bg-primary-light px-3 py-1 rounded-full">开源模型</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">中国AI开源模型展示强大竞争力</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">在国际AI竞赛中展现技术实力，推动全球AI生态发展</p>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-xs text-gray-500">新华网</span>
+                    <i class="fas fa-arrow-right text-primary"></i>
+                </div>
+            </a>
+
+            <!-- 卡片 3：产业应用 -->
+            <a href="http://www.news.cn/tech/20251016/481af781ce4b43cfa1938a6845e44efb/c.html" 
+               class="news-card bg-white rounded-2xl p-6 col-span-1 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-industry text-primary text-xl"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-primary bg-primary-light px-3 py-1 rounded-full">产业升级</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">电子信息制造业全面拥抱AI</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">传统制造业加速智能化转型，提升生产效率和质量</p>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-xs text-gray-500">科技日报</span>
+                    <i class="fas fa-arrow-right text-primary"></i>
+                </div>
+            </a>
+
+            <!-- 卡片 4：国际竞争 -->
+            <a href="http://ai.zhiding.cn/2025/1015/3172709.shtml" 
+               class="news-card bg-white rounded-2xl p-6 col-span-1 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-globe text-primary text-xl"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-primary bg-primary-light px-3 py-1 rounded-full">国际动态</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">美中AI竞争升级</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">美国巨额交易对战中国开源策略，全球AI格局重塑</p>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-xs text-gray-500">至顶网</span>
+                    <i class="fas fa-arrow-right text-primary"></i>
+                </div>
+            </a>
+
+            <!-- 卡片 5：企业创新 -->
+            <a href="https://china.newsroom.ibm.com/2025-10-15-IBM-,-AI" 
+               class="news-card bg-white rounded-2xl p-6 col-span-1 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-cloud text-primary text-xl"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-primary bg-primary-light px-3 py-1 rounded-full">技术创新</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">IBM发布混合集成技术</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">加速企业级AI智能体落地，推动商业智能化进程</p>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-xs text-gray-500">IBM中国</span>
+                    <i class="fas fa-arrow-right text-primary"></i>
+                </div>
+            </a>
+
+            <!-- 卡片 6：具身智能 -->
+            <a href="http://www.news.cn/tech/20251015/f7cd7ab38e49465a922ca3f7059c684d/c.html" 
+               class="news-card bg-white rounded-2xl p-6 col-span-1 fade-in">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-running text-primary text-xl"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-primary bg-primary-light px-3 py-1 rounded-full">前沿技术</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">具身智能迈向规模化应用</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">人形机器人从概念走向实践，开启智能新纪元</p>
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-xs text-gray-500">新华网</span>
+                    <i class="fas fa-arrow-right text-primary"></i>
+                </div>
+            </a>
+        </div>
+
+        <!-- 底部统计 -->
+        <div class="text-center mt-12 fade-in">
+            <div class="inline-flex items-center space-x-8 bg-primary-light rounded-2xl px-8 py-4">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary">22</div>
+                    <div class="text-sm text-gray-600">相关新闻</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary">1</div>
+                    <div class="text-sm text-gray-600">天范围</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary">6+</div>
+                    <div class="text-sm text-gray-600">重点领域</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // 初始检查
+        checkVisibility();
+        
+        // 滚动时检查
+        window.addEventListener('scroll', checkVisibility);
+
+        // 卡片点击效果
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
