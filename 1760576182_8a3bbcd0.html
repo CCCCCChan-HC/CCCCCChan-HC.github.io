@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>低空经济资讯摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .bento-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+        .news-summary {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+        .highlight {
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        .section-header {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 2rem 0;
+            color: #1e293b;
+        }
+        .news-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .news-link:hover {
+            color: #1d4ed8;
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="section-header">
+            <span class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">低空经济</span>
+            <br>
+            <span class="text-lg font-normal text-gray-600">Low-altitude Economy Weekly Digest</span>
+        </h1>
+        
+        <div class="bento-grid">
+            <!-- 主要新闻卡片 -->
+            <div class="bento-card highlight col-span-2">
+                <div class="tag">最新动态</div>
+                <h2 class="news-title">低空经济升维：从技术突破到生态繁荣</h2>
+                <div class="news-source">光明网 · 2025年7月25日</div>
+                <p class="news-summary">低空经济正从单纯的技术突破向完整的产业生态转变，涵盖无人机物流、城市空中交通、应急救援等多个领域，展现出巨大的市场潜力。</p>
+                <a href="https://economy.gmw.cn/2025-07/25/content_38174292.htm" class="news-link">
+                    阅读全文 <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="bento-card">
+                <div class="tag">政策支持</div>
+                <h2 class="news-title">推动低空数据要素集聚、开放、共享</h2>
+                <div class="news-source">国家数据局 · 近期发布</div>
+                <p class="news-summary">国家数据局发布九个领域数据要素相关政策，明确推动低空数据要素的集聚、开放和共享，为低空经济发展提供数据支撑。</p>
+                <a href="https://www.zzydjt.cn/article/detail/87c610ad29cb8fc694275bc2f8edddba" class="news-link">
+                    查看详情 <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="bento-card">
+                <div class="tag">产业应用</div>
+                <h2 class="news-title">场景创新绘就产业进阶升级新图景</h2>
+                <div class="news-source">芜湖新闻网 · 近期报道</div>
+                <p class="news-summary">通过场景创新推动低空经济产业升级，在物流配送、农业植保、城市管理等领域实现规模化应用。</p>
+                <a href="https://cczx.wuhu.gov.cn/cxzx/cxyw/8875065.html" class="news-link">
+                    了解更多 <i class="fas fa-chart-line"></i>
+                </a>
+            </div>
+
+            <div class="bento-card">
+                <div class="tag">基础设施</div>
+                <h2 class="news-title">数字新基建释放强劲动能</h2>
+                <div class="news-source">福建省信息化动态 · 2025年10月9日</div>
+                <p class="news-summary">数字新基建为低空经济发展提供重要支撑，5G网络、北斗导航等基础设施不断完善。</p>
+                <a href="https://xxzx.fujian.gov.cn/jjxx/xxhdt/202510/t20251009_7018628.htm" class="news-link">
+                    查看报告 <i class="fas fa-file-alt"></i>
+                </a>
+            </div>
+
+            <div class="bento-card">
+                <div class="tag">网络支撑</div>
+                <h2 class="news-title">网络基础设施筑起数字经济新底座</h2>
+                <div class="news-source">光明时评 · 2025年9月15日</div>
+                <p class="news-summary">完善的网络基础设施是低空经济发展的重要保障，为无人机通信、导航定位等提供可靠支持。</p>
+                <a href="https://tech.gmw.cn/2025-09/15/content_38285837.htm" class="news-link">
+                    阅读评论 <i class="fas fa-network-wired"></i>
+                </a>
+            </div>
+
+            <div class="bento-card col-span-2">
+                <div class="tag">技术前沿</div>
+                <h2 class="news-title">探馆2025世界智能产业博览会</h2>
+                <div class="news-source">光明网经济频道 · 2025年9月5日</div>
+                <p class="news-summary">世界智能产业博览会展示低空经济最新技术成果，包括智能无人机、飞行控制系统等创新产品。</p>
+                <a href="https://economy.gmw.cn/2025-09/05/content_38266271.htm" class="news-link">
+                    参观展览 <i class="fas fa-plane"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有卡片添加初始样式和观察
+        document.querySelectorAll('.bento-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
