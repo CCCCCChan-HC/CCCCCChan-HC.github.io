@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能与DeepSeek最新动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 0.75rem;
+        }
+        .highlight {
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">AI前沿动态</h1>
+            <p class="text-lg text-gray-600">最新人工智能与DeepSeek技术突破</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- 新闻卡片 1 -->
+            <a href="https://finance.sina.com.cn/roll/2025-05-15/doc-inewsfmy6935920.shtml" class="news-card highlight">
+                <div class="news-title">🚀 DeepSeek登顶AI交易之王！六大模型实盘厮杀战绩惊人</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-chart-line mr-2"></i>
+                    金融交易领域重大突破
+                </div>
+                <div class="news-source">来源：新浪财经</div>
+            </a>
+
+            <!-- 新闻卡片 2 -->
+            <a href="https://www.cls.cn/detail/2174661" class="news-card">
+                <div class="news-title">💎 加密市场大乱斗！DeepSeek稳坐交易宝座</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-coins mr-2"></i>
+                    数字货币交易新纪元
+                </div>
+                <div class="news-source">来源：财联社</div>
+            </a>
+
+            <!-- 新闻卡片 3 -->
+            <a href="https://finance.sina.com.cn/stock/t/2025-10-20/doc-infupkpn5404369.shtml" class="news-card highlight">
+                <div class="news-title">💰 专业对口就是强！DeepSeek暴赚引市场震动</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-rocket mr-2"></i>
+                    投资策略革命性创新
+                </div>
+                <div class="news-source">来源：新浪财经</div>
+            </a>
+
+            <!-- 新闻卡片 4 -->
+            <a href="https://zhidx.com/p/509796" class="news-card">
+                <div class="news-title">🔓 重大突破！DeepSeek打破大模型上下文限制</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-brain mr-2"></i>
+                    技术瓶颈成功突破
+                </div>
+                <div class="news-source">来源：智东西</div>
+            </a>
+
+            <!-- 新闻卡片 5 -->
+            <a href="https://www.chinanews.com.cn/gn/2025/10-13/10497574.shtml" class="news-card highlight">
+                <div class="news-title">🏆 DeepSeek入选全球十大工程成就！中国AI闪耀世界</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-trophy mr-2"></i>
+                    国际认可里程碑
+                </div>
+                <div class="news-source">来源：中国新闻网</div>
+            </a>
+
+            <!-- 新闻卡片 6 -->
+            <a href="https://finance.sina.com.cn/jjxw/2025-10-21/doc-infuries3005463.shtml" class="news-card">
+                <div class="news-title">📈 AI人工智能ETF强势上涨！DeepSeek开源推动市场</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-chart-bar mr-2"></i>
+                    资本市场积极响应
+                </div>
+                <div class="news-source">来源：新浪财经</div>
+            </a>
+
+            <!-- 新闻卡片 7 -->
+            <a href="https://www.infoq.cn/news/Hsjz6oCHeD769UgvdRz3" class="news-card highlight">
+                <div class="news-title">👏 Karpathy盛赞！DeepSeek-OCR技术颠覆传统</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-star mr-2"></i>
+                    业界大咖高度评价
+                </div>
+                <div class="news-source">来源：InfoQ</div>
+            </a>
+
+            <!-- 新闻卡片 8 -->
+            <a href="https://www.bjnews.com.cn/detail/1760962785129561.html" class="news-card">
+                <div class="news-title">🔍 文字识别新纪元！DeepSeek-OCR突破视觉压缩技术</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-eye mr-2"></i>
+                    视觉技术重大创新
+                </div>
+                <div class="news-source">来源：新京报</div>
+            </a>
+
+            <!-- 新闻卡片 9 -->
+            <a href="http://www.news.cn/liangzi/20251021/ee396439afbf46d69446c8b92fc385e0/c.html" class="news-card highlight">
+                <div class="news-title">📊 中国AI用户达5.15亿！生成式AI普及加速</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-users mr-2"></i>
+                    用户规模爆发式增长
+                </div>
+                <div class="news-source">来源：新华网</div>
+            </a>
+
+            <!-- 新闻卡片 10 -->
+            <a href="https://www.guancha.cn/economy/2025_10_21_794029.shtml" class="news-card">
+                <div class="news-title">🌍 全球关注！DeepSeek技术引国际资本追逐</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-globe mr-2"></i>
+                    国际化发展新阶段
+                </div>
+                <div class="news-source">来源：观察者网</div>
+            </a>
+
+            <!-- 新闻卡片 11 -->
+            <a href="https://www.nbd.com.cn/articles/2025-10-21/4098532.html" class="news-card highlight">
+                <div class="news-title">💡 3B参数开启OCR新视界！科创AI ETF受热捧</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-lightbulb mr-2"></i>
+                    参数优化技术突破
+                </div>
+                <div class="news-source">来源：每日经济新闻</div>
+            </a>
+
+            <!-- 新闻卡片 12 -->
+            <a href="https://finance.sina.com.cn/roll/2025-10-21/doc-infuraws4593117.shtml" class="news-card">
+                <div class="news-title">🌟 硅谷沸腾！DeepSeek新模型获全球开发者盛赞</div>
+                <div class="text-blue-600 text-sm flex items-center">
+                    <i class="fas fa-code mr-2"></i>
+                    开发者生态繁荣
+                </div>
+                <div class="news-source">来源：新浪财经</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加初始样式和观察
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            card.style.transitionDelay = `${index * 0.1}s`;
+            
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
