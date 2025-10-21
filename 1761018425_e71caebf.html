@@ -1,0 +1,223 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI人工智能资讯速递</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .bento-item {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2);
+        }
+        
+        .news-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                AI<span class="text-primary">人工智能</span>资讯速递
+            </h1>
+            <p class="text-lg text-gray-600">最新24小时人工智能领域热点新闻</p>
+            <div class="mt-4 flex justify-center items-center space-x-2 text-primary">
+                <i class="fas fa-robot text-2xl"></i>
+                <span class="text-sm font-medium">实时更新 · 专业精选</span>
+            </div>
+        </header>
+
+        <div class="bento-grid">
+            <!-- 新闻1 -->
+            <div class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.1s">
+                <div class="news-card" onclick="window.open('https://it.hangzhou.com.cn/jrjd/yjnews/content/2025-10/20/content_9106367.html', '_blank')">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-users text-primary text-xl mr-2"></i>
+                        <span class="text-xs text-gray-500">用户规模</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">生成式AI用户达5.15亿</h3>
+                    <p class="text-gray-600 flex-grow">我国生成式人工智能用户规模实现翻一番，达到5.15亿人，标志着AI技术普及进入新阶段。</p>
+                    <div class="mt-4 pt-3 border-t border-gray-100">
+                        <span class="text-xs text-gray-400">来源：科技频道</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新闻2 -->
+            <div class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.2s">
+                <div class="news-card" onclick="window.open('https://www.ncsti.gov.cn/kjdt/xwjj/202510/t20251020_222509.html', '_blank')">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-calendar-alt text-primary text-xl mr-2"></i>
+                        <span class="text-xs text-gray-500">品牌活动</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">智领未来AI系列活动</h3>
+                    <p class="text-gray-600 flex-grow">北京发布2025年第四季度人工智能系列品牌活动指引，推动AI产业创新发展。</p>
+                    <div class="mt-4 pt-3 border-t border-gray-100">
+                        <span class="text-xs text-gray-400">来源：科技部门</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新闻3 -->
+            <div class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.3s">
+                <div class="news-card" onclick="window.open('https://jrj.wuhan.gov.cn/ynzx_57/xwzx/202510/t20251020_2662317.shtml', '_blank')">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-chart-line text-primary text-xl mr-2"></i>
+                        <span class="text-xs text-gray-500">金融变革</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">AI推动金融五领域变革</h3>
+                    <p class="text-gray-600 flex-grow">人工智能技术正在深刻改变金融服务、风险管理、客户服务等五大核心领域。</p>
+                    <div class="mt-4 pt-3 border-t border-gray-100">
+                        <span class="text-xs text-gray-400">来源：金融监管</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新闻4 -->
+            <div class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.4s">
+                <div class="news-card" onclick="window.open('https://jxt.hubei.gov.cn/bmdt/rdjj/202510/t20251020_5794131.shtml', '_blank')">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-tools text-primary text-xl mr-2"></i>
+                        <span class="text-xs text-gray-500">应用场景</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">全能秘书与工程设计AI</h3>
+                    <p class="text-gray-600 flex-grow">24项AI创新应用发布，"全能秘书"可写报告做视频，"神笔马良"提升工程设计效率。</p>
+                    <div class="mt-4 pt-3 border-t border-gray-100">
+                        <span class="text-xs text-gray-400">来源：湖北经信</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新闻5 -->
+            <div class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.5s">
+                <div class="news-card" onclick="window.open('https://www.oschina.net/news/369149/time100-ai-2025', '_blank')">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-award text-primary text-xl mr-2"></i>
+                        <span class="text-xs text-gray-500">人物评选</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">时代杂志AI百大人物</h3>
+                    <p class="text-gray-600 flex-grow">《时代》杂志发布2025全球AI百大人物榜单，表彰在人工智能领域的杰出贡献者。</p>
+                    <div class="mt-4 pt-3 border-t border-gray-100">
+                        <span class="text-xs text-gray-400">来源：时代周刊</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新闻6 -->
+            <div class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.6s">
+                <div class="news-card" onclick="window.open('https://www.nbd.com.cn/articles/2025-10-20/4097698.html', '_blank')">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-robot text-primary text-xl mr-2"></i>
+                        <span class="text-xs text-gray-500">技术观点</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">AI能力与硬件要求</h3>
+                    <p class="text-gray-600 flex-grow">宇树科技CEO王兴兴表示：AI能力越强，对机器人硬件的要求将相应降低。</p>
+                    <div class="mt-4 pt-3 border-t border-gray-100">
+                        <span class="text-xs text-gray-400">来源：企业专访</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center mt-12 py-6 border-t border-gray-200">
+            <div class="flex justify-center items-center space-x-4 text-gray-500">
+                <i class="fas fa-sync-alt"></i>
+                <span class="text-sm">最后更新: 2025年10月21日</span>
+                <i class="fas fa-newspaper"></i>
+                <span class="text-sm">6条精选新闻</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加观察
+        document.querySelectorAll('.bento-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'all 0.6s ease-out';
+            item.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(item);
+        });
+
+        // 添加点击效果
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
+```
