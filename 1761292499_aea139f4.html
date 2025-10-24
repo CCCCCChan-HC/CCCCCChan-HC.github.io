@@ -1,0 +1,207 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能新闻摘要 - 2025年10月24日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                人工智能<span class="text-primary">新闻摘要</span>
+            </h1>
+            <div class="flex items-center justify-center gap-4 text-gray-600">
+                <i class="fas fa-calendar-alt"></i>
+                <p class="text-lg">2025年10月24日 · 最新动态</p>
+            </div>
+        </header>
+
+        <div class="bento-grid">
+            <!-- 新闻1 -->
+            <a href="https://finance.sina.com.cn/jjxw/2025-10-24/doc-infuykxm1449237.shtml" 
+               class="news-card fade-in block hover:no-underline">
+                <div class="flex items-start gap-3 mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg">
+                        <i class="fas fa-chart-line text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">AI人工智能ETF涨超4.0%</h2>
+                </div>
+                <p class="text-gray-700 mb-4 text-lg">全面实施人工智能+行动推动市场表现强劲</p>
+                <div class="flex justify-between items-center text-sm text-gray-500">
+                    <span>新浪财经</span>
+                    <span>10月24日</span>
+                </div>
+            </a>
+
+            <!-- 新闻2 -->
+            <a href="http://www.news.cn/tech/20251024/d6a25906af2441bcb51bf546175b631c/c.html" 
+               class="news-card fade-in block hover:no-underline">
+                <div class="flex items-start gap-3 mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg">
+                        <i class="fas fa-industry text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">AI+重塑生产生活范式</h2>
+                </div>
+                <p class="text-gray-700 mb-4 text-lg">中国经济面面观探讨人工智能如何改变传统模式</p>
+                <div class="flex justify-between items-center text-sm text-gray-500">
+                    <span>新华网</span>
+                    <span>10月24日</span>
+                </div>
+            </a>
+
+            <!-- 新闻3 -->
+            <a href="https://www.nbd.com.cn/articles/2025-10-24/4104532.html" 
+               class="news-card fade-in block hover:no-underline">
+                <div class="flex items-start gap-3 mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg">
+                        <i class="fas fa-robot text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">人工智能板块强势领涨</h2>
+                </div>
+                <p class="text-gray-700 mb-4 text-lg">关注人工智能ETF、科创人工智能ETF等投资价值</p>
+                <div class="flex justify-between items-center text-sm text-gray-500">
+                    <span>每日经济新闻</span>
+                    <span>10月24日</span>
+                </div>
+            </a>
+
+            <!-- 新闻4 -->
+            <a href="https://news.sina.com.cn/zx/ds/2025-10-24/doc-infuxtzt1687676.shtml" 
+               class="news-card fade-in block hover:no-underline">
+                <div class="flex items-start gap-3 mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg">
+                        <i class="fas fa-bolt text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">科技资讯AI速递</h2>
+                </div>
+                <p class="text-gray-700 mb-4 text-lg">昨夜今晨科技热点一览，涵盖最新AI动态</p>
+                <div class="flex justify-between items-center text-sm text-gray-500">
+                    <span>新浪科技</span>
+                    <span>10月24日</span>
+                </div>
+            </a>
+
+            <!-- 新闻5 -->
+            <a href="https://news.futunn.com/post/63737403/daily-ai-news-digest-2025-10-24" 
+               class="news-card fade-in block hover:no-underline">
+                <div class="flex items-start gap-3 mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg">
+                        <i class="fas fa-newspaper text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">每日人工智能动态汇总</h2>
+                </div>
+                <p class="text-gray-700 mb-4 text-lg">全面汇总2025年10月24日AI领域重要进展</p>
+                <div class="flex justify-between items-center text-sm text-gray-500">
+                    <span>富途牛牛</span>
+                    <span>10月24日</span>
+                </div>
+            </a>
+
+            <!-- 新闻6 -->
+            <a href="https://flash.jin10.com/detail/20251024115316832800" 
+               class="news-card fade-in block hover:no-underline">
+                <div class="flex items-start gap-3 mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg">
+                        <i class="fas fa-hard-hat text-primary text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900">重庆深化住建领域AI应用</h2>
+                </div>
+                <p class="text-gray-700 mb-4 text-lg">到2025年底深化住建领域人工智能技术应用</p>
+                <div class="flex justify-between items-center text-sm text-gray-500">
+                    <span>金十数据</span>
+                    <span>10月24日</span>
+                </div>
+            </a>
+        </div>
+
+        <footer class="text-center mt-12 text-gray-600">
+            <p class="text-sm">数据更新时间: 2025年10月24日 · 人工智能新闻摘要</p>
+        </footer>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加观察
+        document.querySelectorAll('.fade-in').forEach(card => {
+            observer.observe(card);
+        });
+
+        // 添加鼠标悬停效果
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.08) 100%)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
+```
