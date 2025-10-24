@@ -1,0 +1,188 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智算中心新闻摘要 - 近一周动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)',
+                        'primary-dark': 'rgba(59, 130, 246, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">智算中心<span class="text-primary">动态摘要</span></h1>
+            <p class="text-lg text-gray-600">Recent Updates on Intelligent Computing Centers</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-primary-dark mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Bento Grid 布局 -->
+        <div class="bento-grid">
+            <!-- 卡片1 -->
+            <div class="news-card fade-in col-span-2">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-bolt text-primary text-2xl mr-3"></i>
+                    <span class="text-sm text-gray-500">2025-10-17</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">中国移动实现智算万卡池稳定运行新突破</h2>
+                <p class="text-gray-600 mb-4">中国移动在智算领域取得重大技术突破，成功实现万卡级智算池的稳定运行...</p>
+                <a href="https://finance.sina.com.cn/roll/2025-10-17/doc-infucwey9062879.shtml" 
+                   class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors">
+                    阅读全文 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 卡片2 -->
+            <div class="news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-microchip text-primary text-2xl mr-3"></i>
+                    <span class="text-sm text-gray-500">2025-10-17</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">超智算人工智能产业生态大会在京启幕</h2>
+                <p class="text-gray-600 mb-4">北京举办的超智算大会汇聚行业精英，共同探讨AI发展新范式...</p>
+                <a href="https://www.news.cn/digital/20251017/65ad9f3f4e6a457b9216441f32ff674d/c.html" 
+                   class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors">
+                    查看详情 <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 卡片3 -->
+            <div class="news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-building text-primary text-2xl mr-3"></i>
+                    <span class="text-sm text-gray-500">2025-10-17</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">“首实杯”大赛成果展在京西智谷举办</h2>
+                <p class="text-gray-600 mb-4">门头沟区京西智谷成功举办创新大赛成果展，展示智算中心建设成果...</p>
+                <a href="https://www.cnr.cn/bj/ymkslq/20251017/t20251017_527399499.shtml" 
+                   class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors">
+                    了解更多 <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 卡片4 -->
+            <div class="news-card fade-in col-span-2">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-line text-primary text-2xl mr-3"></i>
+                    <span class="text-sm text-gray-500">2025-10-10</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">科技支撑强国建设丨科技创新铺就网络强国建设"高速路"</h2>
+                <p class="text-gray-600 mb-4">科技创新为网络强国建设提供有力支撑，智算中心在其中发挥关键作用...</p>
+                <a href="https://www.stdaily.com/web/gdxw/2025-10/10/content_412827.html" 
+                   class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors">
+                    阅读报道 <i class="fas fa-newspaper ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 卡片5 -->
+            <div class="news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-industry text-primary text-2xl mr-3"></i>
+                    <span class="text-sm text-gray-500">2025-10-05</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">国家发展改革委支持企业参与"人工智能+"行动</h2>
+                <p class="text-gray-600 mb-4">发改委出台多项措施支持企业深度参与人工智能+行动，推动智算中心建设...</p>
+                <a href="http://finance.people.com.cn/n1/2025/1005/c1004-40577021.html" 
+                   class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors">
+                    政策详情 <i class="fas fa-file-alt ml-2"></i>
+                </a>
+            </div>
+
+            <!-- 卡片6 -->
+            <div class="news-card fade-in">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-map-marker-alt text-primary text-2xl mr-3"></i>
+                    <span class="text-sm text-gray-500">2025-09-25</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">2025人工智能计算大会将于9月26日在京举行</h2>
+                <p class="text-gray-600 mb-4">年度人工智能计算大会聚焦智算中心技术演进和产业发展趋势...</p>
+                <a href="https://tech.gmw.cn/2025-09/25/content_38308961.htm" 
+                   class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors">
+                    大会信息 <i class="fas fa-calendar-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 底部统计 -->
+        <div class="text-center mt-12 fade-in">
+            <div class="bg-gradient-to-r from-primary-light to-white p-6 rounded-2xl inline-block">
+                <p class="text-gray-700"><span class="font-bold text-primary">6</span> 条精选新闻 | 
+                <span class="font-bold text-primary">最近一周</span> 智算中心动态</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(el => observer.observe(el));
+
+        // 卡片悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.05), white)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
+```
