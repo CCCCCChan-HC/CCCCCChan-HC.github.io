@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智算中心最新动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .bento-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 0.75rem;
+        }
+        
+        .highlight-badge {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            color: #3b82f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        @media (min-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .bento-item:nth-child(1) {
+                grid-column: span 2;
+            }
+            
+            .bento-item:nth-child(4) {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="section-header">智算中心最新动态</h1>
+        
+        <div class="bento-grid">
+            <!-- 重点新闻 -->
+            <div class="bento-item">
+                <div class="highlight-badge">
+                    <i class="fas fa-star mr-2"></i>重点新闻
+                </div>
+                <a href="https://www.news.cn/digital/20251017/65ad9f3f4e6a457b9216441f32ff674d/c.html" class="news-title hover:text-blue-600 transition-colors">
+                    超智算人工智能产业生态大会在京启幕，共筑AI发展新范式
+                </a>
+                <p class="text-gray-600 text-sm leading-relaxed">本次大会汇聚行业领袖，共同探讨智算中心建设新路径，推动人工智能产业生态协同发展。</p>
+                <div class="news-source">
+                    <i class="fas fa-newspaper mr-2"></i>来源：新华网
+                </div>
+            </div>
+            
+            <!-- 项目进展 -->
+            <div class="bento-item">
+                <div class="highlight-badge">
+                    <i class="fas fa-chart-line mr-2"></i>项目进展
+                </div>
+                <a href="https://www.eet-china.com/mp/a444346.html" class="news-title hover:text-blue-600 transition-colors">
+                    正阳恒卓助力智算中心建设1000P AI算力集群
+                </a>
+                <p class="text-gray-600 text-sm leading-relaxed">千P级算力集群建设取得重大突破，为AI应用提供强大基础设施支撑。</p>
+                <div class="news-source">
+                    <i class="fas fa-newspaper mr-2"></i>来源：电子工程专辑
+                </div>
+            </div>
+            
+            <!-- 行业动态 -->
+            <div class="bento-item">
+                <div class="highlight-badge">
+                    <i class="fas fa-bullhorn mr-2"></i>行业动态
+                </div>
+                <a href="https://q.stock.sohu.com/cn/news.html?textId=910011358&type=120&tab=200&code=cn_300166&date=2025/0718&spm=stockpc.cnstock.loginpop.5.1752883200043p7YsjUJ" class="news-title hover:text-blue-600 transition-colors">
+                    2025年6月23个智算中心项目建设最新进展
+                </a>
+                <p class="text-gray-600 text-sm leading-relaxed">全国范围内智算中心建设稳步推进，23个项目展现良好发展态势。</p>
+                <div class="news-source">
+                    <i class="fas fa-newspaper mr-2"></i>来源：搜狐财经
+                </div>
+            </div>
+            
+            <!-- 政策支持 -->
+            <div class="bento-item">
+                <div class="highlight-badge">
+                    <i class="fas fa-file-alt mr-2"></i>政策支持
+                </div>
+                <a href="https://www.gov.cn/lianbo/difang/202408/content_6966782.htm" class="news-title hover:text-blue-600 transition-colors">
+                    多地完善政策支持、建设基础设施——有力有序提升算力供给
+                </a>
+                <p class="text-gray-600 text-sm leading-relaxed">各级政府加大政策扶持力度，推动智算基础设施建设和算力供给能力提升。</p>
+                <div class="news-source">
+                    <i class="fas fa-newspaper mr-2"></i>来源：中国政府网
+                </div>
+            </div>
+            
+            <!-- 技术突破 -->
+            <div class="bento-item">
+                <div class="highlight-badge">
+                    <i class="fas fa-microchip mr-2"></i>技术突破
+                </div>
+                <a href="https://xjrb.ts.cn/xjrb/20251015/app_248877.html" class="news-title hover:text-blue-600 transition-colors">
+                    首批3050P智算服务器启用
+                </a>
+                <p class="text-gray-600 text-sm leading-relaxed">高性能智算服务器正式投入使用，标志着算力基础设施建设进入新阶段。</p>
+                <div class="news-source">
+                    <i class="fas fa-newspaper mr-2"></i>来源：新疆日报
+                </div>
+            </div>
+            
+            <!-- 产业生态 -->
+            <div class="bento-item">
+                <div class="highlight-badge">
+                    <i class="fas fa-network-wired mr-2"></i>产业生态
+                </div>
+                <a href="https://www.huawei.com/cn/news/2025/10/ubbf-optical-network" class="news-title hover:text-blue-600 transition-colors">
+                    光网络迈向AI ON，助力构建AI时代三大战略基础设施
+                </a>
+                <p class="text-gray-600 text-sm leading-relaxed">华为发布光网络新技术，为智算中心提供更高效的数据传输解决方案。</p>
+                <div class="news-source">
+                    <i class="fas fa-newspaper mr-2"></i>来源：华为新闻
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为每个新闻项添加初始样式和观察
+        document.querySelectorAll('.bento-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'all 0.6s ease';
+            item.style.transitionDelay = `${index * 0.1}s`;
+            
+            observer.observe(item);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248, 250, 252, 0.95) 100%)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.background = 'rgba(255, 255, 255, 0.95)';
+            });
+        });
+    </script>
+</body>
+</html>
