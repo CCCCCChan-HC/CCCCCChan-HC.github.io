@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>十五五人工智能专题新闻摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .news-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        .news-card:hover::before {
+            left: 100%;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.75rem;
+        }
+        .news-icon {
+            color: #3B82F6;
+            margin-right: 0.5rem;
+        }
+        .header {
+            background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>十五五人工智能发展规划</h1>
+        <p>最新政策解读与行业动态</p>
+    </div>
+
+    <div class="bento-grid">
+        <div class="news-card" onclick="window.open('https://news.bjd.com.cn/2025/10/24/11368514.shtml', '_blank')">
+            <i class="news-icon fas fa-globe"></i>
+            <div class="news-title">外媒聚焦：中国“十五五”规划擘画AI发展新蓝图</div>
+            <div class="news-source">来源：京报网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.chinanews.com.cn/cj/2025/10-24/10503705.shtml', '_blank')">
+            <i class="news-icon fas fa-bullseye"></i>
+            <div class="news-title">韩文秀详解“十五五”AI发展七大目标</div>
+            <div class="news-source">来源：中国新闻网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://economy.caixin.com/2025-10-23/102374908.html', '_blank')">
+            <i class="news-icon fas fa-chart-line"></i>
+            <div class="news-title">四中全会明确AI高质量发展目标</div>
+            <div class="news-source">来源：财新网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.21jingji.com/article/20251024/herald/6a63fe7358eba2183683a5a89be49c5d.html', '_blank')">
+            <i class="news-icon fas fa-cogs"></i>
+            <div class="news-title">中共中央：加强AI顶层设计和体系化部署</div>
+            <div class="news-source">来源：21世纪经济报道</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('http://www.ce.cn/xwzx/gnsz/gdxw/202510/t20251024_2536579.shtml', '_blank')">
+            <i class="news-icon fas fa-robot"></i>
+            <div class="news-title">科技部回应“十五五”AI发展具体目标</div>
+            <div class="news-source">来源：中国经济网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.chinanews.com.cn/gn/2025/10-24/10503760.shtml', '_blank')">
+            <i class="news-icon fas fa-flask"></i>
+            <div class="news-title">阴和俊：部署实施一批AI重大科技任务</div>
+            <div class="news-source">来源：中国新闻网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.guancha.cn/politics/2025_10_24_794437.shtml', '_blank')">
+            <i class="news-icon fas fa-microchip"></i>
+            <div class="news-title">外媒关注中国“科技自立自强”AI战略</div>
+            <div class="news-source">来源：观察者网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://finance.eastmoney.com/a/202510243543493994.html', '_blank')">
+            <i class="news-icon fas fa-chart-pie"></i>
+            <div class="news-title">六部门负责人详解“十五五”AI规划重点</div>
+            <div class="news-source">来源：东方财富网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.acabridge.cn/news/202510/t20251024_2696061.shtml', '_blank')">
+            <i class="news-icon fas fa-graduation-cap"></i>
+            <div class="news-title">中共中央发布会：教育科技要点汇总</div>
+            <div class="news-source">来源：学术桥</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://news.cctv.cn/2025/10/24/ARTIV1AhDZhVVEwroWURFw35251024.shtml', '_blank')">
+            <i class="news-icon fas fa-newspaper"></i>
+            <div class="news-title">权威解读四中全会AI发展重点</div>
+            <div class="news-source">来源：央视网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://wallstreetcn.com/articles/3757747', '_blank')">
+            <i class="news-icon fas fa-briefcase"></i>
+            <div class="news-title">“十五五”时期AI领域重点发展事项</div>
+            <div class="news-source">来源：华尔街见闻</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.xhby.net/content/s68fadcc9e4b071135945b0b1.html', '_blank')">
+            <i class="news-icon fas fa-rocket"></i>
+            <div class="news-title">中国式现代化：AI将实现关键一跃</div>
+            <div class="news-source">来源：新华报业网</div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 初始化卡片动画
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
