@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI资讯速览 | 今日热点</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+            transition: left 0.6s;
+        }
+        .news-card:hover::before {
+            left: 100%;
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.75rem;
+        }
+        .news-icon {
+            color: #3b82f6;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .header {
+            text-align: center;
+            padding: 3rem 2rem 1rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            margin-bottom: 2rem;
+            border-radius: 0 0 2rem 2rem;
+        }
+        .date-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="text-4xl font-bold mb-2">AI 每日速递</h1>
+        <p class="text-blue-100">聚焦人工智能领域最新动态</p>
+        <div class="date-badge">2025年10月23日 更新</div>
+    </div>
+
+    <div class="bento-grid">
+        <div class="news-card" onclick="window.open('http://www.news.cn/local/20251023/f73f4f736ea54564868bdf3812470b2e/c.html', '_blank')">
+            <div class="news-icon"><i class="fas fa-snowflake"></i></div>
+            <div class="news-title">AI科普：霜降时节防寒润燥指南</div>
+            <div class="news-source">来源：新华网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('http://jjckb.xinhuanet.com/20251023/b39f462252a24b2a8b57c891a11abc10/c.html', '_blank')">
+            <div class="news-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="news-title">值得买科技首度披露AI相关收入</div>
+            <div class="news-source">来源：经济参考报</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.cnr.cn/jrpd/dgjrj/20251023/t20251023_527405471.shtml', '_blank')">
+            <div class="news-icon"><i class="fas fa-university"></i></div>
+            <div class="news-title">周小川：AI将带来金融业边际变革</div>
+            <div class="news-source">来源：中央人民广播电台</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.cnr.cn/jrpd/dgjrj/20251023/t20251023_527405344.shtml', '_blank')">
+            <div class="news-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <div class="news-title">肖远企警示AI金融增量风险</div>
+            <div class="news-source">来源：中央人民广播电台</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('http://www.news.cn/tech/20251023/2f3aabd1f15748e89a4df67a3e967e0b/c.html', '_blank')">
+            <div class="news-icon"><i class="fas fa-glasses"></i></div>
+            <div class="news-title">阿里夸克AI眼镜预售开启</div>
+            <div class="news-source">来源：新华网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.stcn.com/article/detail/3402308.html', '_blank')">
+            <div class="news-icon"><i class="fas fa-handshake"></i></div>
+            <div class="news-title">AI+金融仍处早期阶段</div>
+            <div class="news-source">来源：证券时报网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.bjnews.com.cn/detail/1761220828129336.html', '_blank')">
+            <div class="news-icon"><i class="fas fa-heart"></i></div>
+            <div class="news-title">AI助力养老成果显著</div>
+            <div class="news-source">来源：新京报</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.takungpao.com/news/232111/2025/1023/1134073.html', '_blank')">
+            <div class="news-icon"><i class="fas fa-chart-bar"></i></div>
+            <div class="news-title">美四大AI新闻错误率近半</div>
+            <div class="news-source">来源：大公报</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.chinanews.com.cn/cj/2025/10-24/10503737.shtml', '_blank')">
+            <div class="news-icon"><i class="fas fa-palette"></i></div>
+            <div class="news-title">AI赋能千年扎染焕新生</div>
+            <div class="news-source">来源：中国新闻网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('http://www.news.cn/20251023/43667e82289949b1b98dc952ead993b7/c.html', '_blank')">
+            <div class="news-icon"><i class="fas fa-users"></i></div>
+            <div class="news-title">AI与经济社会深度融合</div>
+            <div class="news-source">来源：新华网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://zhidx.com/p/510660.html', '_blank')">
+            <div class="news-icon"><i class="fas fa-tools"></i></div>
+            <div class="news-title">让AI回归工具本质属性</div>
+            <div class="news-source">来源：智东西</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://finance.sina.com.cn/money/fund/jjzl/2025-10-23/doc-infuwwwc2161092.shtml', '_blank')">
+            <div class="news-icon"><i class="fas fa-compass"></i></div>
+            <div class="news-title">理性看待AI赋能与暗礁</div>
+            <div class="news-source">来源：新浪财经</div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 初始化卡片动画
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
