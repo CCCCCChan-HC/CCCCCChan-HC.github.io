@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新能源周报 - 最新行业动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e6f3ff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 119, 255, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .highlight-badge {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .section-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .section-header p {
+            color: #6b7280;
+            font-size: 1.125rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-8">
+    <div class="container mx-auto px-4">
+        <div class="section-header">
+            <h1>新能源周报</h1>
+            <p>最新行业动态与政策解读 · 每周更新</p>
+        </div>
+        
+        <div class="bento-grid">
+            <!-- 新闻条目 1 -->
+            <a href="https://www.gov.cn/zhengce/zhengceku/202502/content_7002959.htm" class="news-card block">
+                <div class="highlight-badge">政策重磅</div>
+                <h3 class="news-title">新能源上网电价市场化改革正式落地</h3>
+                <p class="text-gray-600 text-sm">国家发改委、能源局联合发文，深化新能源上网电价市场化机制</p>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>
+                    <span>中国政府网</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 2 -->
+            <a href="https://www.stcn.com/article/detail/315927.html" class="news-card block">
+                <div class="highlight-badge">融资动态</div>
+                <h3 class="news-title">阳光电源拟定增募资41.56亿元布局新能源装备</h3>
+                <p class="text-gray-600 text-sm">加码新能源发电装备制造，助力产业升级</p>
+                <div class="news-source">
+                    <i class="fas fa-chart-line"></i>
+                    <span>证券时报网</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 3 -->
+            <a href="https://www.ndrc.gov.cn/xxgk/zcfb/tz/202507/t20250711_1399141.html" class="news-card block">
+                <div class="highlight-badge">政策解读</div>
+                <h3 class="news-title">2025年可再生能源电力消纳责任权重明确</h3>
+                <p class="text-gray-600 text-sm">国家发改委发布最新消纳责任权重指标</p>
+                <div class="news-source">
+                    <i class="fas fa-bolt"></i>
+                    <span>国家发改委</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 4 -->
+            <a href="https://energy.pku.edu.cn/tzgg/yjyxw/3e9946e077744bdd8ef4ae6066c7ec90.htm" class="news-card block">
+                <div class="highlight-badge">专家观点</div>
+                <h3 class="news-title">杨雷：新能源产业中国做对了什么？</h3>
+                <p class="text-gray-600 text-sm">《财经》对话能源专家深度解读产业发展</p>
+                <div class="news-source">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>北京大学能源研究院</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 5 -->
+            <a href="https://www.crhc.cn/rmzx/xwzx/ssqydt/2025/10/e2854bf0a53d4b71abe468d170277d07.htm" class="news-card block">
+                <div class="highlight-badge">投资动向</div>
+                <h3 class="news-title">国新发展参与中远海能定向增发项目</h3>
+                <p class="text-gray-600 text-sm">新能源领域投资再下一城</p>
+                <div class="news-source">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <span>国新控股</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 6 -->
+            <a href="https://www.nea.gov.cn/20250110/3fd4783e366f4c14b9ad2c613a58d67f/c.html" class="news-card block">
+                <div class="highlight-badge">监管动态</div>
+                <h3 class="news-title">国家能源局发布2025年能源监管工作要点</h3>
+                <p class="text-gray-600 text-sm">明确新能源行业监管重点方向</p>
+                <div class="news-source">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span>国家能源局</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 7 -->
+            <a href="http://nyj.shandong.gov.cn/art/2025/4/21/art_59960_10308433.html" class="news-card block">
+                <div class="highlight-badge">地方政策</div>
+                <h3 class="news-title">山东发布2025年新能源高水平消纳行动方案</h3>
+                <p class="text-gray-600 text-sm">推动新能源消纳水平再上新台阶</p>
+                <div class="news-source">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>山东省能源局</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 8 -->
+            <a href="https://news.youth.cn/gn/202510/t20251024_16308707.htm" class="news-card block">
+                <div class="highlight-badge">产业展望</div>
+                <h3 class="news-title">郑栅洁：未来10年将再造一个中国高技术产业</h3>
+                <p class="text-gray-600 text-sm">新能源产业迎来重大发展机遇</p>
+                <div class="news-source">
+                    <i class="fas fa-rocket"></i>
+                    <span>中国青年网</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 9 -->
+            <a href="https://www.cnr.cn/tech/gstj/20251026/t20251026_527407842.shtml" class="news-card block">
+                <div class="highlight-badge">民生关注</div>
+                <h3 class="news-title">从一度"绿电"看能源变革中的民生答卷</h3>
+                <p class="text-gray-600 text-sm">新能源发展惠及百姓生活</p>
+                <div class="news-source">
+                    <i class="fas fa-leaf"></i>
+                    <span>央广网</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 10 -->
+            <a href="https://jxas.ac.cn/jiangxishengnenyuanyanjiuhui/8408.html" class="news-card block">
+                <div class="highlight-badge">政策简报</div>
+                <h3 class="news-title">新能源和双碳政策简报（10月第2期）</h3>
+                <p class="text-gray-600 text-sm">最新政策动态一网打尽</p>
+                <div class="news-source">
+                    <i class="fas fa-file-alt"></i>
+                    <span>江西省能源研究会</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 11 -->
+            <a href="https://finance.sina.com.cn/roll/2025-10-27/doc-infvisym9733841.shtml" class="news-card block">
+                <div class="highlight-badge">市场动态</div>
+                <h3 class="news-title">10月27日新能源证券市场与行业动态汇总</h3>
+                <p class="text-gray-600 text-sm">把握新能源投资脉搏</p>
+                <div class="news-source">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>新浪财经</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 12 -->
+            <a href="https://www.yinchuan.gov.cn/xwzx/mrdt/202510/t20251027_5064375.html" class="news-card block">
+                <div class="highlight-badge">区域发展</div>
+                <h3 class="news-title">银川"十四五"产业升级绘就新能源蓝图</h3>
+                <p class="text-gray-600 text-sm">三产同频添活力，创新赋能向未来</p>
+                <div class="news-source">
+                    <i class="fas fa-city"></i>
+                    <span>银川市政府</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为每个新闻卡片添加初始样式和观察
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
