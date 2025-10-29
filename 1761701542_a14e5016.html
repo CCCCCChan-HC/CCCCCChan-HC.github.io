@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能每日资讯 - 2025年10月28日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .news-card:hover::before {
+            left: 100%;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .highlight-badge {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            color: #3b82f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .date-header {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="max-w-7xl mx-auto py-8 px-4">
+        <div class="date-header">
+            <h1 class="text-3xl font-bold mb-2">人工智能每日资讯</h1>
+            <p class="text-lg opacity-90">2025年10月28日 · 最新动态速递</p>
+        </div>
+        
+        <div class="bento-grid">
+            <!-- 新闻条目 -->
+            <a href="https://www.stdaily.com/web/gdxw/2025-10/28/content_422482.html" class="news-card block">
+                <span class="highlight-badge">重磅发布</span>
+                <h3 class="news-title">谷歌重启核电站为AI供电，算力需求爆发式增长</h3>
+                <p class="text-sm text-gray-600">科技巨头谷歌宣布重启核电站计划，专门为人工智能基础设施提供清洁能源支持</p>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>
+                    <span>科技日报</span>
+                </div>
+            </a>
+            
+            <a href="https://news.cctv.cn/2025/10/28/ARTIuw4ExEZEVdUflUHhCuaZ251028.shtml" class="news-card block">
+                <span class="highlight-badge">行业报告</span>
+                <h3 class="news-title">用户规模半年翻番！我国AI大模型加速蜕变</h3>
+                <p class="text-sm text-gray-600">最新数据显示，中国人工智能大模型用户数量实现爆发式增长，产业进入快速发展期</p>
+                <div class="news-source">
+                    <i class="fas fa-tv"></i>
+                    <span>央视新闻</span>
+                </div>
+            </a>
+            
+            <a href="https://finance.sina.com.cn/roll/2025-10-28/doc-infvnafn9585030.shtml" class="news-card block">
+                <span class="highlight-badge">政策解读</span>
+                <h3 class="news-title">"十五五"规划8次提及人工智能，产业发展迎来新机遇</h3>
+                <p class="text-sm text-gray-600">最新发布的"十五五"规划中多次强调人工智能发展，为产业指明方向</p>
+                <div class="news-source">
+                    <i class="fas fa-chart-line"></i>
+                    <span>新浪财经</span>
+                </div>
+            </a>
+            
+            <a href="https://home.wuhan.gov.cn/mtbd/202510/t20251028_2667888.shtml" class="news-card block">
+                <span class="highlight-badge">创新突破</span>
+                <h3 class="news-title">六成全球专利领跑！AI激活数字经济新引擎</h3>
+                <p class="text-sm text-gray-600">中国在人工智能领域专利占比达到60%，成为全球创新的重要力量</p>
+                <div class="news-source">
+                    <i class="fas fa-bolt"></i>
+                    <span>武汉市政府</span>
+                </div>
+            </a>
+            
+            <a href="https://www.chinanews.com.cn/cj/2025/10-28/10505699.shtml" class="news-card block">
+                <span class="highlight-badge">区域发展</span>
+                <h3 class="news-title">合肥AI产业营收近500亿，产业集群效应凸显</h3>
+                <p class="text-sm text-gray-600">今年上半年合肥人工智能产业实现近500亿元营收，同比增长显著</p>
+                <div class="news-source">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>中国新闻网</span>
+                </div>
+            </a>
+            
+            <a href="https://www.nbd.com.cn/articles/2025-10-28/4114708.html" class="news-card block">
+                <span class="highlight-badge">产品动态</span>
+                <h3 class="news-title">小度AI眼镜开启预售，高通推出新一代AI芯片</h3>
+                <p class="text-sm text-gray-600">多款AI硬件产品集中发布，智能穿戴设备迎来新突破</p>
+                <div class="news-source">
+                    <i class="fas fa-microchip"></i>
+                    <span>每日经济新闻</span>
+                </div>
+            </a>
+            
+            <a href="https://k.sina.com.cn/article_3240851740_c12b791c00101hiwa.html" class="news-card block">
+                <span class="highlight-badge">资本市场</span>
+                <h3 class="news-title">AI概念股集体涨停，资本市场热情高涨</h3>
+                <p class="text-sm text-gray-600">2025年10月28日人工智能板块表现强势，多只个股涨停</p>
+                <div class="news-source">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>新浪科技</span>
+                </div>
+            </a>
+            
+            <a href="https://mp.weixin.qq.com/s/jq1yT6lfPheYp2bx-X8G5w" class="news-card block">
+                <span class="highlight-badge">技术前沿</span>
+                <h3 class="news-title">Anthropic发布Claude for Excel测试版</h3>
+                <p class="text-sm text-gray-600">AI助手正式进入办公软件领域，提升工作效率新突破</p>
+                <div class="news-source">
+                    <i class="fas fa-robot"></i>
+                    <span>AI早报</span>
+                </div>
+            </a>
+            
+            <a href="https://finance.sina.com.cn/stock/aiassist/ydfx/2025-10-28/doc-infvmezv1383679.shtml" class="news-card block">
+                <span class="highlight-badge">企业动态</span>
+                <h3 class="news-title">税友股份涨停分析：治理优化+AI技术突破+业务增长</h3>
+                <p class="text-sm text-gray-600">AI技术在财税领域的应用获得市场认可，相关企业表现亮眼</p>
+                <div class="news-source">
+                    <i class="fas fa-building"></i>
+                    <span>证券时报</span>
+                </div>
+            </a>
+            
+            <a href="https://juejin.cn/post/7565838689509752874" class="news-card block">
+                <span class="highlight-badge">技术突破</span>
+                <h3 class="news-title">GPT-5升级对话能力，AlphaCode 2.0发布</h3>
+                <p class="text-sm text-gray-600">大模型技术持续迭代，编程助手能力实现质的飞跃</p>
+                <div class="news-source">
+                    <i class="fas fa-code"></i>
+                    <span>掘金技术社区</span>
+                </div>
+            </a>
+            
+            <a href="https://news.sina.com.cn/zx/ds/2025-10-28/doc-infvkumv4542352.shtml" class="news-card block">
+                <span class="highlight-badge">综合资讯</span>
+                <h3 class="news-title">科技资讯AI速递：昨夜今晨科技热点一览</h3>
+                <p class="text-sm text-gray-600">涵盖人工智能领域最新动态，把握产业发展脉搏</p>
+                <div class="news-source">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <span>新浪科技</span>
+                </div>
+            </a>
+            
+            <a href="https://cbgc.scol.com.cn/news/6898181" class="news-card block">
+                <span class="highlight-badge">媒体聚焦</span>
+                <h3 class="news-title">《新闻联播》关注人工智能发展成果</h3>
+                <p class="text-sm text-gray-600">主流媒体集中报道AI产业进展，社会关注度持续提升</p>
+                <div class="news-source">
+                    <i class="fas fa-play-circle"></i>
+                    <span>川观新闻</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加初始样式和观察
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+            observer.observe(card);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'rgba(255, 255, 255, 1)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'rgba(255, 255, 255, 0.95)';
+            });
+        });
+    </script>
+</body>
+</html>
