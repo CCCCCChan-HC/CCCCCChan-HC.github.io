@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI每日快讯 | 2025年10月30日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+            transition: left 0.6s;
+        }
+        .news-card:hover::before {
+            left: 100%;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+        }
+        .news-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 400;
+        }
+        .news-highlight {
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            border-left: 4px solid #3b82f6;
+        }
+        .header {
+            text-align: center;
+            padding: 3rem 2rem 1rem;
+        }
+        .date-badge {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1f2937, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .section-subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="date-badge">
+            <i class="fas fa-calendar-alt mr-2"></i>2025年10月30日
+        </div>
+        <h1 class="section-title">AI每日快讯</h1>
+        <p class="section-subtitle">最新人工智能领域动态一览</p>
+    </div>
+
+    <div class="bento-grid">
+        <div class="news-card news-highlight" onclick="window.open('https://www.cls.cn/detail/2187045', '_blank')">
+            <div class="news-title">苹果CFO宣布：正在大幅增加AI投资</div>
+            <div class="news-source">来源：财联社</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.stcn.com/article/detail/3462985.html', '_blank')">
+            <div class="news-title">深夜暴跌！AI泡沫担忧再起</div>
+            <div class="news-source">来源：证券时报网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.guancha.cn/economy/2025_10_30_795157.shtml', '_blank')">
+            <div class="news-title">硅谷大厂集体"倒戈"使用中国大模型</div>
+            <div class="news-source">来源：观察者网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('http://www.news.cn/money/20251030/d7da8847f0664235aa0205564c1b659c/c.html', '_blank')">
+            <div class="news-title">中国银联国家AI应用中试基地发布创新成果</div>
+            <div class="news-source">来源：新华网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.cnr.cn/newscenter/native/gd/kx/20251030/t20251030_527412648.shtml', '_blank')">
+            <div class="news-title">上海明确"AI+制造"发展路线图</div>
+            <div class="news-source">来源：央广网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://wjw.sz.gov.cn/wzx/content/post_12465021.html', '_blank')">
+            <div class="news-title">AI驱动医疗变革！深圳召开人工智能医院建设大会</div>
+            <div class="news-source">来源：深圳市卫健委</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('http://jxt.hubei.gov.cn/bmdt/rdjj/202510/t20251030_5801246.shtml', '_blank')">
+            <div class="news-title">湖北AI产业年增速40%，今年将破1500亿元</div>
+            <div class="news-source">来源：湖北省经信厅</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.fuzhou.gov.cn/zgfzzt/shfgfgg/dxjy/202510/t20251030_5224820.htm', '_blank')">
+            <div class="news-title">全省首个人工智能发展中心在闽清揭牌</div>
+            <div class="news-source">来源：福州市政府</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('http://ai.zhiding.cn/2025/1030/3173288.shtml', '_blank')">
+            <div class="news-title">多智能体AI协作实现医疗领域技术突破</div>
+            <div class="news-source">来源：至顶网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.thepaper.cn/newsDetail_forward_31851817', '_blank')">
+            <div class="news-title">AI大模型要颠覆电商模式？专家：想多了</div>
+            <div class="news-source">来源：澎湃新闻</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://database.caixin.com/2025-10-30/102377433.html', '_blank')">
+            <div class="news-title">科技巨头豪掷千金建设AI数据中心</div>
+            <div class="news-source">来源：财新网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.qstheory.cn/20251030/770bfc22a3f443ad86280bb406f589a2/c.html', '_blank')">
+            <div class="news-title">紧缺的AI人才从何处来？</div>
+            <div class="news-source">来源：求是网</div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
