@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI科技动态周报</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .news-item {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">AI科技动态周报</h1>
+            <p class="text-xl text-blue-600">Weekly AI Technology Digest</p>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            <!-- 新闻项目开始 -->
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-star text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">突破性技术榜单发布</h2>
+                </div>
+                <p class="text-gray-700 mb-4">麻省理工评出2025十大突破性技术，AI领域占据主导地位</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：麻省理工科技评论</span>
+                    <a href="https://www.mittrchina.com/news/detail/14262" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-cogs text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">上海发布智能终端产业新政</h2>
+                </div>
+                <p class="text-gray-700 mb-4">上海市经信委出台智能终端产业高质量发展指导意见</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：上海市经信委</span>
+                    <a href="https://www.sheitc.sh.gov.cn/cyfz/20251014/8363d29292c6433195e55f35d607b5d5.html" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-bolt text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">AI精准预测飓风增强</h2>
+                </div>
+                <p class="text-gray-700 mb-4">人工智能模型成功预测飓风"梅丽莎"的迅猛增强过程</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：科学网</span>
+                    <a href="https://news.sciencenet.cn/htmlnews/2025/10/554234.shtm" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-rocket text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">太空测试光子AI芯片</h2>
+                </div>
+                <p class="text-gray-700 mb-4">国际科研团队将在太空环境中测试新型光子AI芯片</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：人民网</span>
+                    <a href="http://finance.people.com.cn/n1/2025/1031/c1004-40593651.html" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-globe text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">世界科技发展论坛启幕</h2>
+                </div>
+                <p class="text-gray-700 mb-4">2025年世界科技与发展论坛聚焦人工智能促进科技发展</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：中国科协</span>
+                    <a href="https://www.cast.org.cn/xw/MTBD/art/2025/art_827aaf805c694079b8975a97ba368693.html" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-code text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">软件开发革命来临</h2>
+                </div>
+                <p class="text-gray-700 mb-4">AI驱动的软件开发革命：2025年10月关键更新汇总</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：COAIO</span>
+                    <a href="https://coaio.com/zh/news/2025/10/ai-driven-revolution-in-software-development-key-updates-from-october-2025/" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-brain text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">从通用智能到实体智能</h2>
+                </div>
+                <p class="text-gray-700 mb-4">2025年10月AI技术前沿速览，探索智能技术新边界</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：新浪科技</span>
+                    <a href="https://cj.sina.cn/articles/view/2610664157/9b9b92dd001018rz2?froms=ggmp&vt=4" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-line text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">人工智能+经济增长新动力</h2>
+                </div>
+                <p class="text-gray-700 mb-4">"十五五"新蓝图：人工智能+为经济增长注入强劲动力</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：经济参考报</span>
+                    <a href="http://jjckb.xinhuanet.com/20251031/684a6acd20e143d8814414fd507e69f6/c.html" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-shield-alt text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">警惕AI依赖风险</h2>
+                </div>
+                <p class="text-gray-700 mb-4">人机共生时代如何保持独立思考，专家提出警示</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：新华网</span>
+                    <a href="http://www.news.cn/world/20251028/6a3228de097f465d998ea49e16099d62/c.html" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-microchip text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">实时控制MCU技术突破</h2>
+                </div>
+                <p class="text-gray-700 mb-4">实时控制MCU开启新一轮技术竞争，AI应用前景广阔</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：电子工程专辑</span>
+                    <a href="https://www.eet-china.com/mp/a448287.html" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-graduation-cap text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">青少年AI普及活动启动</h2>
+                </div>
+                <p class="text-gray-700 mb-4">ENJOY AI全球青少年人工智能普及活动正式展开</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：ENJOY AI</span>
+                    <a href="https://enjoyai.cc/" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-item gradient-bg rounded-2xl p-6 hover-lift border border-blue-100">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-network-wired text-blue-500 text-xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">网络威胁动态狩猎系统</h2>
+                </div>
+                <p class="text-gray-700 mb-4">BadIP全球网络威胁动态狩猎系统发布最新监测数据</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-blue-600">来源：BadIP</span>
+                    <a href="http://47.243.173.130/d-2025-10-25.html" class="text-blue-500 hover:text-blue-700">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <div class="inline-flex items-center space-x-2 text-blue-600">
+                <i class="fas fa-sync-alt"></i>
+                <span>数据更新至2025年10月31日</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻项添加观察
+        document.querySelectorAll('.news-item').forEach(item => {
+            item.style.animationPlayState = 'paused';
+            observer.observe(item);
+        });
+
+        // 添加点击效果
+        document.querySelectorAll('.news-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (!e.target.closest('a')) {
+                    const link = this.querySelector('a');
+                    if (link) {
+                        window.open(link.href, '_blank');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
