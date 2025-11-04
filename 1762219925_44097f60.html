@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI科技前沿速递 | 2025年11月3日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .bento-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 119, 255, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .bento-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        .bento-item:hover::before {
+            left: 100%;
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+        .news-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 0.5rem;
+        }
+        .icon-wrapper {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.2) 100%);
+        }
+        .header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .date-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="date-badge">
+            <i class="fas fa-calendar-alt mr-2"></i>2025年11月3日
+        </div>
+        <h1 class="text-4xl font-bold mb-4">AI科技前沿速递</h1>
+        <p class="text-xl opacity-90">探索人工智能领域的最新突破与动态</p>
+    </div>
+
+    <div class="bento-grid">
+        <!-- 新闻项目 -->
+        <div class="bento-item" onclick="window.open('https://www.stdaily.com/web/gdxw/2025-11/03/content_425980.html', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-rocket text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">百度发布2025十大科技前沿发明</div>
+            <p class="text-gray-600">揭秘AI应用涌现背后的技术突破与创新成果</p>
+            <div class="news-source">来源：科技日报</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('http://www.zqrb.cn/finance/hongguanjingji/2025-11-03/A1762163903339.html', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-industry text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">工信部：加快人工智能+制造专项行动</div>
+            <p class="text-gray-600">深入实施关键核心技术突破战略</p>
+            <div class="news-source">来源：证券日报</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://www.stcn.com/article/detail/3476826.html', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-plane text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">AI赋能航空产业蓬勃发展</div>
+            <p class="text-gray-600">大量高端智能产品集中亮相展示</p>
+            <div class="news-source">来源：证券时报</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://www.stdaily.com/web/gdxw/2025-11/03/content_425833.html', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-brain text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">研究发现：AI更智能的同时也更自私</div>
+            <p class="text-gray-600">主流大模型展现复杂行为特征</p>
+            <div class="news-source">来源：科技日报</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://www.cls.cn/detail/2189640', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-chart-line text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">对冲基金高管评AI投资巨浪</div>
+            <p class="text-gray-600">科技巨头陷入囚徒困境博弈</p>
+            <div class="news-source">来源：财联社</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://www.nbd.com.cn/articles/2025-11-03/4127287.html', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-robot text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">十五运惊现"夸父"机器人</div>
+            <p class="text-gray-600">AI与机器人技术融合创新展示</p>
+            <div class="news-source">来源：每日经济新闻</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://www.guancha.cn/internation/2025_11_03_795637.shtml', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-microchip text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">中国能生产数百万颗AI芯片</div>
+            <p class="text-gray-600">半导体产业迎来重大突破</p>
+            <div class="news-source">来源：观察者网</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://sichuan.scol.com.cn/ggxw/202511/83149052.html', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-tv text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">显示+AI：一块好屏的黑科技</div>
+            <p class="text-gray-600">智能显示技术背后的创新突破</p>
+            <div class="news-source">来源：四川新闻</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://www.sh-italent.com/Article/202511/202511030009.shtml', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-handshake text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">千万不要对AI太有礼貌</div>
+            <p class="text-gray-600">人机交互的新发现与建议</p>
+            <div class="news-source">来源：上海人才热线</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://cn.technode.com/post/2025-11-03/now-for-ai-powered-platform/', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-cogs text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">业务加入AI就能被认可吗？</div>
+            <p class="text-gray-600">AI赋能平台的现实思考</p>
+            <div class="news-source">来源：动点科技</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://www.chinanews.com.cn/dwq/2025/11-03/10509278.shtml', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-globe-asia text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">世界湾区经济论坛聚焦AI创新</div>
+            <p class="text-gray-600">香港举行全球AI与医药创新盛会</p>
+            <div class="news-source">来源：中国新闻网</div>
+        </div>
+
+        <div class="bento-item" onclick="window.open('https://mp.weixin.qq.com/s/aGFympgzunCONbUzr12TcQ', '_blank')">
+            <div class="icon-wrapper">
+                <i class="fas fa-lightbulb text-blue-500 text-xl"></i>
+            </div>
+            <div class="news-title">Qwen3-Max-Thinking正式上线</div>
+            <p class="text-gray-600">新一代AI思考模型发布</p>
+            <div class="news-source">来源：AI早报</div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 初始化所有bento项目的动画
+        document.querySelectorAll('.bento-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(item);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.querySelector('.icon-wrapper').style.transform = 'scale(1.1)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.querySelector('.icon-wrapper').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
