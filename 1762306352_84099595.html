@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI资讯速递 | 2025年11月4日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        highlight: 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .bento-item {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12 animate-fade-in-up">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                <span class="text-primary">AI</span>资讯速递
+            </h1>
+            <p class="text-lg text-gray-600">Latest Artificial Intelligence News · 2025年11月4日</p>
+        </header>
+
+        <div class="bento-grid">
+            <!-- 新闻项 1 -->
+            <a href="https://news.cnr.cn/native/gd/kx/20251104/t20251104_527418352.shtml" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.1s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-robot text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">革命性突破！全球首个具身智能新技术问世</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">机器人学习新技能仅需十几分钟，开启智能新纪元</p>
+                <span class="text-xs text-primary font-medium">来源：央广网</span>
+            </a>
+
+            <!-- 新闻项 2 -->
+            <a href="http://www.ce.cn/xwzx/gnsz/gdxw/202511/t20251104_2556257.shtml" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.2s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-industry text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">工信部重磅发声：加速AI+制造深度融合</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">关键核心技术突破在即，智能制造迎来新机遇</p>
+                <span class="text-xs text-primary font-medium">来源：中国经济网</span>
+            </a>
+
+            <!-- 新闻项 3 -->
+            <a href="https://www.ncsti.gov.cn/kjdt/kjrd/rgzn_kjrd/202511/t20251104_224049.html" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.3s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-brain text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">惊人发现！AI越智能越"自私"</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">主流大模型研究揭示人工智能行为新特征</p>
+                <span class="text-xs text-primary font-medium">来源：科技部</span>
+            </a>
+
+            <!-- 新闻项 4 -->
+            <a href="https://news.bjd.com.cn/2025/11/04/11388855.shtml" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.4s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-bolt text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">百度发布十大科技前沿发明</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">AI技术突破加速收获实效，引领行业创新浪潮</p>
+                <span class="text-xs text-primary font-medium">来源：北京日报</span>
+            </a>
+
+            <!-- 新闻项 5 -->
+            <a href="https://www.stcn.com/article/detail/3478760.html" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.5s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-hard-hat text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">AI改造最难啃的万亿基建行业</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">求解"效率"与"可信"双重挑战，基建智能化加速</p>
+                <span class="text-xs text-primary font-medium">来源：证券时报</span>
+            </a>
+
+            <!-- 新闻项 6 -->
+            <a href="http://www.ce.cn/cysc/newmain/yc/jsxw/202511/t20251104_2558255.shtml" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.6s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-users text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">全球顶尖学者齐聚乌镇峰会</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">共探"AI For Science"新未来，科学智能化迎来突破</p>
+                <span class="text-xs text-primary font-medium">来源：中国经济网</span>
+            </a>
+
+            <!-- 新闻项 7 -->
+            <a href="https://news.microsoft.com/source/asia/features/%E5%BE%AE%E8%BD%AF%E5%B0%86%E6%89%A9%E5%A4%A7%E6%96%B0%E5%B1%B1%E4%BA%91%E7%AB%AF%E5%8C%BA%E5%9F%9F-%E5%B8%A6%E5%8A%A8%E4%B8%9C%E5%8D%97%E4%BA%9Aai%E8%BD%AC%E5%9E%8B/" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.7s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-cloud text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">微软扩大新山云端区域</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">带动东南亚AI转型，云服务布局再升级</p>
+                <span class="text-xs text-primary font-medium">来源：Microsoft Asia</span>
+            </a>
+
+            <!-- 新闻项 8 -->
+            <a href="https://cn.chinadaily.com.cn/a/202511/04/WS69095f38a310c4deea5efe5a.html" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.8s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-film text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">AIGC短剧从"可看"到"好看"</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">坚持"两创"理念，AI内容创作质量大幅提升</p>
+                <span class="text-xs text-primary font-medium">来源：中国日报</span>
+            </a>
+
+            <!-- 新闻项 9 -->
+            <a href="https://www.chinanews.com.cn/gj/2025/11-04/10509548.shtml" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 0.9s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-exclamation-triangle text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">大语言模型无法可靠识别错误信念</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">最新研究提醒AI结果可靠性问题</p>
+                <span class="text-xs text-primary font-medium">来源：中国新闻网</span>
+            </a>
+
+            <!-- 新闻项 10 -->
+            <a href="https://sichuan.scol.com.cn/ggxw/202511/83149857.html" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 1.0s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-tv text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">AI+显示：屏幕如何"好看"又"好用"？</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">智能显示技术迎来新突破，用户体验全面升级</p>
+                <span class="text-xs text-primary font-medium">来源：四川在线</span>
+            </a>
+
+            <!-- 新闻项 11 -->
+            <a href="https://www.xhby.net/content/s69096392e4b0dec50a1deb1e.html" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 1.1s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-handshake text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">AI技术下沉与产业创新交流活动在沪举办</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">推动人工智能技术实际应用落地</p>
+                <span class="text-xs text-primary font-medium">来源：新华报业</span>
+            </a>
+
+            <!-- 新闻项 12 -->
+            <a href="https://news.gmw.cn/2025-11/04/content_38388896.htm" class="bento-item gradient-bg animate-fade-in-up" style="animation-delay: 1.2s">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-user-friends text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">以人为本推动人工智能发展</h2>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">强调AI发展应以服务人类为核心</p>
+                <span class="text-xs text-primary font-medium">来源：光明网</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有bento项添加观察
+        document.querySelectorAll('.bento-item').forEach(item => {
+            observer.observe(item);
+        });
+
+        // 添加点击效果
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
