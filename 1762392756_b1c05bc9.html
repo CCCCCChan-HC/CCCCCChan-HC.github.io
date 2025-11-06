@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能每日要闻</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .news-item {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">AI前沿动态</h1>
+            <p class="text-xl text-blue-600">Latest Artificial Intelligence News</p>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            <!-- 新闻项 -->
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://dzswgf.mofcom.gov.cn/news/43/2025/11/1762321152582.html" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🚀 人工智能赋能新型工业化加速推进</h3>
+                    <p class="text-blue-600 text-sm mb-4">Accelerating AI-powered new industrialization</p>
+                    <p class="text-gray-600 text-xs">来源：商务部</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="http://www.china.com.cn/opinion2020/2025-11/05/content_118160384.shtml" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🌍 以人为本引领全球AI向善发展</h3>
+                    <p class="text-blue-600 text-sm mb-4">Human-centered approach guides global AI development</p>
+                    <p class="text-gray-600 text-xs">来源：中国网</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://www.stdaily.com/web/gdxw/2025-11/05/content_426977.html" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🎓 AI教育新思考：激活思维还是助长懈怠？</h3>
+                    <p class="text-blue-600 text-sm mb-4">AI in education: Boosting creativity or fostering laziness?</p>
+                    <p class="text-gray-600 text-xs">来源：科技日报</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://finance.sina.com.cn/jjxw/2025-11-04/doc-infweshx1848115.shtml" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🏭 突破关键技术："人工智能+制造"深入实施</h3>
+                    <p class="text-blue-600 text-sm mb-4">Breaking through key technologies in AI+manufacturing</p>
+                    <p class="text-gray-600 text-xs">来源：新浪财经</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="http://www.news.cn/liangzi/20251105/f883a626924645dfbc6d1d57ab0936b5/c.html" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">⚡ 硅谷AI精英争分夺秒追赶技术变革</h3>
+                    <p class="text-blue-600 text-sm mb-4">Silicon Valley AI elites race against technology cycles</p>
+                    <p class="text-gray-600 text-xs">来源：新华网</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://www.cls.cn/detail/2191920" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🛰️ 谷歌提出太空AI数据中心"捕日者"计划</h3>
+                    <p class="text-blue-600 text-sm mb-4">Google's "Sun Catcher": AI data centers in space</p>
+                    <p class="text-gray-600 text-xs">来源：财联社</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://www.stcn.com/article/detail/3476141.html" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🌟 百度发布2025十大科技前沿发明</h3>
+                    <p class="text-blue-600 text-sm mb-4">Baidu unveils top 10 tech innovations for 2025</p>
+                    <p class="text-gray-600 text-xs">来源：证券时报</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://www.ncsti.gov.cn/kjdt/xwjj/202511/t20251105_224229.html" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🏙️ 北京"模数世界"构筑AI产业生态高地</h3>
+                    <p class="text-blue-600 text-sm mb-4">Beijing's "Digital World" builds AI ecosystem hub</p>
+                    <p class="text-gray-600 text-xs">来源：科技部</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://www.wuhan.gov.cn/sy/whyw/202511/t20251105_2672382.html" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🏭 武汉出台AI+制造方案培育100个智能体标杆</h3>
+                    <p class="text-blue-600 text-sm mb-4">Wuhan launches AI+manufacturing plan with 100 smart applications</p>
+                    <p class="text-gray-600 text-xs">来源：武汉市政府</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://www.stdaily.com/web/gjxw/2025-11/05/content_427012.html" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🌱 AI为全球节能减排注入智慧动能</h3>
+                    <p class="text-blue-600 text-sm mb-4">AI injects smart power into global energy conservation</p>
+                    <p class="text-gray-600 text-xs">来源：科技日报</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://dzswgf.mofcom.gov.cn/news/43/2025/11/1762321300688.html" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">🏥 五部门联合促进"人工智能+医疗卫生"应用</h3>
+                    <p class="text-blue-600 text-sm mb-4">Five departments promote AI+healthcare applications</p>
+                    <p class="text-gray-600 text-xs">来源：商务部</p>
+                </a>
+            </div>
+
+            <div class="news-item bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 border border-blue-100 hover-lift">
+                <a href="https://www.stcn.com/article/detail/3388527.html" target="_blank" class="block">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">📊 人工智能重磅报告最新发布</h3>
+                    <p class="text-blue-600 text-sm mb-4">Latest heavyweight AI report released</p>
+                    <p class="text-gray-600 text-xs">来源：证券时报</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <div class="inline-flex items-center space-x-2 text-blue-600">
+                <i class="fas fa-robot text-2xl"></i>
+                <span class="text-lg font-semibold">AI Daily Digest · 人工智能每日摘要</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻项添加观察
+        document.querySelectorAll('.news-item').forEach(item => {
+            item.style.animationPlayState = 'paused';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
