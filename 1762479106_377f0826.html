@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Weekly Digest | 人工智能周报</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 0.75rem;
+        }
+        .highlight-accent {
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+            padding-left: 0.5rem;
+            border-left: 3px solid #3b82f6;
+        }
+        .section-header {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .news-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .news-link:hover .news-title {
+            color: #3b82f6;
+        }
+        .icon-wrapper {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .date-badge {
+            background: rgba(59, 130, 246, 0.1);
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="section-header">
+            <i class="fas fa-brain mr-4"></i>AI Weekly Digest
+            <div class="text-lg font-normal mt-2">人工智能周报 | 2025年11月</div>
+        </h1>
+        
+        <div class="bento-grid">
+            <!-- 新闻条目 -->
+            <a href="https://gxt.fujian.gov.cn/zwgk/xw/hydt/xydt/202511/t20251106_7030958.htm" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-industry text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月06日</div>
+                    <h2 class="news-title">工信部重磅揭榜！AI+制造大模型国家队亮相</h2>
+                    <p class="text-gray-600">首次采用"揭榜挂帅"机制推进人工智能与制造业深度融合</p>
+                    <div class="news-source">来源：福建省工业和信息化厅</div>
+                </div>
+            </a>
+
+            <a href="https://news.cctv.cn/2025/11/06/ARTIqyITBxuEoh19sPItWF8m251106.shtml" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-globe text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月06日</div>
+                    <h2 class="news-title">互联网之光博览会：AI应用惊艳亮相乌镇</h2>
+                    <p class="text-gray-600">"AI共生、智启未来"主题展示最新人工智能技术成果</p>
+                    <div class="news-source">来源：央视网</div>
+                </div>
+            </a>
+
+            <a href="https://www.cls.cn/detail/2193665" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-robot text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月07日</div>
+                    <h2 class="news-title">进博会AI装备吸睛！智能眼镜机器人成焦点</h2>
+                    <p class="text-gray-600">AI PC、机器人、智能眼镜等创新产品集中展示</p>
+                    <div class="news-source">来源：财联社</div>
+                </div>
+            </a>
+
+            <a href="https://news.gmw.cn/2025-11/07/content_38396427.htm" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月07日</div>
+                    <h2 class="news-title">AI+实体经济深度融合战略正式启动</h2>
+                    <p class="text-gray-600">让人工智能真正融入实体经济血脉，推动产业升级</p>
+                    <div class="news-source">来源：光明网</div>
+                </div>
+            </a>
+
+            <a href="http://www.ce.cn/cysc/newmain/yc/jsxw/202511/t20251107_2564229.shtml" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-shopping-cart text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月07日</div>
+                    <h2 class="news-title">双十一AI购物革命！智能导购全面上岗</h2>
+                    <p class="text-gray-600">人工智能在今年双十一期间实现规模化应用</p>
+                    <div class="news-source">来源：中国经济网</div>
+                </div>
+            </a>
+
+            <a href="https://home.wuhan.gov.cn/mtbd/202511/t20251106_2673427.shtml" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-bolt text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月06日</div>
+                    <h2 class="news-title">湖北AI产业加速跑！中部崛起智造引擎</h2>
+                    <p class="text-gray-600">加速奔袭的湖北人工智能产业成为区域发展新动力</p>
+                    <div class="news-source">来源：武汉市人民政府</div>
+                </div>
+            </a>
+
+            <a href="https://news.china.com/socialgd/10000169/20251106/48969699.html" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-tv text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月06日</div>
+                    <h2 class="news-title">8000亿市场爆发！AI+显示融合新机遇</h2>
+                    <p class="text-gray-600">人工智能与显示技术融合发展创造巨大市场空间</p>
+                    <div class="news-source">来源：中华网</div>
+                </div>
+            </a>
+
+            <a href="http://www.ce.cn/cysc/newmain/yc/jsxw/202511/t20251107_2564300.shtml" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-handshake text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月07日</div>
+                    <h2 class="news-title">全球数字经济合作装上AI新引擎</h2>
+                    <p class="text-gray-600">人工智能成为推动全球数字经济合作的关键力量</p>
+                    <div class="news-source">来源：中国经济网</div>
+                </div>
+            </a>
+
+            <a href="http://wsb.gxzf.gov.cn/yhjw_48207/gxydm_48209/t26136288.shtml" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月07日</div>
+                    <h2 class="news-title">东盟伙伴体验中国AI！智能产品出海加速</h2>
+                    <p class="text-gray-600">AI换装、智能巡检机器人等产品受到国际关注</p>
+                    <div class="news-source">来源：广西壮族自治区政府</div>
+                </div>
+            </a>
+
+            <a href="https://www.stcn.com/article/detail/3483120.html" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-cogs text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月07日</div>
+                    <h2 class="news-title">从技术秀到强赋能！AI驱动产业价值链升级</h2>
+                    <p class="text-gray-600">人工智能正在从展示性技术向实际生产力转变</p>
+                    <div class="news-source">来源：证券时报</div>
+                </div>
+            </a>
+
+            <a href="https://m.c114.com.cn/w16-1299865.html" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-cog text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月07日</div>
+                    <h2 class="news-title">部长发话！加快推进AI赋能新型工业化</h2>
+                    <p class="text-gray-600">李乐成部长强调人工智能在工业化中的关键作用</p>
+                    <div class="news-source">来源：C114通信网</div>
+                </div>
+            </a>
+
+            <a href="https://www.chinanews.com.cn/cj/2025/11-07/10511398.shtml" class="news-link">
+                <div class="news-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-camera text-white text-xl"></i>
+                    </div>
+                    <div class="date-badge">11月07日</div>
+                    <h2 class="news-title">智能眼镜新突破！摄像装备AI化应用</h2>
+                    <p class="text-gray-600">在乌镇感受人工智能带来的全新应用体验</p>
+                    <div class="news-source">来源：中国新闻网</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加初始样式和观察
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.querySelector('.icon-wrapper').style.transform = 'scale(1.1)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.querySelector('.icon-wrapper').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
