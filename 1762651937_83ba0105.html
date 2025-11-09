@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI前沿动态 - 信息摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .bento-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        .news-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .news-desc {
+            font-size: 0.875rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .news-source {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            border-left: 2px solid #3b82f6;
+            padding-left: 0.5rem;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 3rem 2rem 1rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .date-badge {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(29, 78, 216, 0.1) 100%);
+            color: #3b82f6;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+        
+        .icon-wrapper {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(29, 78, 216, 0.1) 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .icon {
+            color: #3b82f6;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">AI前沿动态</h1>
+        <div class="date-badge">
+            <i class="fas fa-calendar-alt mr-2"></i>
+            2025年11月8日 · 最新资讯
+        </div>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">全球人工智能领域最新突破与发展趋势</p>
+    </div>
+
+    <div class="bento-grid">
+        <!-- 新闻项 1 -->
+        <a href="https://news.cnr.cn/native/gd/20251108/t20251108_527423312.shtml" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-rocket icon"></i>
+            </div>
+            <h2 class="news-title">17项领先科技！全球发展迎来智能引擎</h2>
+            <p class="news-desc">透视全球科技创新趋势，人工智能成为核心驱动力</p>
+            <div class="news-source">中央人民广播电台</div>
+        </a>
+
+        <!-- 新闻项 2 -->
+        <a href="http://www.ce.cn/xwzx/gnsz/gdxw/202511/t20251108_2567000.shtml" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-globe icon"></i>
+            </div>
+            <h2 class="news-title">世界互联网大会蓝皮书发布：AI向全域赋能发展</h2>
+            <p class="news-desc">人工智能技术正加速向各行业领域渗透融合</p>
+            <div class="news-source">中国经济网</div>
+        </a>
+
+        <!-- 新闻项 3 -->
+        <a href="https://www.stdaily.com/web/gdxw/2025-11/08/content_428928.html" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-brain icon"></i>
+            </div>
+            <h2 class="news-title">科大讯飞发布星火X1.5及AI软硬一体方案</h2>
+            <p class="news-desc">新一代AI大模型技术突破，软硬件协同创新</p>
+            <div class="news-source">科技日报</div>
+        </a>
+
+        <!-- 新闻项 4 -->
+        <a href="https://www.nju.edu.cn/info/1056/446781.htm" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-chart-line icon"></i>
+            </div>
+            <h2 class="news-title">新浪探索大会聚焦AI前沿驱动产业变革</h2>
+            <p class="news-desc">AI技术如何重塑传统产业格局与发展模式</p>
+            <div class="news-source">南京大学新闻网</div>
+        </a>
+
+        <!-- 新闻项 5 -->
+        <a href="https://www.nfnews.com/content/r6d5zG9aoE.html" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-water icon"></i>
+            </div>
+            <h2 class="news-title">乌镇峰会蓝皮书披露AI技术发展趋势</h2>
+            <p class="news-desc">全球数字治理新动向与人工智能发展路径</p>
+            <div class="news-source">南方新闻网</div>
+        </a>
+
+        <!-- 新闻项 6 -->
+        <a href="http://finance.people.com.cn/n1/2025/1108/c1004-40599546.html" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-microchip icon"></i>
+            </div>
+            <h2 class="news-title">AI推动技术创新助力消费电子产业发展</h2>
+            <p class="news-desc">人工智能如何重塑消费电子产品生态</p>
+            <div class="news-source">人民网</div>
+        </a>
+
+        <!-- 新闻项 7 -->
+        <a href="https://news.eol.cn/yaowen/202511/t20251108_2699146.shtml" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-graduation-cap icon"></i>
+            </div>
+            <h2 class="news-title">聚焦人工智能，共话教育未来</h2>
+            <p class="news-desc">2025世界大学校长论坛探讨AI与教育融合</p>
+            <div class="news-source">中国教育在线</div>
+        </a>
+
+        <!-- 新闻项 8 -->
+        <a href="http://jjckb.xinhuanet.com/20251108/501f898fe1b34680af4d45d30fe891d2/c.html" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-video icon"></i>
+            </div>
+            <h2 class="news-title">快手科技：全面拓展AI应用助力千行百业</h2>
+            <p class="news-desc">视频生成技术逼近影视级标准</p>
+            <div class="news-source">新华财经</div>
+        </a>
+
+        <!-- 新闻项 9 -->
+        <a href="https://www.nbd.com.cn/articles/2025-11-08/4135502.html" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-shield-alt icon"></i>
+            </div>
+            <h2 class="news-title">迫切需要治理AI产生的不实信息</h2>
+            <p class="news-desc">2025乌镇峰会关注人工智能伦理与治理</p>
+            <div class="news-source">每日经济新闻</div>
+        </a>
+
+        <!-- 新闻项 10 -->
+        <a href="http://www.news.cn/local/20251108/3e1b630a2e4146e3b5a566b99c9c662e/c.html" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-heartbeat icon"></i>
+            </div>
+            <h2 class="news-title">医疗AI有了"评审员"！北京启动应用评测服务</h2>
+            <p class="news-desc">医疗人工智能标准化评测体系正式建立</p>
+            <div class="news-source">新华网</div>
+        </a>
+
+        <!-- 新闻项 11 -->
+        <a href="https://www.stcn.com/article/detail/3388527.html" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-file-alt icon"></i>
+            </div>
+            <h2 class="news-title">人工智能重磅报告最新发布</h2>
+            <p class="news-desc">全球互联网发展迈入智能化新阶段</p>
+            <div class="news-source">证券时报</div>
+        </a>
+
+        <!-- 新闻项 12 -->
+        <a href="https://www.thepaper.cn/newsDetail_forward_31923926?commTag=true" class="bento-item hover:no-underline">
+            <div class="icon-wrapper">
+                <i class="fas fa-atom icon"></i>
+            </div>
+            <h2 class="news-title">中美竞逐物理AI赛道，中国科技公司破浪先行</h2>
+            <p class="news-desc">物理人工智能成为新一轮科技竞争焦点</p>
+            <div class="news-source">澎湃新闻</div>
+        </a>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为每个bento项添加初始样式和观察
+        document.querySelectorAll('.bento-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
