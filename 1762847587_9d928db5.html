@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智算中心动态周报</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .bento-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        .bento-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        .news-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .highlight-badge {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.05));
+            color: #3b82f6;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .news-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+        .news-link:hover .news-title {
+            color: #3b82f6;
+        }
+        .header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>智算中心周报</h1>
+        <p>最新行业动态与技术前沿 · 过去一周精选</p>
+    </div>
+
+    <div class="bento-grid">
+        <!-- 新闻条目 -->
+        <div class="bento-item animate-on-scroll">
+            <a href="http://www.suzhou.gov.cn/szsrmzf/szyw/202511/6a3f8404a9504a25ad81466cb1944743.shtml" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-bolt"></i>生态建设
+                </div>
+                <div class="news-title">苏州加速构建"模型+数据+机器人+算力"生态体系</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>苏州市政府官网
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://finance.sina.com.cn/roll/2025-11-11/doc-infwyqee2202841.shtml" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-wifi"></i>5G+工业互联网
+                </div>
+                <div class="news-title">2025中国5G+工业互联网大会武汉开幕，聚焦前沿技术</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>新浪财经
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://www.stcn.com/article/detail/3488442.html" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-server"></i>算力部署
+                </div>
+                <div class="news-title">南威软件智算中心首批高性能服务器正式投入运营</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>证券时报网
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="http://www.news.cn/politics/20251110/227abcc6b94340e49c6c0183128c13cd/c.html" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-trophy"></i>全球领先
+                </div>
+                <div class="news-title">我国智能算力规模稳居世界前列，产业优势凸显</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>新华网
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://www.chinatelecom.com.cn/ct/news/yunjisuanjisuanli/162547.html" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-network-wired"></i>一体化发展
+                </div>
+                <div class="news-title">中国通服发布《全国一体化算力网发展调研报告》</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>中国电信
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://www.pds.gov.cn/contents/63296/440080.html" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-lightbulb"></i>政策提案
+                </div>
+                <div class="news-title">统筹推进算力中心建设，打造数字经济发展新引擎</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>平顶山市政府
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://stcn.com/article/detail/3487534.html" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-crown"></i>行业领先
+                </div>
+                <div class="news-title">联想HPC TOP100十一连冠，全面升级算力基础设施</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>证券时报网
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://stcn.com/article/detail/3488204.html" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-robot"></i>智能装备
+                </div>
+                <div class="news-title">云工场斥资1500万美元购入四足机器人，布局智能运维</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>证券时报网
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://www.gov.cn/zhengce/content/202508/content_7037861.htm" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-file-alt"></i>国家政策
+                </div>
+                <div class="news-title">国务院发布"人工智能+"行动意见，推动产业深度融合</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>中国政府网
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://gansu.gansudaily.com.cn/system/2025/11/11/031275608.shtml" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-leaf"></i>绿色算力
+                </div>
+                <div class="news-title">稻盛云武威智算中心加力构建绿色算力产业新高地</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>甘肃日报
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://news.sciencenet.cn/htmlnews/2025/11/554839.shtm" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-chart-line"></i>行业榜单
+                </div>
+                <div class="news-title">2025中国高性能计算机TOP100榜单正式发布</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>科学网
+                </div>
+            </a>
+        </div>
+
+        <div class="bento-item animate-on-scroll">
+            <a href="https://www.odcc.org.cn/news/p-1988069729085710337.html" class="news-link" target="_blank">
+                <div class="highlight-badge">
+                    <i class="fas fa-users"></i>行业盛会
+                </div>
+                <div class="news-title">2025ODCC冬季全会顺利召开，推动数据中心标准建设</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>ODCC官网
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 为所有动画元素添加观察
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 添加悬停效果增强
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
