@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI每日热点 - 2025年11月11日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+        .news-card:hover::before {
+            left: 100%;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 0.5rem;
+        }
+        .highlight-badge {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+        .header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+        .icon {
+            color: #3b82f6;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI每日热点速递</h1>
+        <p>2025年11月11日 · 最新人工智能前沿动态</p>
+    </div>
+
+    <div class="bento-grid">
+        <div class="news-card" onclick="window.open('http://world.people.com.cn/n1/2025/1111/c1002-40600836.html', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-bolt icon"></i>能源革命</div>
+            <div class="news-title">人工智能技术助力全球能源转型</div>
+            <div class="news-source">来源：人民网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.gov.cn/zhengce/202511/content_7047749.htm', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-rocket icon"></i>政策支持</div>
+            <div class="news-title">推动新场景大规模应用！多部门最新回应</div>
+            <div class="news-source">来源：中国政府网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.szzg.gov.cn/2025/xwzx/qwfb/202511/t20251111_5230091.htm', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-industry icon"></i>工业升级</div>
+            <div class="news-title">人工智能赋能新型工业化进入融合发展新阶段</div>
+            <div class="news-source">来源：深圳市政府</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.stcn.com/article/detail/3367787.html', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-handshake icon"></i>强强联合</div>
+            <div class="news-title">AI重磅！两大巨头牵手！</div>
+            <div class="news-source">来源：证券时报</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://stcn.com/article/detail/3488355.html', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-code-branch icon"></i>开源生态</div>
+            <div class="news-title">AI从技术到生态，乌镇峰会的开源共识</div>
+            <div class="news-source">来源：证券时报</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://news.2500sz.com/doc/2025/11/11/1180777.shtml', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-city icon"></i>智慧城市</div>
+            <div class="news-title">以AI赋能千行百业加快"人工智能+"城市建设</div>
+            <div class="news-source">来源：苏州新闻</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://cj.sina.cn/articles/view/1010395044/3c3967a401901muzu', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-chart-line icon"></i>行业报告</div>
+            <div class="news-title">中国人工智能报告2025：新趋势</div>
+            <div class="news-source">来源：新浪财经</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://stcn.com/article/detail/3488770.html', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-robot icon"></i>具身智能</div>
+            <div class="news-title">传化智联携手智元机器人、蚂蚁集团等共建国家级具身智能</div>
+            <div class="news-source">来源：证券时报</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.ncsti.gov.cn/kjdt/kjrd/qtrd_kjrd/202511/t20251111_224824.html', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-atom icon"></i>量子突破</div>
+            <div class="news-title">量子计算机理论互联距离达两千公里构建全球量子互联网</div>
+            <div class="news-source">来源：科技部</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('https://www.cs.com.cn/ssgs/gsxw/202511/t20251111_6522811.html', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-cogs icon"></i>技术创新</div>
+            <div class="news-title">"新材料+AI"双引擎驱动国恩未来发布多款具身智能机器人</div>
+            <div class="news-source">来源：中国证券报</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('http://www.news.cn/politics/20251111/b3f5a8322c194bb9800ded7d465b5dbf/c.html', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-heartbeat icon"></i>医疗健康</div>
+            <div class="news-title">"医学+AI"视角看健康中国新图景</div>
+            <div class="news-source">来源：新华网</div>
+        </div>
+
+        <div class="news-card" onclick="window.open('http://news.china.com.cn/2025-11/11/content_118172123.shtml', '_blank')">
+            <div class="highlight-badge"><i class="fas fa-shield-alt icon"></i>监管动态</div>
+            <div class="news-title">国家网信办：累计有611款生成式人工智能服务完成备案</div>
+            <div class="news-source">来源：中国网</div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 初始化卡片动画
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
