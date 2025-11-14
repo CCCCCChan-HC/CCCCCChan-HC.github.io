@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智算中心最新动态 - 信息摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 0.75rem;
+        }
+        .highlight-accent {
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        .section-header {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="section-header">智算中心前沿动态</h1>
+        
+        <div class="bento-grid">
+            <!-- 新闻1 -->
+            <a href="https://www.pds.gov.cn/contents/63296/440080.html" class="news-card highlight-accent block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-bolt text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">重磅提案！统筹推进算力中心建设打造数字经济新引擎</h2>
+                </div>
+                <p class="text-gray-600 text-sm">最新政策建议聚焦算力基础设施布局优化</p>
+                <div class="news-source">来源：平顶山市政府</div>
+            </a>
+
+            <!-- 新闻2 -->
+            <a href="http://www.news.cn/tech/20251112/29be43a6a1ed45099f5dc98fe8567ebd/c.html" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-trophy text-yellow-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">HPC TOP100 十一连冠！联想全面升级算力基础设施</h2>
+                </div>
+                <p class="text-gray-600 text-sm">领军企业持续夯实算力底座建设</p>
+                <div class="news-source">来源：新华网</div>
+            </a>
+
+            <!-- 新闻3 -->
+            <a href="http://jjckb.xinhuanet.com/20251112/0b6ffb529bce44dc9aaf271e36f08c1a/c.html" class="news-card highlight-accent block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-users text-green-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">第七届中国超级算力大会召开：共探智能算力经济新未来</h2>
+                </div>
+                <p class="text-gray-600 text-sm">行业盛会引领算力产业发展方向</p>
+                <div class="news-source">来源：经济参考报</div>
+            </a>
+
+            <!-- 新闻4 -->
+            <a href="https://finance.sina.cn/2025-11-14/detail-infxifii1957542.d.html" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-chart-line text-purple-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">昆明数字经济强势崛起，智算中心建设加速推进</h2>
+                </div>
+                <p class="text-gray-600 text-sm">区域数字经济呈现蓬勃发展态势</p>
+                <div class="news-source">来源：新浪财经</div>
+            </a>
+
+            <!-- 新闻5 -->
+            <a href="https://www.beijing.gov.cn/ywdt/gzdt/202511/t20251113_4279627.html" class="news-card highlight-accent block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-list-check text-red-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">经开区2025年数据中心白名单公布，将给予算力补贴</h2>
+                </div>
+                <p class="text-gray-600 text-sm">政策红利助推算力基础设施建设</p>
+                <div class="news-source">来源：北京市政府</div>
+            </a>
+
+            <!-- 新闻6 -->
+            <a href="https://www.dtdata.cn/news/show/3498.html" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-money-bill-wave text-green-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">264.79亿元！8省20个智算中心/算力项目已备案</h2>
+                </div>
+                <p class="text-gray-600 text-sm">大规模投资彰显算力产业发展信心</p>
+                <div class="news-source">来源：DT数据</div>
+            </a>
+
+            <!-- 新闻7 -->
+            <a href="https://news.southcn.com/node_54a44f01a2/e8314c3a6d.shtml" class="news-card highlight-accent block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-mountain text-orange-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">广东智算建设势头强劲！构筑"算力高地"新蓝图</h2>
+                </div>
+                <p class="text-gray-600 text-sm">粤港澳大湾区算力布局全面升级</p>
+                <div class="news-source">来源：南方网</div>
+            </a>
+
+            <!-- 新闻8 -->
+            <a href="https://www.geelytech.com/news/35" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-car text-blue-400 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">吉利星睿智算中心落地，赋能汽车产业智能化转型</h2>
+                </div>
+                <p class="text-gray-600 text-sm">制造业巨头加速智算中心布局</p>
+                <div class="news-source">来源：吉利科技</div>
+            </a>
+
+            <!-- 新闻9 -->
+            <a href="https://sjj.hubei.gov.cn/bmdt/tzgg/202511/t20251113_5812513.shtml" class="news-card highlight-accent block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-ticket text-indigo-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">湖北省算力券申领正式开始，企业可获直接补贴</h2>
+                </div>
+                <p class="text-gray-600 text-sm">创新政策工具降低算力使用成本</p>
+                <div class="news-source">来源：湖北省经信厅</div>
+            </a>
+
+            <!-- 新闻10 -->
+            <a href="http://gxj.sz.gov.cn/gkmlpt/content/12/12052/post_12052805.html" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-robot text-cyan-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">深圳加快打造人工智能先锋城市，智算中心建设提速</h2>
+                </div>
+                <p class="text-gray-600 text-sm">特区引领人工智能基础设施建设浪潮</p>
+                <div class="news-source">来源：深圳市工信局</div>
+            </a>
+
+            <!-- 新闻11 -->
+            <a href="https://www.stcn.com/article/detail/3494519.html" class="news-card highlight-accent block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-flag text-red-400 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">亮剑英伟达！寒武纪引领中国AI软件新生态建设</h2>
+                </div>
+                <p class="text-gray-600 text-sm">国产AI芯片企业加速生态布局</p>
+                <div class="news-source">来源：证券时报</div>
+            </a>
+
+            <!-- 新闻12 -->
+            <a href="https://www.gov.cn/zhengce/zhengceku/202508/content_7037862.htm" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-file-alt text-gray-600 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">国务院发文：深入实施"人工智能+"行动，强化算力支撑</h2>
+                </div>
+                <p class="text-gray-600 text-sm">国家层面推动AI与算力深度融合</p>
+                <div class="news-source">来源：中国政府网</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 初始化卡片动画
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
