@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Weekly Digest | 人工智能周报</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .bento-item {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-desc {
+            font-size: 0.875rem;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .news-source {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            border-left: 2px solid #3b82f6;
+            padding-left: 0.5rem;
+        }
+        
+        .highlight-badge {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            color: #3b82f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">AI Weekly Digest</h1>
+            <p class="text-lg text-gray-600">人工智能领域最新动态 · 过去一周精选</p>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="bento-grid">
+            <!-- 新闻条目 1 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('https://www.gov.cn/zhengce/content/202508/content_7037861.htm', '_blank')">
+                <div class="highlight-badge">政策动态</div>
+                <h2 class="news-title">国务院发布"人工智能+"行动纲领</h2>
+                <p class="news-desc">国家层面重磅政策出台，明确AI产业发展路线图</p>
+                <div class="news-source">中国政府网</div>
+            </div>
+
+            <!-- 新闻条目 2 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('https://www.stdaily.com/web/gdxw/2025-11/13/content_431437.html', '_blank')">
+                <div class="highlight-badge">企业动态</div>
+                <h2 class="news-title">百度世界大会展示AI新突破</h2>
+                <p class="news-desc">李彦宏发布多项AI成果，助推新质生产力发展</p>
+                <div class="news-source">科技日报</div>
+            </div>
+
+            <!-- 新闻条目 3 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('https://news.un.org/zh/story/2025/11/1141081', '_blank')">
+                <div class="highlight-badge">全球视野</div>
+                <h2 class="news-title">AI应对气候挑战的机遇与风险</h2>
+                <p class="news-desc">联合国探讨人工智能在气候变化中的关键作用</p>
+                <div class="news-source">联合国新闻</div>
+            </div>
+
+            <!-- 新闻条目 4 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('http://news.china.com.cn/2025-11/12/content_118172551.shtml', '_blank')">
+                <div class="highlight-badge">监管进展</div>
+                <h2 class="news-title">611款生成式AI服务完成备案</h2>
+                <p class="news-desc">监管体系逐步完善，AI服务规范化进程加速</p>
+                <div class="news-source">中国网</div>
+            </div>
+
+            <!-- 新闻条目 5 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('http://www.news.cn/liangzi/20251110/fe8f98a4bcce4aa3843adcb31943cadf/c.html', '_blank')">
+                <div class="highlight-badge">技术前沿</div>
+                <h2 class="news-title">行业领袖热议通用人工智能未来</h2>
+                <p class="news-desc">专家共商AGI发展路径与技术突破方向</p>
+                <div class="news-source">新华网</div>
+            </div>
+
+            <!-- 新闻条目 6 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('https://www.cls.cn/detail/2200353', '_blank')">
+                <div class="highlight-badge">商业洞察</div>
+                <h2 class="news-title">腾讯日赚7亿投向IT基础设施</h2>
+                <p class="news-desc">近600亿资本开支集中布局AI算力底座</p>
+                <div class="news-source">财联社</div>
+            </div>
+
+            <!-- 新闻条目 7 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('http://www.wnd.gov.cn/doc/2025/11/12/4680623.shtml', '_blank')">
+                <div class="highlight-badge">区域发展</div>
+                <h2 class="news-title">江苏首个人工智能创新平台落地无锡</h2>
+                <p class="news-desc">高新区打造AI产业生态，推动区域创新发展</p>
+                <div class="news-source">无锡高新区</div>
+            </div>
+
+            <!-- 新闻条目 8 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('http://www.news.cn/tech/20251114/e2ab6fe251074798bcd1618810f8bce7/c.html', '_blank')">
+                <div class="highlight-badge">技术预测</div>
+                <h2 class="news-title">空间智能将成AI下一座高峰</h2>
+                <p class="news-desc">专家预测三维感知与交互技术将引领下一代AI突破</p>
+                <div class="news-source">新华网科技</div>
+            </div>
+
+            <!-- 新闻条目 9 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('https://kpmg.com/cn/zh/home/media/press-releases/2025/11/kpmg-released-research-report-on-ai-applications-in-hydrogen-energy-at-ciie.html', '_blank')">
+                <div class="highlight-badge">产业融合</div>
+                <h2 class="news-title">AI+氢能产业融合路径发布</h2>
+                <p class="news-desc">毕马威进博会发布AI技术在氢能领域应用研究报告</p>
+                <div class="news-source">毕马威中国</div>
+            </div>
+
+            <!-- 新闻条目 10 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('https://wearable.ofweek.com/2025-11/ART-8400-5000-30673578.html', '_blank')">
+                <div class="highlight-badge">消费趋势</div>
+                <h2 class="news-title">双11期间AI眼镜销售火爆</h2>
+                <p class="news-desc">智能穿戴设备迎来消费升级，AI赋能新体验</p>
+                <div class="news-source">OFweek可穿戴设备网</div>
+            </div>
+
+            <!-- 新闻条目 11 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('https://news.gmw.cn/2025-11/12/content_38406719.htm', '_blank')">
+                <div class="highlight-badge">社会应用</div>
+                <h2 class="news-title">人工智能赋能社会治理创新</h2>
+                <p class="news-desc">AI技术在公共服务领域的深度应用与价值创造</p>
+                <div class="news-source">光明网</div>
+            </div>
+
+            <!-- 新闻条目 12 -->
+            <div class="bento-item animate-fade-in-up" onclick="window.open('https://www.cac.gov.cn/2025-11/09/c_1764411950182277.htm', '_blank')">
+                <div class="highlight-badge">行业盛会</div>
+                <h2 class="news-title">乌镇峰会聚焦AI技术创新与治理</h2>
+                <p class="news-desc">世界互联网大会探讨人工智能可持续发展路径</p>
+                <div class="news-source">国家网信办</div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 text-gray-500 text-sm">
+            <p>© 2025 AI Weekly Digest · 数据更新至2025年11月14日</p>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有bento项添加动画
+        document.querySelectorAll('.bento-item').forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+            item.style.animationPlayState = 'paused';
+            observer.observe(item);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.querySelector('.highlight-badge').style.background = 
+                    'linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.1) 100%)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.querySelector('.highlight-badge').style.background = 
+                    'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%)';
+            });
+        });
+    </script>
+</body>
+</html>
