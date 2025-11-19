@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI每日资讯速递</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .news-card {
+            animation: fadeInUp 0.6s ease-out;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">AI每日资讯速递</h1>
+            <p class="text-xl text-blue-600">Latest Artificial Intelligence News & Updates</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- 新闻1 -->
+            <a href="https://jingji.cctv.cn/2025/11/18/ARTIt35bv7lgiEE58Sb27pFn251118.shtml" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-robot text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">工信部部署AI+制造新战略</h2>
+                </div>
+                <p class="text-gray-600 mb-4">探索人工智能与制造业深度融合，推动5G-A基础设施建设</p>
+                <span class="text-sm text-blue-500">来源：央视财经</span>
+            </a>
+
+            <!-- 新闻2 -->
+            <a href="http://www.news.cn/tech/20251118/5e7fcbce6c66405fa7f85da9ccde55db/c.html" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-brain text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">北京打造AI+协同生态</h2>
+                </div>
+                <p class="text-gray-600 mb-4">从技术突破到价值创造，构建人工智能产业新格局</p>
+                <span class="text-sm text-blue-500">来源：新华网</span>
+            </a>
+
+            <!-- 新闻3 -->
+            <a href="https://www.ndrc.gov.cn/wsdwhfz/202511/t20251118_1401696.html" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-line text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">人工智能+行动总体部署</h2>
+                </div>
+                <p class="text-gray-600 mb-4">专家解读AI+行动的作用机理和实施路径</p>
+                <span class="text-sm text-blue-500">来源：国家发改委</span>
+            </a>
+
+            <!-- 新闻4 -->
+            <a href="https://www.ncsti.gov.cn/kjdt/xwjj/202511/t20251118_225470.html" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-users text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">2025人工智能+大会启幕</h2>
+                </div>
+                <p class="text-gray-600 mb-4">场景驱动协同创新，共绘AI下一个十年蓝图</p>
+                <span class="text-sm text-blue-500">来源：科技部</span>
+            </a>
+
+            <!-- 新闻5 -->
+            <a href="https://www.nbd.com.cn/articles/2025-11-18/4147976.html" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-microchip text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">重庆AI终端产业目标3000亿</h2>
+                </div>
+                <p class="text-gray-600 mb-4">到2030年人工智能终端产业规模达3000亿元以上</p>
+                <span class="text-sm text-blue-500">来源：每日经济新闻</span>
+            </a>
+
+            <!-- 新闻6 -->
+            <a href="https://www.phy.pku.edu.cn/info/1031/12852.htm" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-flask text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">北大AI研究登顶《自然》</h2>
+                </div>
+                <p class="text-gray-600 mb-4">马滟青教授课题组在人工智能领域取得重大突破</p>
+                <span class="text-sm text-blue-500">来源：北京大学</span>
+            </a>
+
+            <!-- 新闻7 -->
+            <a href="https://finance.sina.com.cn/stock/t/2025-11-18/doc-infxvaxh2804388.shtml" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">AI时代机遇与挑战并存</h2>
+                </div>
+                <p class="text-gray-600 mb-4">从科技创新到行业应用，深度解析AI发展趋势</p>
+                <span class="text-sm text-blue-500">来源：新浪财经</span>
+            </a>
+
+            <!-- 新闻8 -->
+            <a href="https://www.cs.com.cn/ssgs/gsxw/202511/t20251118_6523936.html" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-bolt text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">朗新科技AI重塑能源产业</h2>
+                </div>
+                <p class="text-gray-600 mb-4">武汉总部启航，用人工智能技术革新能源领域</p>
+                <span class="text-sm text-blue-500">来源：中国证券报</span>
+            </a>
+
+            <!-- 新闻9 -->
+            <a href="https://www.cnr.cn/jingji/ycbd/20251118/t20251118_527433903.shtml" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-industry text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">央企AI+新基建加速落地</h2>
+                </div>
+                <p class="text-gray-600 mb-4">智慧大脑驱动产业变革，央企数字化转型提速</p>
+                <span class="text-sm text-blue-500">来源：中央人民广播电台</span>
+            </a>
+
+            <!-- 新闻10 -->
+            <a href="https://eu.36kr.com/zh/p/3558562898443138" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-search-dollar text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">百度AI业务收入增速超50%</h2>
+                </div>
+                <p class="text-gray-600 mb-4">内化AI迎来兑现时刻，商业化进程显著加速</p>
+                <span class="text-sm text-blue-500">来源：36氪</span>
+            </a>
+
+            <!-- 新闻11 -->
+            <a href="https://news.sjtu.edu.cn/jdyw/20251118/216905.html" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-graduation-cap text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">上交大展示可信AI成果</h2>
+                </div>
+                <p class="text-gray-600 mb-4">在世界互联网大会乌镇峰会展示人工智能创新</p>
+                <span class="text-sm text-blue-500">来源：上海交通大学</span>
+            </a>
+
+            <!-- 新闻12 -->
+            <a href="https://www.stdaily.com/web/gdxw/2025-11/18/content_433497.html" 
+               class="news-card scroll-reveal rounded-2xl p-6 block">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-lightbulb text-blue-600 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">共绘AI+赋能产业新蓝图</h2>
+                </div>
+                <p class="text-gray-600 mb-4">第七届中国创新发展高峰论坛聚焦人工智能</p>
+                <span class="text-sm text-blue-500">来源：科技日报</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // 为所有需要动画的元素添加观察
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 页面加载时触发一次动画
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.scroll-reveal').forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
