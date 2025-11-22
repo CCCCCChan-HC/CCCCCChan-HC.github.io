@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI每日要闻 - 2025年11月21日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+            transition: left 0.6s;
+        }
+        .news-card:hover::before {
+            left: 100%;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .highlight-accent {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        .section-header {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date-badge {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="section-header">AI每日要闻</h1>
+        <div class="text-center mb-8">
+            <span class="date-badge"><i class="fas fa-calendar-alt mr-2"></i>2025年11月21日</span>
+        </div>
+        
+        <div class="bento-grid">
+            <div class="news-card highlight-accent" onclick="window.open('http://www.news.cn/info/20250116/e96e117ae3aa4d92aaae3875ee5385ca/c.html', '_blank')">
+                <div class="news-title">2025人工智能发展路径全解析：未来已来，你准备好了吗？</div>
+                <div class="news-source"><i class="fas fa-newspaper"></i>新华网</div>
+            </div>
+
+            <div class="news-card" onclick="window.open('https://ecas.cas.cn/xxkw/kbcd/201115_146615/ml/xxhcxyyyal/202501/t20250117_5045348.html', '_blank')">
+                <div class="news-title">MIT发布2025十大突破性技术：AI领域独占鳌头</div>
+                <div class="news-source"><i class="fas fa-flask"></i>中国科学院网信工作网</div>
+            </div>
+
+            <div class="news-card highlight-accent" onclick="window.open('https://cpc.people.com.cn/n1/2025/1121/c64387-40608425.html', '_blank')">
+                <div class="news-title">年轻人如何在AI时代脱颖而出？人民眼深度解读</div>
+                <div class="news-source"><i class="fas fa-eye"></i>人民网</div>
+            </div>
+
+            <div class="news-card" onclick="window.open('https://home.wuhan.gov.cn/mtbd/202511/t20251121_2681649.shtml', '_blank')">
+                <div class="news-title">中国信通院华中研究院正式落户武汉，打造AI创新高地</div>
+                <div class="news-source"><i class="fas fa-map-marker-alt"></i>武汉市政府网</div>
+            </div>
+
+            <div class="news-card highlight-accent" onclick="window.open('https://finance.sina.com.cn/tech/digi/2025-11-19/doc-infxvyar4306042.shtml', '_blank')">
+                <div class="news-title">华为重磅开源AI容器技术，以软件创新突破硬件限制</div>
+                <div class="news-source"><i class="fas fa-code-branch"></i>新浪科技</div>
+            </div>
+
+            <div class="news-card" onclick="window.open('http://jxt.hubei.gov.cn/bmdt/rdjj/202511/t20251121_5817665.shtml', '_blank')">
+                <div class="news-title">湖北加速构建"人工智能+"普惠应用新生态</div>
+                <div class="news-source"><i class="fas fa-leaf"></i>湖北省经济和信息化厅</div>
+            </div>
+
+            <div class="news-card highlight-accent" onclick="window.open('http://www.news.cn/sci-tech/20251121/e6e1e1f4f2a8404ebdc87022f0ef408f/c.html', '_blank')">
+                <div class="news-title">2025年度十大科普热词发布，AI相关概念占据主导</div>
+                <div class="news-source"><i class="fas fa-fire"></i>新华网科技</div>
+            </div>
+
+            <div class="news-card" onclick="window.open('https://www.ln.gov.cn/web/ywdt/zymtkln/2025112114245640100/index.shtml', '_blank')">
+                <div class="news-title">AI赋能东北振兴：沈阳老工业基地的数字化转型之路</div>
+                <div class="news-source"><i class="fas fa-industry"></i>辽宁省人民政府</div>
+            </div>
+
+            <div class="news-card highlight-accent" onclick="window.open('https://www.prnasia.com/story/513045-1.shtml', '_blank')">
+                <div class="news-title">M31亮相ICCAD 2025：高性能低功耗IP驱动AI芯片创新</div>
+                <div class="news-source"><i class="fas fa-microchip"></i>美通社</div>
+            </div>
+
+            <div class="news-card" onclick="window.open('https://jnz.cs.com.cn/app/html/jnz/db2be0d9f88546748f287bee4b722a64.html', '_blank')">
+                <div class="news-title">中国铁塔启动"擎天"AI平台，加速科技型企业转型</div>
+                <div class="news-source"><i class="fas fa-bolt"></i>中证网</div>
+            </div>
+
+            <div class="news-card highlight-accent" onclick="window.open('https://news.eol.cn/hot/hangye/202511/t20251121_2702324.html', '_blank')">
+                <div class="news-title">华为算力基础设施实现重大突破，为AI发展筑基</div>
+                <div class="news-source"><i class="fas fa-server"></i>中国教育在线</div>
+            </div>
+
+            <div class="news-card" onclick="window.open('https://www.nbd.com.cn/articles/2025-11-21/4151853.html', '_blank')">
+                <div class="news-title">华为将发布AI突破性技术，解决算力资源利用效率难题</div>
+                <div class="news-source"><i class="fas fa-cogs"></i>每日经济新闻</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 初始化卡片动画
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+
+        // 添加点击效果
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
