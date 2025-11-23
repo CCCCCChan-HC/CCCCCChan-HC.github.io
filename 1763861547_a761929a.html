@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI每日资讯速递 | 2025-11-22</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .news-item {
+            animation: fadeInUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 头部标题 -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">AI每日资讯速递</h1>
+            <p class="text-lg text-gray-600">2025年11月22日 · 人工智能领域最新动态</p>
+        </div>
+
+        <!-- Bento Grid 布局 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- 重大政策 -->
+            <div class="col-span-1 md:col-span-2 gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 0.1s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-file-alt text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">重磅政策发布</h2>
+                </div>
+                <a href="http://mp.weixin.qq.com/s?__biz=MzI5NzExMTY0Mg==&mid=2650861934&idx=2&sn=d4997e3762fee804cd632a91d281a0af" 
+                   class="block text-3xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    中国银河证券深度解读《人工智能+行动意见》
+                </a>
+                <p class="text-gray-600 text-sm">政策引领AI产业发展新方向</p>
+                <span class="inline-block mt-4 px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">政策解读</span>
+            </div>
+
+            <!-- 技术突破 -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 0.2s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-microchip text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">技术前沿</h2>
+                </div>
+                <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTI0NjM3Mg==&mid=2247489217&idx=1&sn=5f0f150a3fffdad12546b841041bb435" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    AI芯片博弈升级，模型记忆技术突破
+                </a>
+                <p class="text-gray-600 text-sm">从代码加速到芯片创新</p>
+            </div>
+
+            <!-- 医疗AI -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 0.3s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-heartbeat text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">AI+医疗</h2>
+                </div>
+                <a href="http://www.news.cn/tech/20251122/454389c8530849629e644f641d9bbcf2/c.html" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    算力助推！AI医疗催生更多创新场景
+                </a>
+                <p class="text-gray-600 text-sm">远程医疗技术新进展</p>
+            </div>
+
+            <!-- 企业动态 -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 0.4s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-building text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">企业要闻</h2>
+                </div>
+                <a href="https://www.cs.com.cn/ssgs/gsxw/202511/t20251122_6524599.html" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    中国铁塔启动"擎天"AI平台建设
+                </a>
+                <p class="text-gray-600 text-sm">加快打造科技型创新企业</p>
+            </div>
+
+            <!-- 投资风向 -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 0.5s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-line text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">资本市场</h2>
+                </div>
+                <a href="https://www.nbd.com.cn/articles/2025-11-22/4153466.html" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    首批科创创业人工智能ETF获批
+                </a>
+                <p class="text-gray-600 text-sm">永赢基金前瞻布局硬科技</p>
+            </div>
+
+            <!-- 国际动态 -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 0.6s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-globe text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">国际视野</h2>
+                </div>
+                <a href="https://finance.sina.com.cn/stock/usstock/c/2025-11-22/doc-infyevpy6778790.shtml" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    Alphabet AI进展对OpenAI构成威胁
+                </a>
+                <p class="text-gray-600 text-sm">股价应声上涨</p>
+            </div>
+
+            <!-- 行业报告 -->
+            <div class="col-span-1 md:col-span-2 gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 0.7s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-bar text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">深度研究</h2>
+                </div>
+                <a href="http://sohu.com/a/927581092_121757514" 
+                   class="block text-2xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    2025全球生成式AI行业趋势报告发布
+                </a>
+                <p class="text-gray-600 text-sm">中英文版同步上线</p>
+                <span class="inline-block mt-4 px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">行业报告</span>
+            </div>
+
+            <!-- 开发工具 -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 0.8s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-tools text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">开发前沿</h2>
+                </div>
+                <a href="http://t.cj.sina.com.cn/articles/view/7073837338/1a5a2311a00101gpr8?finpagefr=p_103" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    2025年AI编程工具TOP10深度解析
+                </a>
+                <p class="text-gray-600 text-sm">从工具选型到趋势洞察</p>
+            </div>
+
+            <!-- 学术前沿 -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 0.9s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-graduation-cap text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">学术动态</h2>
+                </div>
+                <a href="https://hub.baai.ac.cn/view/50571" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    姚期智：大模型革新各行业，AI向AGI迈进
+                </a>
+                <p class="text-gray-600 text-sm">图灵奖得主最新观点</p>
+            </div>
+
+            <!-- 伦理探讨 -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 1.0s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-balance-scale text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">科技伦理</h2>
+                </div>
+                <a href="https://www.thepaper.cn/newsDetail_forward_32021561" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    第三届中国科技伦理论坛共议AI时代新命题
+                </a>
+                <p class="text-gray-600 text-sm">人工智能伦理建设</p>
+            </div>
+
+            <!-- 市场表现 -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 1.1s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-bolt text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">市场快讯</h2>
+                </div>
+                <a href="https://stcn.com/article/detail/3507138.html" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    人工智能板块直线飙涨！重磅利好传来
+                </a>
+                <p class="text-gray-600 text-sm">资本市场热烈响应</p>
+            </div>
+
+            <!-- 产业应用 -->
+            <div class="gradient-bg rounded-2xl p-6 news-item" style="animation-delay: 1.2s">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-industry text-primary text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">产业应用</h2>
+                </div>
+                <a href="http://sohu.com/a/913713294_121924584" 
+                   class="block text-xl font-bold text-gray-900 hover:text-primary transition-colors mb-4">
+                    AI算法与云计算重塑产业生态格局
+                </a>
+                <p class="text-gray-600 text-sm">2025年高科技行业趋势</p>
+            </div>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="text-center text-gray-500 text-sm">
+            <p>数据更新时间：2025年11月22日 | 信息来源：各大权威媒体及机构</p>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻项添加观察
+        document.querySelectorAll('.news-item').forEach(item => {
+            observer.observe(item);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 20px 40px rgba(59, 130, 246, 0.15)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
+            });
+        });
+    </script>
+</body>
+</html>
