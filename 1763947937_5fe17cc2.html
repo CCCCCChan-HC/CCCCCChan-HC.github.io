@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI新闻速递 - 最新动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        highlight: 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-top: 0.5rem;
+        }
+        .highlight-gradient {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">AI新闻速递</h1>
+            <p class="text-lg text-gray-600">最新人工智能动态 · 24小时热点追踪</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- 新闻卡片 1 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 0.1s">
+                <a href="https://36kr.com/p/3240860700655622" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-bolt text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">李飞飞团队发布2025年AI指数报告：12大趋势证明AI不再只是可能性</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">斯坦福大学最新报告揭示人工智能发展现状</p>
+                    <div class="news-source">来源：36氪</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 2 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 0.2s">
+                <a href="https://www.stcn.com/article/detail/3507138.html" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-chart-line text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">直线飙涨！人工智能板块迎来重磅利好</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">资本市场对AI产业前景持续看好</p>
+                    <div class="news-source">来源：证券时报</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 3 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 0.3s">
+                <a href="https://www.ultralytics.com/zh/blog/2025-ai-trends-the-innovations-to-look-out-for-this-year" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-eye text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">2025年AI与视觉趋势：今年值得关注的创新突破</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">Ultralytics发布年度技术展望</p>
+                    <div class="news-source">来源：Ultralytics</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 4 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 0.4s">
+                <a href="https://finance.sina.com.cn/jjxw/2025-11-23/doc-infykxea4757397.shtml" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-users text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">国际人工智能科学家大会密集发布多项成果和榜单</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">全球AI领域最新研究进展集中展示</p>
+                    <div class="news-source">来源：新浪财经</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 5 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 0.5s">
+                <a href="https://www.secrss.com/articles/83587" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-key text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">信通院发布2025人工智能产业十大关键词</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">把握AI产业发展核心脉络</p>
+                    <div class="news-source">来源：安全内参</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 6 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 0.6s">
+                <a href="https://news.tju.edu.cn/info/1012/574489.htm" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-brain text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">天津大学解码大脑信息处理机制助力新一代AI发展</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">脑科学研究的重大突破</p>
+                    <div class="news-source">来源：天津大学</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 7 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 0.7s">
+                <a href="https://www.stcn.com/article/detail/3487776.html" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-globe text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">世界互联网大会发布《全球人工智能标准发展报告》</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">推动AI技术标准化进程</p>
+                    <div class="news-source">来源：证券时报</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 8 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 0.8s">
+                <a href="https://www.cls.cn/detail/2204501" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-crown text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">AI大模型"新王"加冕！奥尔特曼发来贺电，谷歌做对了什么？</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">大模型竞争格局生变</p>
+                    <div class="news-source">来源：财联社</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 9 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 0.9s">
+                <a href="https://finance.sina.com.cn/hy/hyjz/2025-11-23/doc-infyknqa7693395.shtml" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-chart-bar text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">天风证券赵晓光：人工智能的应用效果低于预期</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">业内专家对AI商业化前景的理性分析</p>
+                    <div class="news-source">来源：新浪财经</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 10 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 1.0s">
+                <a href="https://www.cnr.cn/jingji/jjgd/20251123/t20251123_527438265.shtml" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-industry text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">2025中国5G+工业互联网大会：工业互联网"向智"跃升</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">智能制造进入规模化应用新阶段</p>
+                    <div class="news-source">来源：中央人民广播电台</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 11 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 1.1s">
+                <a href="https://www.iyiou.com/data/202511241115240" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-newspaper text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">大模型周报：AI技术新突破密集涌现</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">11月16日-23日技术进展汇总</p>
+                    <div class="news-source">来源：亿欧</div>
+                </a>
+            </div>
+
+            <!-- 新闻卡片 12 -->
+            <div class="news-card highlight-gradient animate-fade-in-up" style="animation-delay: 1.2s">
+                <a href="https://finance.sina.com.cn/hy/hyjz/2025-11-23/doc-infyknqa7686557.shtml" class="block">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-crystal-ball text-primary text-xl mr-3"></i>
+                        <h2 class="news-title">杨耀东：未来五年内或能看到强人工智能的出现</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm">专家预测AGI发展时间表</p>
+                    <div class="news-source">来源：新浪财经</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加观察
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.08) 100%)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%)';
+            });
+        });
+    </script>
+</body>
+</html>
