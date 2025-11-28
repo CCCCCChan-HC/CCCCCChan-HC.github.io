@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI每日动态 - 2025年11月27日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': '#93C5FD'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-top: 0.5rem;
+        }
+        
+        .date-badge {
+            background: linear-gradient(135deg, #3B82F6, #60A5FA);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                <span class="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+                    AI每日动态摘要
+                </span>
+            </h1>
+            <div class="date-badge">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                2025年11月27日
+            </div>
+            <p class="text-gray-600 text-lg">探索人工智能领域的最新突破与发展</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- 新闻条目1 -->
+            <a href="http://www.news.cn/info/20250116/e96e117ae3aa4d92aaae3875ee5385ca/c.html" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-robot text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">2025人工智能新纪元：拥抱变革的关键时刻</h2>
+                </div>
+                <p class="text-gray-700 text-sm">深度解析人工智能发展趋势与应对策略</p>
+                <div class="news-source">来源：新华网</div>
+            </a>
+
+            <!-- 新闻条目2 -->
+            <a href="https://ecas.cas.cn/xxkw/kbcd/201115_146615/ml/xxhcxyyyal/202501/t20250117_5045348.html" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-flask text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">MIT发布2025十大突破性技术，AI领域独占鳌头</h2>
+                </div>
+                <p class="text-gray-700 text-sm">科技创新前沿的最新风向标</p>
+                <div class="news-source">来源：中国科学院网信工作网</div>
+            </a>
+
+            <!-- 新闻条目3 -->
+            <a href="http://finance.people.com.cn/n1/2025/1128/c1004-40613282.html" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-industry text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">全国多地启动AI应用中试基地建设</h2>
+                </div>
+                <p class="text-gray-700 text-sm">加速人工智能技术产业化进程</p>
+                <div class="news-source">来源：人民网经济·科技</div>
+            </a>
+
+            <!-- 新闻条目4 -->
+            <a href="http://paper.people.com.cn/rmrb/pc/content/202511/27/content_30117064.html" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-bolt text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">人工智能碰撞新火花：创新应用的无限可能</h2>
+                </div>
+                <p class="text-gray-700 text-sm">探索AI与传统行业融合的创新路径</p>
+                <div class="news-source">来源：人民日报评论员观察</div>
+            </a>
+
+            <!-- 新闻条目5 -->
+            <a href="https://finance.sina.com.cn/tech/roll/2025-11-28/doc-infywyzp0171612.shtml" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-chart-line text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">2025 AI现状：智能体技术引领产业转型浪潮</h2>
+                </div>
+                <p class="text-gray-700 text-sm">全面分析人工智能发展现状与未来趋势</p>
+                <div class="news-source">来源：新浪科技</div>
+            </a>
+
+            <!-- 新闻条目6 -->
+            <a href="https://www.group.citic/html/2025/News_1127/3083.html" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-factory text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">中信集团入选全国首批领航级智能工厂</h2>
+                </div>
+                <p class="text-gray-700 text-sm">智能制造领域的标杆性突破</p>
+                <div class="news-source">来源：中信集团</div>
+            </a>
+
+            <!-- 新闻条目7 -->
+            <a href="https://www.tsinghua.edu.cn/info/1182/122783.htm" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-graduation-cap text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">清华大学发布首个AI教育应用指导规范</h2>
+                </div>
+                <p class="text-gray-700 text-sm">严禁利用AI实施学术不端行为</p>
+                <div class="news-source">来源：清华大学</div>
+            </a>
+
+            <!-- 新闻条目8 -->
+            <a href="http://www.news.cn/tech/20251128/6d04ef5d3d9b480cbd5953eb9f5a6c6c/c.html" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-shield-alt text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">AI+时代网络安全挑战升级，构建新防线迫在眉睫</h2>
+                </div>
+                <p class="text-gray-700 text-sm">应对多样化AI网络攻击的新策略</p>
+                <div class="news-source">来源：新华网科技</div>
+            </a>
+
+            <!-- 新闻条目9 -->
+            <a href="http://www.ce.cn/xwzx/kj/202511/t20251127_2605918.shtml" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-rocket text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">美国推出"创世纪计划"，AI加速科技突破</h2>
+                </div>
+                <p class="text-gray-700 text-sm">全球AI竞赛进入新阶段</p>
+                <div class="news-source">来源：中国经济网</div>
+            </a>
+
+            <!-- 新闻条目10 -->
+            <a href="https://news.jiangnan.edu.cn/info/1081/104934.htm" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-university text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">江苏高等教育按下智能化"快进键"</h2>
+                </div>
+                <p class="text-gray-700 text-sm">教育领域AI应用的深度探索</p>
+                <div class="news-source">来源：江南大学新闻网</div>
+            </a>
+
+            <!-- 新闻条目11 -->
+            <a href="https://www.21jingji.com/article/20251126/herald/97c18f93208cbecac08f0b5e223ad383.html" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-stethoscope text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">北京加快AI辅助诊疗技术推广应用</h2>
+                </div>
+                <p class="text-gray-700 text-sm">医疗健康领域的AI革命</p>
+                <div class="news-source">来源：21世纪经济报道</div>
+            </a>
+
+            <!-- 新闻条目12 -->
+            <a href="https://www.chinanews.com.cn/cj/2025/11-27/10522563.shtml" class="news-card animate-fade-in-up">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-users text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">行业翘楚齐聚"中国光谷"，共话AI产业发展</h2>
+                </div>
+                <p class="text-gray-700 text-sm">产业精英共商人工智能发展大计</p>
+                <div class="news-source">来源：中国新闻网</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}ms`;
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 为每个新闻卡片添加随机延迟
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.dataset.delay = (index % 6) * 100;
+            observer.observe(card);
+        });
+
+        // 悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
