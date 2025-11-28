@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI资讯速递 - 每日人工智能动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        highlight: 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        .news-card:hover::before {
+            left: 100%;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .news-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-top: 0.5rem;
+        }
+        .news-date {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            margin-top: 0.25rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #3B82F6, #1E40AF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .highlight-badge {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3B82F6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="section-title">AI前沿动态 · 每日速递</h1>
+        
+        <div class="bento-grid">
+            <!-- 新闻条目 1 -->
+            <a href="http://mp.weixin.qq.com/s?__biz=MzkzNzkxMDcxNQ==&mid=2247484344&idx=1&sn=9a291d06f5f77575ca0cca21b2084cd4" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-bolt mr-1"></i> 最新快讯</div>
+                <h2 class="news-title">AI视野重磅发布：今日AI行业全景扫描</h2>
+                <p class="text-gray-600">涵盖最新技术突破、产业动态和市场趋势的全面报道</p>
+                <div class="news-source">来源：AI视野 · 每日AI资讯速递</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+
+            <!-- 新闻条目 2 -->
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTI0NjM3Mg==&mid=2247489217&idx=1&sn=5f0f150a3fffdad12546b841041bb435" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-microchip mr-1"></i> 技术深度</div>
+                <h2 class="news-title">从代码加速到芯片博弈：AI底层技术大揭秘</h2>
+                <p class="text-gray-600">深入解析模型记忆机制与硬件优化策略</p>
+                <div class="news-source">来源：AI前沿</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+
+            <!-- 新闻条目 3 -->
+            <a href="http://mp.weixin.qq.com/s?__biz=MzkzNzkxMDcxNQ==&mid=2247484340&idx=1&sn=55bd69d949fe0e7c173cc0ffee170516" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-newspaper mr-1"></i> 昨日回顾</div>
+                <h2 class="news-title">AI视野昨日精选：不容错过的重要动态</h2>
+                <p class="text-gray-600">回顾前日AI领域的关键进展和热点事件</p>
+                <div class="news-source">来源：AI视野 · 每日AI资讯速递</div>
+                <div class="news-date">2025-08-25</div>
+            </a>
+
+            <!-- 新闻条目 4 -->
+            <a href="https://finance.sina.com.cn/tech/roll/2025-05-06/doc-inevqyfh2355840.shtml" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-robot mr-1"></i> 专家观点</div>
+                <h2 class="news-title">IBM专家预言：2025年成AI智能体应用拐点</h2>
+                <p class="text-gray-600">翟峰指出智能体技术将迎来规模化爆发</p>
+                <div class="news-source">来源：新浪科技</div>
+                <div class="news-date">2025-05-06</div>
+            </a>
+
+            <!-- 新闻条目 5 -->
+            <a href="https://blog.csdn.net/weixin_72959097/article/details/147735685" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-chart-line mr-1"></i> 权威报告</div>
+                <h2 class="news-title">斯坦福2025AI指数报告：全球竞争格局深度剖析</h2>
+                <p class="text-gray-600">全面评估各国AI发展态势与技术实力</p>
+                <div class="news-source">来源：CSDN技术社区</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+
+            <!-- 新闻条目 6 -->
+            <a href="#" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-laptop-code mr-1"></i> 硬件动态</div>
+                <h2 class="news-title">AI笔记本电脑迎爆发元年：2025年出货量激增</h2>
+                <p class="text-gray-600">专用AI芯片成为PC市场新增长引擎</p>
+                <div class="news-source">来源：小兰爱吃瓜</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+
+            <!-- 新闻条目 7 -->
+            <a href="#" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-atom mr-1"></i> 量子突破</div>
+                <h2 class="news-title">量子计算新里程碑：错误校正技术获重大突破</h2>
+                <p class="text-gray-600">为实用化量子计算机奠定坚实基础</p>
+                <div class="news-source">来源：小兰爱吃瓜</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+
+            <!-- 新闻条目 8 -->
+            <a href="#" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-shield-alt mr-1"></i> 安全前沿</div>
+                <h2 class="news-title">AI安全新范式：自适应防御系统全面升级</h2>
+                <p class="text-gray-600">智能威胁检测响应速度提升300%</p>
+                <div class="news-source">来源：AI视野</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+
+            <!-- 新闻条目 9 -->
+            <a href="#" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-brain mr-1"></i> 算法创新</div>
+                <h2 class="news-title">神经架构搜索突破：自动设计效率提升10倍</h2>
+                <p class="text-gray-600">大幅降低AI模型开发门槛和成本</p>
+                <div class="news-source">来源：AI前沿</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+
+            <!-- 新闻条目 10 -->
+            <a href="#" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-industry mr-1"></i> 产业应用</div>
+                <h2 class="news-title">制造业AI化加速：智能工厂覆盖率超60%</h2>
+                <p class="text-gray-600">生产效率平均提升45%，成本下降30%</p>
+                <div class="news-source">来源：行业报告</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+
+            <!-- 新闻条目 11 -->
+            <a href="#" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-graduation-cap mr-1"></i> 人才培养</div>
+                <h2 class="news-title">全球AI人才缺口达100万，薪酬持续上涨</h2>
+                <p class="text-gray-600">顶尖AI工程师年薪突破200万元</p>
+                <div class="news-source">来源：人才市场分析</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+
+            <!-- 新闻条目 12 -->
+            <a href="#" class="news-card block">
+                <div class="highlight-badge"><i class="fas fa-globe mr-1"></i> 国际合作</div>
+                <h2 class="news-title">多国签署AI治理框架，共建可信AI生态</h2>
+                <p class="text-gray-600">全球AI治理进入标准化新阶段</p>
+                <div class="news-source">来源：国际新闻</div>
+                <div class="news-date">2025-08-26</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 初始化卡片动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.news-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+                observer.observe(card);
+            });
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, #FFFFFF, #F8FAFC)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
