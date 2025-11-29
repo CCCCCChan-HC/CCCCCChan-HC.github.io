@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI每日要闻 - 2025年人工智能最新动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066ff',
+                        'primary-light': 'rgba(0, 102, 255, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 102, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .news-card:hover::before {
+            left: 100%;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">AI<span class="text-primary">每日要闻</span></h1>
+            <p class="text-xl text-gray-600">2025年人工智能领域最新突破与发展趋势</p>
+            <div class="mt-4 flex justify-center items-center space-x-2 text-primary">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="text-sm font-medium">更新时间：2025年11月28日</span>
+            </div>
+        </div>
+
+        <!-- Bento Grid 新闻布局 -->
+        <div class="bento-grid">
+            <!-- 新闻1 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-rocket text-primary text-lg"></i>
+                    </div>
+                    <a href="http://www.news.cn/info/20250116/e96e117ae3aa4d92aaae3875ee5385ca/c.html" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        🚀 2025人工智能新纪元：如何拥抱技术变革？
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">新华网深度解析人工智能发展路径与应对策略</p>
+                <span class="text-xs text-gray-400">来源：新华网</span>
+            </div>
+
+            <!-- 新闻2 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-chart-line text-primary text-lg"></i>
+                    </div>
+                    <a href="http://ts2.tech/zh/2025%E5%B9%B46%E6%9C%88%E8%87%B37%E6%9C%88%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        📊 6-7月AI重大突破：技术演进与市场影响
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">TechStock²发布最新人工智能进展分析报告</p>
+                <span class="text-xs text-gray-400">来源：TechStock²</span>
+            </div>
+
+            <!-- 新闻3 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-flask text-primary text-lg"></i>
+                    </div>
+                    <a href="https://ecas.cas.cn/xxkw/kbcd/201115_146615/ml/xxhcxyyyal/202501/t20250117_5045348.html" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        🔬 麻省理工发布2025十大突破性技术
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">《麻省理工科技评论》揭示年度最具影响力AI技术</p>
+                <span class="text-xs text-gray-400">来源：中国科学院</span>
+            </div>
+
+            <!-- 新闻4 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-shield-alt text-primary text-lg"></i>
+                    </div>
+                    <a href="http://cpc.people.com.cn/n1/2025/1128/c64387-40613298.html" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        🛡️ 多管齐下：防范AI技术滥用新策略
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">中国共产党新闻网探讨AI安全治理方案</p>
+                <span class="text-xs text-gray-400">来源：人民网</span>
+            </div>
+
+            <!-- 新闻5 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-industry text-primary text-lg"></i>
+                    </div>
+                    <a href="https://www.ncsti.gov.cn/kjdt/kjrd/rgzn_kjrd/202511/t20251128_230374.html" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        🏭 国家人工智能应用中试基地全面启动
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">全国多地加速AI技术产业化应用布局</p>
+                <span class="text-xs text-gray-400">来源：科技部</span>
+            </div>
+
+            <!-- 新闻6 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-robot text-primary text-lg"></i>
+                    </div>
+                    <a href="http://www.news.cn/20251128/4dadf8c846604be396389a36a7d83c3a/c.html" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        🤖 2025世界智能制造大会：AI赋能工业4.0
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">新华网报道智能制造最新技术成果</p>
+                <span class="text-xs text-gray-400">来源：新华网</span>
+            </div>
+
+            <!-- 新闻7 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-graduation-cap text-primary text-lg"></i>
+                    </div>
+                    <a href="https://www.tsinghua.edu.cn/info/1182/122828.htm" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        🎓 清华大学：严禁AI生成内容直接用作学业成果
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">高校出台AI学术规范，保障教育质量</p>
+                <span class="text-xs text-gray-400">来源：清华大学</span>
+            </div>
+
+            <!-- 新闻8 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-briefcase text-primary text-lg"></i>
+                    </div>
+                    <a href="https://www.stcn.com/article/detail/3517583.html" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        💼 AI全面应用于资本市场建设新进展
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">金融科技ETF备受市场关注，AI驱动投资变革</p>
+                <span class="text-xs text-gray-400">来源：证券时报</span>
+            </div>
+
+            <!-- 新闻9 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-leaf text-primary text-lg"></i>
+                    </div>
+                    <a href="http://yqb.gxzf.gov.cn/zwdt123/dszx/t26224762.shtml" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        🌿 防城港经开区：AI控场打造绿色新质生产力
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">AI技术助力可持续发展，推动绿色制造</p>
+                <span class="text-xs text-gray-400">来源：广西政府网</span>
+            </div>
+
+            <!-- 新闻10 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-globe text-primary text-lg"></i>
+                    </div>
+                    <a href="http://www.news.cn/world/20251128/dccf190f8e2b40e69dfd688a6b947ef8/c.html" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        🌍 俄罗斯推动AI技术赋能各行业发展
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">国际视角：全球AI技术应用新趋势</p>
+                <span class="text-xs text-gray-400">来源：新华网国际</span>
+            </div>
+
+            <!-- 新闻11 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-cogs text-primary text-lg"></i>
+                    </div>
+                    <a href="https://www.cac.gov.cn/2025-11/28/c_1766054890857165.htm" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        ⚙️ 具身智能驶入"成长快车道"
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">解锁服务新技能，AI机器人技术突破</p>
+                <span class="text-xs text-gray-400">来源：国家网信办</span>
+            </div>
+
+            <!-- 新闻12 -->
+            <div class="news-card fade-in">
+                <div class="flex items-start mb-3">
+                    <div class="bg-primary-light p-2 rounded-lg mr-3">
+                        <i class="fas fa-file-alt text-primary text-lg"></i>
+                    </div>
+                    <a href="https://finance.sina.com.cn/roll/2025-11-28/doc-infyypau9612336.shtml" 
+                       class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                        📄 专利审查指南新规：首设AI大数据专章
+                    </a>
+                </div>
+                <p class="text-gray-600 mb-2">加强AI伦理审查，完善知识产权保护</p>
+                <span class="text-xs text-gray-400">来源：新浪财经</span>
+            </div>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="text-center mt-12 pt-8 border-t border-gray-200">
+            <div class="flex justify-center space-x-6 text-gray-500 mb-4">
+                <a href="#" class="hover:text-primary transition-colors"><i class="fab fa-weixin"></i></a>
+                <a href="#" class="hover:text-primary transition-colors"><i class="fab fa-weibo"></i></a>
+                <a href="#" class="hover:text-primary transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-sm text-gray-400">© 2025 AI每日要闻 - 聚焦人工智能最新动态</p>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // 页面加载时检查可见性
+        window.addEventListener('load', checkVisibility);
+        // 滚动时检查可见性
+        window.addEventListener('scroll', checkVisibility);
+
+        // 初始化检查
+        checkVisibility();
+
+        // 添加卡片点击效果
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'A') {
+                    const link = this.querySelector('a');
+                    if (link) {
+                        window.open(link.href, '_blank');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
