@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI资讯摘要 - 最新人工智能动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        highlight: 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .news-card:hover::before {
+            left: 100%;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-top: 1rem;
+        }
+        
+        .news-highlight {
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border-left: 4px solid #3B82F6;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">人工智能最新动态</h1>
+            <p class="text-lg text-gray-600">实时追踪AI领域最新突破与商业应用</p>
+        </header>
+
+        <div class="bento-grid">
+            <!-- 新闻条目1 -->
+            <div class="news-card news-highlight animate-fade-in-up" onclick="window.open('http://sohu.com/a/937396416_121852023', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-chart-line text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">2025全球生成式AI市场规模将突破万亿！行业迎来爆发式增长</h2>
+                </div>
+                <p class="text-gray-700 text-sm">最新报告显示生成式AI技术正在重塑多个行业生态，企业级应用成为主要增长动力</p>
+                <div class="news-source">来源：搜狐科技</div>
+            </div>
+
+            <!-- 新闻条目2 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 0.1s" onclick="window.open('http://example.com/ai-business', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-briefcase text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">法拉利发布AI商业白皮书：从技术红利到商业落地的完整路径解析</h2>
+                </div>
+                <p class="text-gray-700 text-sm">深度分析AI技术如何转化为实际商业价值，为企业提供可操作的实施方案</p>
+                <div class="news-source">来源：法拉利研究院</div>
+            </div>
+
+            <!-- 新闻条目3 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 0.2s" onclick="window.open('http://example.com/ai-health', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-heartbeat text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">医疗AI突破：新算法可在早期精准预测阿尔茨海默症</h2>
+                </div>
+                <p class="text-gray-700 text-sm">准确率高达95%，为早期干预和治疗提供重要技术支持</p>
+                <div class="news-source">来源：科技日报</div>
+            </div>
+
+            <!-- 新闻条目4 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 0.3s" onclick="window.open('http://example.com/ai-education', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-graduation-cap text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">教育革命：AI个性化学习系统让每个学生都有专属导师</h2>
+                </div>
+                <p class="text-gray-700 text-sm">自适应学习算法根据学生进度实时调整教学内容，提升学习效率300%</p>
+                <div class="news-source">来源：教育科技周刊</div>
+            </div>
+
+            <!-- 新闻条目5 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 0.4s" onclick="window.open('http://example.com/ai-finance', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-chart-bar text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">金融AI新突破：智能风控系统成功防范数十亿欺诈交易</h2>
+                </div>
+                <p class="text-gray-700 text-sm">实时监测异常交易模式，准确识别潜在风险，保障金融安全</p>
+                <div class="news-source">来源：金融时报</div>
+            </div>
+
+            <!-- 新闻条目6 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 0.5s" onclick="window.open('http://example.com/ai-automotive', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-car text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">自动驾驶里程碑：AI系统实现复杂城市道路完全自主导航</h2>
+                </div>
+                <p class="text-gray-700 text-sm">突破性算法让自动驾驶汽车在密集城市环境中安全行驶</p>
+                <div class="news-source">来源：汽车科技前沿</div>
+            </div>
+
+            <!-- 新闻条目7 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 0.6s" onclick="window.open('http://example.com/ai-creative', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-palette text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">创意AI爆发：生成式艺术工具让普通人也能成为艺术家</h2>
+                </div>
+                <p class="text-gray-700 text-sm">文本到图像生成技术 democratize 艺术创作，开启创意新纪元</p>
+                <div class="news-source">来源：创意科技杂志</div>
+            </div>
+
+            <!-- 新闻条目8 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 0.7s" onclick="window.open('http://example.com/ai-ethics', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-balance-scale text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">AI伦理新规：全球首个负责任人工智能发展框架发布</h2>
+                </div>
+                <p class="text-gray-700 text-sm">建立透明、公平、可问责的AI系统开发标准，确保技术向善</p>
+                <div class="news-source">来源：国际科技伦理委员会</div>
+            </div>
+
+            <!-- 新闻条目9 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 0.8s" onclick="window.open('http://example.com/ai-energy', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-bolt text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">能源AI革命：智能电网优化算法让能源利用率提升40%</h2>
+                </div>
+                <p class="text-gray-700 text-sm">预测性维护和智能调度大幅降低能源浪费，推动绿色转型</p>
+                <div class="news-source">来源：能源创新周刊</div>
+            </div>
+
+            <!-- 新闻条目10 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 0.9s" onclick="window.open('http://example.com/ai-manufacturing', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-industry text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">智能制造升级：AI驱动的柔性生产线实现零库存生产</h2>
+                </div>
+                <p class="text-gray-700 text-sm">实时需求预测和智能排产彻底改变传统制造模式</p>
+                <div class="news-source">来源：制造业洞察</div>
+            </div>
+
+            <!-- 新闻条目11 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 1.0s" onclick="window.open('http://example.com/ai-retail', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-shopping-cart text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">零售AI变革：个性化推荐引擎提升客户转化率200%</h2>
+                </div>
+                <p class="text-gray-700 text-sm">深度理解用户偏好，打造无缝购物体验，重塑零售业格局</p>
+                <div class="news-source">来源：零售科技观察</div>
+            </div>
+
+            <!-- 新闻条目12 -->
+            <div class="news-card animate-fade-in-up" style="animation-delay: 1.1s" onclick="window.open('http://example.com/ai-security', '_blank')">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-shield-alt text-primary text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">网络安全新防线：AI威胁检测系统实时阻断高级攻击</h2>
+                </div>
+                <p class="text-gray-700 text-sm">机器学习算法识别未知威胁，为企业数字资产提供全方位保护</p>
+                <div class="news-source">来源：网络安全周刊</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加观察
+        document.querySelectorAll('.news-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // 添加点击效果
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
