@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI前沿动态 - 人工智能最新资讯</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': '#60A5FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.75rem;
+        }
+        
+        .highlight-badge {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            color: #3B82F6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="text-4xl font-bold mb-4">🚀 AI前沿动态</h1>
+        <p class="text-xl opacity-90">最新人工智能资讯与深度分析</p>
+        <div class="mt-4 flex justify-center space-x-2">
+            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm">实时更新</span>
+            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm">专业解读</span>
+            <span class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm">全球视野</span>
+        </div>
+    </div>
+
+    <div class="bento-grid">
+        <!-- 新闻卡片 1 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-chart-line mr-1"></i>产业动态</span>
+            <h2 class="news-title">全年核心产值有望突破4500亿元！人工智能产业迎来爆发式增长</h2>
+            <p class="text-gray-600 text-sm">中国人工智能产业规模持续扩大，技术创新能力显著提升</p>
+            <div class="news-source">来源：新浪财经</div>
+        </div>
+
+        <!-- 新闻卡片 2 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-robot mr-1"></i>技术前沿</span>
+            <h2 class="news-title">人工智能如何行稳致远？专家深度解读发展路径</h2>
+            <p class="text-gray-600 text-sm">探讨AI技术可持续发展与安全治理的关键问题</p>
+            <div class="news-source">来源：中国经济网</div>
+        </div>
+
+        <!-- 新闻卡片 3 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-university mr-1"></i>研究报告</span>
+            <h2 class="news-title">斯坦福发布2025年AI指数报告：全球AI发展进入新阶段</h2>
+            <p class="text-gray-600 text-sm">全面分析人工智能技术趋势与产业发展现状</p>
+            <div class="news-source">来源：51CTO</div>
+        </div>
+
+        <!-- 新闻卡片 4 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-city mr-1"></i>区域发展</span>
+            <h2 class="news-title">"人工智能第一城"如何再突围？多地竞相布局AI产业</h2>
+            <p class="text-gray-600 text-sm">各城市加大AI产业投入，打造人工智能创新高地</p>
+            <div class="news-source">来源：央广网</div>
+        </div>
+
+        <!-- 新闻卡片 5 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-microchip mr-1"></i>硬件突破</span>
+            <h2 class="news-title">AI存力需求高景气度有望延续，芯片产业迎来新机遇</h2>
+            <p class="text-gray-600 text-sm">人工智能算力需求持续增长，带动相关产业链发展</p>
+            <div class="news-source">来源：证券时报网</div>
+        </div>
+
+        <!-- 新闻卡片 6 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-globe mr-1"></i>国际视野</span>
+            <h2 class="news-title">全球人工智能模型又添"新成员"，能力边界不断扩大</h2>
+            <p class="text-gray-600 text-sm">国际巨头持续投入，AI模型性能实现新突破</p>
+            <div class="news-source">来源：新浪财经</div>
+        </div>
+
+        <!-- 新闻卡片 7 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-handshake mr-1"></i>产业合作</span>
+            <h2 class="news-title">光谷"AI新势力"发布，一批重点项目签约落户</h2>
+            <p class="text-gray-600 text-sm">政企合作推动人工智能产业集群发展</p>
+            <div class="news-source">来源：武汉东湖高新区</div>
+        </div>
+
+        <!-- 新闻卡片 8 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-trending-up mr-1"></i>投资热点</span>
+            <h2 class="news-title">巨头千亿级投入！AI产业新周期，这一方向潜力凸显</h2>
+            <p class="text-gray-600 text-sm">资本市场看好AI发展前景，投资热情持续高涨</p>
+            <div class="news-source">来源：新浪财经</div>
+        </div>
+
+        <!-- 新闻卡片 9 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-cogs mr-1"></i>技术创新</span>
+            <h2 class="news-title">从代码加速到芯片博弈，AI技术迎来全面升级</h2>
+            <p class="text-gray-600 text-sm">人工智能底层技术实现重要突破</p>
+            <div class="news-source">来源：微信公众号</div>
+        </div>
+
+        <!-- 新闻卡片 10 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-industry mr-1"></i>工业应用</span>
+            <h2 class="news-title">东土科技为工业人工智能铸造"中国根系"</h2>
+            <p class="text-gray-600 text-sm">国产工业AI解决方案取得重要进展</p>
+            <div class="news-source">来源：中国证券报</div>
+        </div>
+
+        <!-- 新闻卡片 11 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-shield-alt mr-1"></i>安全治理</span>
+            <h2 class="news-title">提升国际治理效能，推动人工智能安全发展</h2>
+            <p class="text-gray-600 text-sm">全球合作构建AI安全治理体系</p>
+            <div class="news-source">来源：光明网</div>
+        </div>
+
+        <!-- 新闻卡片 12 -->
+        <div class="news-card animate-on-scroll">
+            <span class="highlight-badge"><i class="fas fa-calendar-alt mr-1"></i>行业盛会</span>
+            <h2 class="news-title">2025"人工智能+"产业生态大会将举行，布局春季行情</h2>
+            <p class="text-gray-600 text-sm">行业盛会聚焦AI技术与产业融合</p>
+            <div class="news-source">来源：经济观察网</div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // 添加点击跳转功能
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function() {
+                const links = [
+                    'https://finance.sina.com.cn/jjxw/2025-12-01/doc-infzfmwq5525192.shtml',
+                    'http://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251201_2610865.shtml',
+                    'https://www.51cto.com/aigc/5698.html',
+                    'https://www.cnr.cn/bj/tt/20251201/t20251201_527446486.shtml',
+                    'https://www.stcn.com/article/detail/3518571.html',
+                    'https://finance.sina.com.cn/jjxw/2025-05-25/doc-inexuumx8656756.shtml',
+                    'https://www.wehdz.gov.cn/2022/ggxw_68627/cydt_68630/202512/t20251201_2684843.shtml',
+                    'https://finance.sina.com.cn/roll/2025-11-28/doc-infyxmri0035424.shtml',
+                    'http://mp.weixin.qq.com/s?__biz=MzI4NTI0NjM3Mg==&mid=2247489217&idx=1&sn=5f0f150a3fffdad12546b841041bb435',
+                    'https://paper.cnstock.com/html/2025-12/01/content_2152215.htm',
+                    'https://news.gmw.cn/2025-12/01/content_38448575.htm',
+                    'http://www.eeo.com.cn/2025/1201/769972.shtml'
+                ];
+                if (links[index]) {
+                    window.open(links[index], '_blank');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
