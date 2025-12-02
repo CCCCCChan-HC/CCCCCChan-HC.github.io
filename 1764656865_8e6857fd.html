@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI每日要闻 | 2025年12月2日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        gradient: 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .news-card:hover::before {
+            left: 100%;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">
+                AI<span class="text-primary">每日要闻</span>
+            </h1>
+            <div class="flex items-center justify-center gap-4 text-gray-600">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="text-lg">2025年12月2日</span>
+                <i class="fas fa-bolt text-yellow-500"></i>
+                <span class="text-lg">实时更新</span>
+            </div>
+        </div>
+
+        <!-- Bento Grid 布局 -->
+        <div class="bento-grid">
+            <!-- 新闻卡片 1 -->
+            <a href="https://news.sina.com.cn/zx/ds/2025-12-01/doc-infzhxya3021690.shtml" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">热点</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">科技晚报AI速递：今日科技热点一览</h3>
+                <p class="text-gray-600 text-sm mb-4">涵盖人工智能领域最新动态与发展趋势</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-newspaper mr-1"></i>
+                    新浪科技
+                </div>
+            </a>
+
+            <!-- 新闻卡片 2 -->
+            <a href="https://www.cac.gov.cn/2025-12/1/c_1766054925913288.htm" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">政策</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">"人工智能+政务"规范应用案例名单公示</h3>
+                <p class="text-gray-600 text-sm mb-4">2025年规范应用案例拟入选名单公告</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-landmark mr-1"></i>
+                    国家网信办
+                </div>
+            </a>
+
+            <!-- 新闻卡片 3 -->
+            <a href="https://www.qstheory.cn/20251202/8f639db801914278a81c8d0f76340cec/c.html" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">战略</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">推动网信事业高质量发展 开创网络强国建设新局面</h3>
+                <p class="text-gray-600 text-sm mb-4">网络强国建设战略部署与实施路径</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-globe mr-1"></i>
+                    求是网
+                </div>
+            </a>
+
+            <!-- 新闻卡片 4 -->
+            <a href="http://www.news.cn/info/20250116/e96e117ae3aa4d92aaae3875ee5385ca/c.html" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">展望</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">2025，人工智能走向何方？我们如何拥抱变化？</h3>
+                <p class="text-gray-600 text-sm mb-4">AI技术发展趋势与应对策略分析</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-chart-line mr-1"></i>
+                    新华网
+                </div>
+            </a>
+
+            <!-- 新闻卡片 5 -->
+            <a href="http://ts2.tech/zh/2025%E5%B9%B46%E6%9C%88%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%EF%BC%9A%E7%AA%81%E7%A0%B4%E3%80%81%E8%B6%8B%E5%8A%BF%E4%B8%8E%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">突破</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">人工智能最新进展：突破、趋势与未来展望</h3>
+                <p class="text-gray-600 text-sm mb-4">2025年6月AI技术重大突破汇总</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-rocket mr-1"></i>
+                    TechStock²
+                </div>
+            </a>
+
+            <!-- 新闻卡片 6 -->
+            <a href="https://app.xinhuanet.com/news/article.html?articleId=8b70c42cc8bbec61ee6535c54f76ec69" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm">产业</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">国产大模型大变局：从"百模大战"到"基模五强"</h3>
+                <p class="text-gray-600 text-sm mb-4">国内AI大模型市场竞争格局演变</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-industry mr-1"></i>
+                    新华网客户端
+                </div>
+            </a>
+
+            <!-- 新闻卡片 7 -->
+            <a href="https://www.ncsti.gov.cn/kjdt/xwjj/202505/t20250512_204428.html" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm">创新</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">北京AI现象级产品诞生的背后</h3>
+                <p class="text-gray-600 text-sm mb-4">重磅发布接连不断的创新生态分析</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-city mr-1"></i>
+                    北京市科委
+                </div>
+            </a>
+
+            <!-- 新闻卡片 8 -->
+            <a href="https://www.stcn.com/article/detail/1822757.html" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">投资</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">国产算力价值奇点已至</h3>
+                <p class="text-gray-600 text-sm mb-4">政策、市场、技术、业绩四重共振</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-chart-bar mr-1"></i>
+                    证券时报
+                </div>
+            </a>
+
+            <!-- 新闻卡片 9 -->
+            <a href="http://m.10jqka.com.cn/20251202/c672882079.shtml" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-sm">预测</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">2030人工智能展望：全球算力井喷与投资机遇</h3>
+                <p class="text-gray-600 text-sm mb-4">未来五年AI算力发展趋势分析</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-crystal-ball mr-1"></i>
+                    同花顺
+                </div>
+            </a>
+
+            <!-- 新闻卡片 10 -->
+            <a href="http://bj.people.com.cn/n2/2025/1201/c14540-41428014.html" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">数据</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">北京人工智能产业规模有望超4500亿元</h3>
+                <p class="text-gray-600 text-sm mb-4">2025年产业规模预测与增长分析</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-chart-pie mr-1"></i>
+                    人民网
+                </div>
+            </a>
+
+            <!-- 新闻卡片 11 -->
+            <a href="http://www.news.cn/tech/20250105/ef4e2802b0f6453f81fb31bb11cc56cd/c.html" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-cyan-100 text-cyan-600 px-3 py-1 rounded-full text-sm">进化</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">2025年，人工智能如何进化</h3>
+                <p class="text-gray-600 text-sm mb-4">AI技术演进路径与创新突破</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-brain mr-1"></i>
+                    新华网科技
+                </div>
+            </a>
+
+            <!-- 新闻卡片 12 -->
+            <a href="http://www.news.cn/info/20251118/9db6c6f6bb6e4f4abe7fe984b6a80e55/c.html" 
+               class="news-card animate-fade-in-up hover:bg-gradient-to-r from-white to-blue-50">
+                <div class="flex items-start justify-between mb-3">
+                    <span class="bg-lime-100 text-lime-600 px-3 py-1 rounded-full text-sm">会议</span>
+                    <i class="fas fa-external-link-alt text-gray-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">"人工智能+"产业生态大会12月启幕</h3>
+                <p class="text-gray-600 text-sm mb-4">共赴AI融合新跨越的重要行业盛会</p>
+                <div class="text-xs text-gray-500 flex items-center">
+                    <i class="fas fa-users mr-1"></i>
+                    新华网资讯
+                </div>
+            </a>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="text-center mt-12 pt-8 border-t border-gray-200">
+            <p class="text-gray-600 text-sm">
+                <i class="fas fa-sync-alt mr-2"></i>
+                数据更新时间：2025年12月2日 10:00
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加观察
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.style.animationPlayState = 'paused';
+            observer.observe(card);
+        });
+
+        // 添加点击效果
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                const link = this.getAttribute('href');
+                
+                // 添加点击动画
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                    window.open(link, '_blank');
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
