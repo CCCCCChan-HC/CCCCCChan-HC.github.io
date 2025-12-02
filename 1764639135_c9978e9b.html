@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能每日要闻</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007AFF',
+                        highlight: 'rgba(0, 122, 255, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .news-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .source-tag {
+            background: linear-gradient(90deg, rgba(0, 122, 255, 0.1) 0%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <div class="text-center mb-12 fade-in">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">人工智能<span class="text-primary">每日要闻</span></h1>
+            <p class="text-lg text-gray-600">Latest AI News Updates · 最新行业动态</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-blue-300 mx-auto mt-4"></div>
+        </div>
+
+        <!-- Bento Grid 布局 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- 重点新闻卡片 -->
+            <div class="lg:col-span-2 fade-in">
+                <a href="https://www.cnstock.com/commonDetail/595752" class="block news-card rounded-2xl p-8 border border-gray-100 hover:border-primary/20">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-primary text-xl mr-3"></i>
+                        <span class="source-tag px-3 py-1 rounded-full text-sm text-primary">上证早知道</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">人工智能产业大会来袭！布局"春季躁动"正当时</h2>
+                    <p class="text-gray-600 mb-4">峨眉山邀请股东参与特别活动，AI产业迎来重要发展机遇期</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="far fa-clock mr-2"></i>
+                        <span>今日更新</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 数据新闻卡片 -->
+            <div class="fade-in">
+                <a href="http://bj.people.com.cn/n2/2025/1201/c14540-41428014.html" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20 h-full">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-primary text-xl mr-3"></i>
+                        <span class="source-tag px-3 py-1 rounded-full text-sm text-primary">人民网</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">北京AI产业规模将突破4500亿元</h2>
+                    <p class="text-gray-600 text-sm">2025年首都人工智能产业发展目标正式公布</p>
+                    <div class="mt-4 text-3xl font-bold text-primary">4500亿+</div>
+                </a>
+            </div>
+
+            <!-- 深度分析卡片 -->
+            <div class="fade-in">
+                <a href="http://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251201_2610865.shtml" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20 h-full">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-search text-primary text-xl mr-3"></i>
+                        <span class="source-tag px-3 py-1 rounded-full text-sm text-primary">中国经济网</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">人工智能如何行稳致远？专家深度解读</h2>
+                    <p class="text-gray-600 text-sm">探讨AI技术可持续发展路径与行业规范</p>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <i class="fas fa-user-graduate mr-2"></i>
+                        <span>专家观点</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 技术动态卡片 -->
+            <div class="md:col-span-2 fade-in">
+                <a href="http://sohu.com/a/874482820_121902920" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-robot text-primary text-xl mr-3"></i>
+                        <span class="source-tag px-3 py-1 rounded-full text-sm text-primary">搜狐科技</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">2025年AI行业重磅动态：人形机器人突破在即</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div class="bg-highlight rounded-lg p-3">
+                            <div class="text-sm text-primary font-semibold">宇树科技</div>
+                            <div class="text-xs text-gray-600">人形机器人新突破</div>
+                        </div>
+                        <div class="bg-highlight rounded-lg p-3">
+                            <div class="text-sm text-primary font-semibold">赛力斯AI</div>
+                            <div class="text-xs text-gray-600">新公司成立</div>
+                        </div>
+                        <div class="bg-highlight rounded-lg p-3">
+                            <div class="text-sm text-primary font-semibold">华为PuraX</div>
+                            <div class="text-xs text-gray-600">带来新机遇</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 个人观点卡片 -->
+            <div class="fade-in">
+                <a href="#" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20 h-full">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-book text-primary text-xl mr-3"></i>
+                        <span class="source-tag px-3 py-1 rounded-full text-sm text-primary">科技札记</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">华章：AI技术热点深度观察</h2>
+                    <p class="text-gray-600 text-sm">2025年1月25日最新科技趋势分析</p>
+                    <div class="mt-4 flex items-center text-sm text-gray-500">
+                        <i class="fas fa-hashtag mr-2"></i>
+                        <span>#人工智能 #今日科技热点</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 更多新闻列表 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- 额外新闻条目 -->
+            <div class="fade-in">
+                <a href="#" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20">
+                    <h3 class="font-bold text-gray-900 mb-2">AI芯片技术迎来新突破</h3>
+                    <p class="text-sm text-gray-600 mb-3">国内企业发布新一代人工智能专用处理器</p>
+                    <span class="source-tag px-2 py-1 rounded text-xs text-primary">科技日报</span>
+                </a>
+            </div>
+            
+            <div class="fade-in">
+                <a href="#" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20">
+                    <h3 class="font-bold text-gray-900 mb-2">医疗AI诊断准确率创新高</h3>
+                    <p class="text-sm text-gray-600 mb-3">人工智能辅助医疗系统实现95%以上准确率</p>
+                    <span class="source-tag px-2 py-1 rounded text-xs text-primary">健康报</span>
+                </a>
+            </div>
+            
+            <div class="fade-in">
+                <a href="#" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20">
+                    <h3 class="font-bold text-gray-900 mb-2">教育领域AI应用加速</h3>
+                    <p class="text-sm text-gray-600 mb-3">智能教育平台覆盖全国超千所院校</p>
+                    <span class="source-tag px-2 py-1 rounded text-xs text-primary">教育在线</span>
+                </a>
+            </div>
+            
+            <div class="fade-in">
+                <a href="#" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20">
+                    <h3 class="font-bold text-gray-900 mb-2">自动驾驶技术新进展</h3>
+                    <p class="text-sm text-gray-600 mb-3">L4级自动驾驶将在多个城市试点</p>
+                    <span class="source-tag px-2 py-1 rounded text-xs text-primary">汽车之家</span>
+                </a>
+            </div>
+            
+            <div class="fade-in">
+                <a href="#" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20">
+                    <h3 class="font-bold text-gray-900 mb-2">AI赋能智能制造</h3>
+                    <p class="text-sm text-gray-600 mb-3">工业机器人智能化升级趋势明显</p>
+                    <span class="source-tag px-2 py-1 rounded text-xs text-primary">工业在线</span>
+                </a>
+            </div>
+            
+            <div class="fade-in">
+                <a href="#" class="block news-card rounded-2xl p-6 border border-gray-100 hover:border-primary/20">
+                    <h3 class="font-bold text-gray-900 mb-2">金融风控AI模型升级</h3>
+                    <p class="text-sm text-gray-600 mb-3">银行机构全面引入智能风控系统</p>
+                    <span class="source-tag px-2 py-1 rounded text-xs text-primary">财经网</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="text-center mt-12 py-8 border-t border-gray-100">
+            <p class="text-gray-600">AI Daily News · 每日人工智能要闻摘要</p>
+            <p class="text-sm text-gray-500 mt-2">更新时间：2025年12月2日</p>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.style.opacity = "1";
+                        element.style.transform = "translateY(0)";
+                    }
+                });
+            };
+            
+            // 初始加载时执行一次
+            fadeInOnScroll();
+            
+            // 滚动时执行
+            window.addEventListener('scroll', fadeInOnScroll);
+        });
+    </script>
+</body>
+</html>
