@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI科技动态速览</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066ff'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 102, 255, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 102, 255, 0.1);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 102, 255, 0.2);
+        }
+        
+        .news-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 1rem;
+            opacity: 0.8;
+        }
+        
+        .highlight-gradient {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 102, 255, 0.05) 100%);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 mb-4">
+                AI<span class="text-primary">科技</span>动态
+            </h1>
+            <p class="text-lg text-gray-600">Latest Artificial Intelligence Developments · 最新人工智能资讯</p>
+        </header>
+
+        <div class="bento-grid">
+            <!-- 新闻卡片1 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-bolt text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">HOT</span>
+                </div>
+                <a href="https://news.sina.com.cn/zx/ds/2025-12-01/doc-infzhxya3021690.shtml" class="news-title hover:text-primary transition-colors">
+                    科技晚报AI速递：今日科技热点一览
+                </a>
+                <p class="text-gray-700 text-sm">涵盖最新人工智能领域的重要动态和发展趋势</p>
+                <div class="news-source">来源：新浪科技</div>
+            </div>
+
+            <!-- 新闻卡片2 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-trophy text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">TOP 10</span>
+                </div>
+                <a href="https://www.tsinghua.edu.cn/info/1182/122898.htm" class="news-title hover:text-primary transition-colors">
+                    青年最关注的改变未来十大变革科技榜单发布
+                </a>
+                <p class="text-gray-700 text-sm">揭示年轻一代对未来科技发展的期待和关注点</p>
+                <div class="news-source">来源：清华大学</div>
+            </div>
+
+            <!-- 新闻卡片3 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-industry text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">政策</span>
+                </div>
+                <a href="https://finance.sina.com.cn/jjxw/2025-12-02/doc-infzkmzk2385830.shtml" class="news-title hover:text-primary transition-colors">
+                    工信部筹备中国人工智能终端行业协会
+                </a>
+                <p class="text-gray-700 text-sm">推动人工智能终端产业规范发展和创新应用</p>
+                <div class="news-source">来源：新浪财经</div>
+            </div>
+
+            <!-- 新闻卡片4 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-globe text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">全球</span>
+                </div>
+                <a href="http://www.ce.cn/cysc/newmain/yc/jsxw/202512/t20251202_2613575.shtml" class="news-title hover:text-primary transition-colors">
+                    十一月全球人工智能领域发展盘点
+                </a>
+                <p class="text-gray-700 text-sm">全面回顾全球AI技术最新进展和应用成果</p>
+                <div class="news-source">来源：中国经济网</div>
+            </div>
+
+            <!-- 新闻卡片5 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-users text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">大会</span>
+                </div>
+                <a href="http://www.news.cn/info/20251118/9db6c6f6bb6e4f4abe7fe984b6a80e55/c.html" class="news-title hover:text-primary transition-colors">
+                    "人工智能+"产业生态大会启幕
+                </a>
+                <p class="text-gray-700 text-sm">共赴AI融合新跨越，探讨产业生态建设</p>
+                <div class="news-source">来源：新华网</div>
+            </div>
+
+            <!-- 新闻卡片6 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-eye text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">每日</span>
+                </div>
+                <a href="http://mp.weixin.qq.com/s?__biz=MzkzNzkxMDcxNQ==&mid=2247484340&idx=1&sn=55bd69d949fe0e7c173cc0ffee170516" class="news-title hover:text-primary transition-colors">
+                    AI视野：每日AI资讯速递
+                </a>
+                <p class="text-gray-700 text-sm">实时追踪AI领域最新动态和技术突破</p>
+                <div class="news-source">来源：微信公众号</div>
+            </div>
+
+            <!-- 新闻卡片7 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-microchip text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">前沿</span>
+                </div>
+                <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTI0NjM3Mg==&mid=2247489217&idx=1&sn=5f0f150a3fffdad12546b841041bb435" class="news-title hover:text-primary transition-colors">
+                    AI前沿：从代码加速到芯片博弈
+                </a>
+                <p class="text-gray-700 text-sm">深入探讨AI底层技术发展和竞争格局</p>
+                <div class="news-source">来源：微信公众号</div>
+            </div>
+
+            <!-- 新闻卡片8 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-chart-line text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">解读</span>
+                </div>
+                <a href="http://mp.weixin.qq.com/s?__biz=MzI5NzExMTY0Mg==&mid=2650861934&idx=2&sn=d4997e3762fee804cd632a91d281a0af" class="news-title hover:text-primary transition-colors">
+                    解读《关于深入实施"人工智能+"行动的意见》
+                </a>
+                <p class="text-gray-700 text-sm">专业分析政策导向和产业发展机遇</p>
+                <div class="news-source">来源：中国银河证券</div>
+            </div>
+
+            <!-- 新闻卡片9 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-atom text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">量子</span>
+                </div>
+                <a href="http://yuctz.com/article/560" class="news-title hover:text-primary transition-colors">
+                    量子计算与人工智能融合成为热点
+                </a>
+                <p class="text-gray-700 text-sm">WAIC大会探讨量子计算如何赋能AI发展</p>
+                <div class="news-source">来源：YUCTZ</div>
+            </div>
+
+            <!-- 新闻卡片10 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-dna text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">生物</span>
+                </div>
+                <a href="https://news.cau.edu.cn/mtndnew/78aa79a4aca34437b44b15dfcd307330.htm" class="news-title hover:text-primary transition-colors">
+                    "AI基因科学家"明年全球上线
+                </a>
+                <p class="text-gray-700 text-sm">人工智能在基因科学领域的突破性应用</p>
+                <div class="news-source">来源：中国农业大学</div>
+            </div>
+
+            <!-- 新闻卡片11 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-book text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">白皮书</span>
+                </div>
+                <a href="https://www.stdaily.com/web/gdxw/2025-12/01/content_440611.html" class="news-title hover:text-primary transition-colors">
+                    北京人工智能产业白皮书发布
+                </a>
+                <p class="text-gray-700 text-sm">描绘AI创新策源地发展蓝图和路径</p>
+                <div class="news-source">来源：科技日报</div>
+            </div>
+
+            <!-- 新闻卡片12 -->
+            <div class="news-card highlight-gradient fade-in">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-laptop text-primary text-xl mr-3"></i>
+                    <span class="text-sm font-semibold text-primary">硬件</span>
+                </div>
+                <a href="javascript:void(0)" class="news-title hover:text-primary transition-colors">
+                    AI笔记本电脑爆发式增长
+                </a>
+                <p class="text-gray-700 text-sm">2025年计算机领域最新硬件动态</p>
+                <div class="news-source">来源：行业动态</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // 初始化检查
+        window.addEventListener('load', checkVisibility);
+        window.addEventListener('scroll', checkVisibility);
+
+        // 鼠标移动效果
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.news-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
