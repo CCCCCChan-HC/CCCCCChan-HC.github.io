@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI科技动态速览</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': '#60A5FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+            opacity: 0.7;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-desc {
+            font-size: 0.875rem;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .news-source {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6, #60A5FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <span class="gradient-text">AI科技动态</span>速览
+            </h1>
+            <p class="text-lg text-gray-600">实时追踪人工智能领域最新进展与热点</p>
+        </header>
+
+        <div class="bento-grid">
+            <!-- 新闻卡片 1 -->
+            <a href="https://news.sina.com.cn/zx/ds/2025-12-01/doc-infzhxya3021690.shtml" class="news-card animate-fade-in-up" style="animation-delay: 0.1s">
+                <div class="news-title">🔥 科技晚报AI速递：今日热点全览</div>
+                <div class="news-desc">汇总今日科技动向，涵盖新国标实施、西山居CEO辞任、豆包手机助手、ChatGPT三周年等多领域热点</div>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>
+                    <span>新浪科技 · 2025-12-01</span>
+                </div>
+            </a>
+
+            <!-- 新闻卡片 2 -->
+            <a href="http://finance.people.com.cn/n1/2025/1204/c1004-40617474.html" class="news-card animate-fade-in-up" style="animation-delay: 0.2s">
+                <div class="news-title">🚀 2025"人工智能+"产业生态大会在京举办</div>
+                <div class="news-desc">探讨产业发展，发布多项报告与标准，启动相关行动，推动AI与传统产业深度融合</div>
+                <div class="news-source">
+                    <i class="fas fa-users"></i>
+                    <span>人民网 · 2025-12-04</span>
+                </div>
+            </a>
+
+            <!-- 新闻卡片 3 -->
+            <a href="http://finance.people.com.cn/n1/2025/1204/c1004-40617501.html" class="news-card animate-fade-in-up" style="animation-delay: 0.3s">
+                <div class="news-title">💫 AI为传统通信注入新动能</div>
+                <div class="news-desc">5G新通话、量子安全产品等创新成果展示，AI与通信融合推动传统通信升级</div>
+                <div class="news-source">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <span>人民网 · 2025-12-04</span>
+                </div>
+            </a>
+
+            <!-- 新闻卡片 4 -->
+            <a href="https://www.stcn.com/article/detail/1822757.html" class="news-card animate-fade-in-up" style="animation-delay: 0.4s">
+                <div class="news-title">📈 国产算力价值奇点已至</div>
+                <div class="news-desc">政策、市场、技术、业绩四重共振，国产算力价值曲线显著上升，迎来历史性发展机遇</div>
+                <div class="news-source">
+                    <i class="fas fa-chart-line"></i>
+                    <span>证券时报 · 2025-12-04</span>
+                </div>
+            </a>
+
+            <!-- 新闻卡片 5 -->
+            <a href="http://ts2.tech/zh/2025%E5%B9%B46%E6%9C%88%E8%87%B37%E6%9C%88%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95" class="news-card animate-fade-in-up" style="animation-delay: 0.5s">
+                <div class="news-title">💹 科技股动态：AI数据通信繁荣</div>
+                <div class="news-desc">Thermo Fisher Scientific内部人士卖股、Nutanix财报后暴跌、Lumentum因AI数据通信繁荣股价飙升</div>
+                <div class="news-source">
+                    <i class="fas fa-stock"></i>
+                    <span>TechStock² · 2025-11-28</span>
+                </div>
+            </a>
+
+            <!-- 新闻卡片 6 -->
+            <a href="http://www.npc.gov.cn/npc/c2/c30834/202512/t20251204_449806.html" class="news-card animate-fade-in-up" style="animation-delay: 0.6s">
+                <div class="news-title">🎯 人大代表潘教峰：加快AI数智技术创新</div>
+                <div class="news-desc">突破基础理论和核心技术，强化算力、算法、数据等高效供给，推动AI全面应用</div>
+                <div class="news-source">
+                    <i class="fas fa-user-tie"></i>
+                    <span>全国人大 · 2025-12-04</span>
+                </div>
+            </a>
+
+            <!-- 新闻卡片 7 -->
+            <a href="http://ts2.tech/zh/2025%E5%B9%B46%E6%9C%88%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%EF%BC%9A%E7%AA%81%E7%A0%B4%E3%80%81%E8%B6%8B%E5%8A%BF%E4%B8%8E%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B" class="news-card animate-fade-in-up" style="animation-delay: 0.7s">
+                <div class="news-title">🌐 TechStock²：科技与交易交汇点</div>
+                <div class="news-desc">Aristocrat Leisure、Lynas Rare Earths、New 'Home Orchard' Guide等多领域资讯</div>
+                <div class="news-source">
+                    <i class="fas fa-globe"></i>
+                    <span>TechStock² · 2025-12-04</span>
+                </div>
+            </a>
+
+            <!-- 新闻卡片 8 -->
+            <a href="https://app.xinhuanet.com/news/article.html?articleId=8b70c42cc8bbec61ee6535c54f76ec69" class="news-card animate-fade-in-up" style="animation-delay: 0.8s">
+                <div class="news-title">⚡ 国产大模型大变局：从百模大战到基模五强</div>
+                <div class="news-desc">DeepSeek等技术突破使格局变为字节跳动、阿里等"基模五强"竞争，聚焦智能上限突破与多模态融合</div>
+                <div class="news-source">
+                    <i class="fas fa-robot"></i>
+                    <span>新华网 · 2025-12-04</span>
+                </div>
+            </a>
+
+            <!-- 补充新闻卡片 9 -->
+            <a href="#" class="news-card animate-fade-in-up" style="animation-delay: 0.9s">
+                <div class="news-title">🔬 AI基础理论研究新突破</div>
+                <div class="news-desc">多所高校联合研究团队在AI基础理论领域取得重要进展，为下一代AI技术奠定基础</div>
+                <div class="news-source">
+                    <i class="fas fa-flask"></i>
+                    <span>科技日报 · 2025-12-04</span>
+                </div>
+            </a>
+
+            <!-- 补充新闻卡片 10 -->
+            <a href="#" class="news-card animate-fade-in-up" style="animation-delay: 1.0s">
+                <div class="news-title">🏭 智能制造迎来AI升级浪潮</div>
+                <div class="news-desc">传统制造业加速AI技术应用，生产效率提升显著，产业数字化转型进入快车道</div>
+                <div class="news-source">
+                    <i class="fas fa-industry"></i>
+                    <span>经济参考报 · 2025-12-04</span>
+                </div>
+            </a>
+
+            <!-- 补充新闻卡片 11 -->
+            <a href="#" class="news-card animate-fade-in-up" style="animation-delay: 1.1s">
+                <div class="news-title">🌍 全球AI治理框架逐步完善</div>
+                <div class="news-desc">国际组织推动AI治理标准制定，确保人工智能技术健康发展与安全应用</div>
+                <div class="news-source">
+                    <i class="fas fa-handshake"></i>
+                    <span>国际在线 · 2025-12-04</span>
+                </div>
+            </a>
+
+            <!-- 补充新闻卡片 12 -->
+            <a href="#" class="news-card animate-fade-in-up" style="animation-delay: 1.2s">
+                <div class="news-title">💡 AI芯片技术再创新高</div>
+                <div class="news-desc">新一代AI芯片发布，算力密度提升3倍，能耗降低40%，推动边缘计算发展</div>
+                <div class="news-source">
+                    <i class="fas fa-microchip"></i>
+                    <span>电子技术周刊 · 2025-12-04</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加观察
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.style.animationPlayState = 'paused';
+            observer.observe(card);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
