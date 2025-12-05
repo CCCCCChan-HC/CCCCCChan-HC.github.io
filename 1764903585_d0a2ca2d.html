@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能周报摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-content {
+            font-size: 0.875rem;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+        
+        .news-source {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+        }
+        
+        .highlight-gradient {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.8) 0%, rgba(59, 130, 246, 0.4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-header {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, #1f2937 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4">
+        <h1 class="section-header">
+            <i class="fas fa-brain mr-4"></i>
+            人工智能周报摘要
+            <span class="text-sm font-normal text-gray-500 block mt-2">最近一周AI领域重要动态</span>
+        </h1>
+        
+        <div class="bento-grid">
+            <!-- 新闻条目 1 -->
+            <a href="https://www.xiaoyuzhoufm.com/episode/666effa1b6a84127292b56d8" class="news-card block hover:no-underline">
+                <div class="news-title">Apple Intelligence终亮相！人工智能成苹果销量新法宝</div>
+                <div class="news-content">本期轻解读探讨Apple Intelligence及其对iPhone 16销量的影响，还包含其他热点动态。</div>
+                <div class="news-meta">
+                    <span>2025-12-05</span>
+                    <span class="news-source">小宇宙FM</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 2 -->
+            <a href="http://opinion.people.com.cn/n1/2025/1205/c434885-40617987.html" class="news-card block hover:no-underline">
+                <div class="news-title">具身智能：新概念变新赛道，人形机器人发展迅猛</div>
+                <div class="news-content">具身智能是人工智能与机器人学融合的前沿领域，我国机器人产业"量质齐升"，在核心技术与市场布局上优势凸显。</div>
+                <div class="news-meta">
+                    <span>2025-12-05</span>
+                    <span class="news-source">人民网</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 3 -->
+            <a href="http://www.news.cn/tech/20251201/f1100bed2ece4a74a7eb234fce017ff2/c.html" class="news-card block hover:no-underline">
+                <div class="news-title">11月全球AI领域动作密集，科技企业探索太空数据中心</div>
+                <div class="news-content">11月全球人工智能领域发展盘点，各国加大投入，多款新模型发布。</div>
+                <div class="news-meta">
+                    <span>2025-12-01</span>
+                    <span class="news-source">新华网</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 4 -->
+            <a href="http://mp.weixin.qq.com/s?__biz=MzIyMTAwMzk1Mg==&mid=2651208195&idx=1&sn=146af47704ded74a07f4c480339bbfd4" class="news-card block hover:no-underline">
+                <div class="news-title">Mary Meeker发布340页AI重磅报告，揭示20条重要启示</div>
+                <div class="news-content">2025年人工智能趋势报告聚焦AI技术发展、商业生态、社会影响等，揭示ChatGPT增长、六大科技公司资本支出等重要信息。</div>
+                <div class="news-meta">
+                    <span>2025-12-05</span>
+                    <span class="news-source">微信公众号</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 5 -->
+            <a href="http://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251205_2622951.shtml" class="news-card block hover:no-underline">
+                <div class="news-title">中国AI独角兽企业何以脱颖而出？入选数量暴涨350%</div>
+                <div class="news-content">2025全球独角兽企业500强榜单发布，中国人工智能独角兽企业入选数量由2家增至9家，涨幅达350%。</div>
+                <div class="news-meta">
+                    <span>2025-12-05</span>
+                    <span class="news-source">中国经济网</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 6 -->
+            <a href="https://news.cctv.com/2025/12/05/ARTI6T4vsG9OTnCSq2f3YavZ251205.shtml" class="news-card block hover:no-underline">
+                <div class="news-title">多省份"十五五"规划建议出炉，加快建设AI创新高地</div>
+                <div class="news-content">多地发布"十五五"规划建议，聚焦人工智能等前沿产业，广东推动智能化转型，浙江打造科创高地。</div>
+                <div class="news-meta">
+                    <span>2025-12-05</span>
+                    <span class="news-source">央视网</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 7 -->
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk0NjM3NjAxMA==&mid=2247489230&idx=1&sn=bc19293d9540914d85323f7d93628e9a" class="news-card block hover:no-underline">
+                <div class="news-title">2025年全球技术突破进展，涵盖AI、生物医学、量子计算</div>
+                <div class="news-content">2025年全球技术突破最新资讯，涵盖人工智能、生物医学、量子计算、材料科学等多个领域。</div>
+                <div class="news-meta">
+                    <span>2025-12-05</span>
+                    <span class="news-source">微信公众号</span>
+                </div>
+            </a>
+
+            <!-- 新闻条目 8 -->
+            <a href="http://mp.weixin.qq.com/s?__biz=MzU5NzU4NDg1Ng==&mid=2247528389&idx=1&sn=49816161456b0129647d37bf9b84ce93" class="news-card block hover:no-underline">
+                <div class="news-title">2024年AI芯片技术发展分析：光子芯片、新型材料应用</div>
+                <div class="news-content">本文综述2024年人工智能芯片技术发展，分析美欧等构建产业联盟、加大投资等举措。</div>
+                <div class="news-meta">
+                    <span>2025-12-05</span>
+                    <span class="news-source">微信公众号</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加初始样式和观察
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transitionDelay = `${index * 0.1}s`;
+            
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
