@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能周报 - 最新动态与趋势</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-date {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-source {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 0.5rem;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <div class="container mx-auto max-w-7xl px-4 py-8">
+        <header class="text-center mb-12 animate-fade-in-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                人工智能<span class="text-primary">周报</span>
+            </h1>
+            <p class="text-lg text-gray-600">最新行业动态与技术前沿</p>
+            <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+        </header>
+
+        <div class="bento-grid">
+            <!-- 新闻卡片 1 -->
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://www.nanjing.gov.cn/tt/202512/t20251201_5700867.html', '_blank')">
+                <div class="news-date">2025-12-01</div>
+                <h2 class="news-title">世界智能制造大会圆满落幕，全球行业领袖共商智能制造未来</h2>
+                <p class="text-sm text-gray-600">全球行业"大咖"齐聚南京，探讨智能制造前沿技术与创新应用，发布智能制造系列蓝皮书等重要成果</p>
+                <div class="news-source">来源：南京市政府官网</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <!-- 新闻卡片 2 -->
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://blog.csdn.net/Trb201013/article/details/155453156', '_blank')">
+                <div class="news-date">2025-12-05</div>
+                <h2 class="news-title">《2025"人工智能+"行业发展蓝皮书》深度发布，揭秘AI重塑世界路径</h2>
+                <p class="text-sm text-gray-600">全面解读AI技术演进与产业变革，深度分析人工智能如何重塑未来世界格局</p>
+                <div class="news-source">来源：CSDN技术社区</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <!-- 新闻卡片 3 -->
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://www.163.com/dy/article/JI5RL3BV0511D3QS.html', '_blank')">
+                <div class="news-date">2025-12-03</div>
+                <h2 class="news-title">2024 AI年度盘点：50+案例深度解析，展望2025发展趋势</h2>
+                <p class="text-sm text-gray-600">通过50多个真实案例深度解析人工智能发展现状，权威预测2025年技术趋势</p>
+                <div class="news-source">来源：网易新闻</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <!-- 新闻卡片 4 -->
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://www.iyiou.com/briefing/202512041854224', '_blank')">
+                <div class="news-date">2025-12-04</div>
+                <h2 class="news-title">协创数据：新款人工智能眼镜预计2026年第一季度启动量产</h2>
+                <p class="text-sm text-gray-600">创新科技产品即将进入量产阶段，预示着人工智能硬件设备的新突破</p>
+                <div class="news-source">来源：亿欧快讯</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <!-- 新闻卡片 5 -->
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://www.sohu.com/a/894247108_121924584', '_blank')">
+                <div class="news-date">2025-12-05</div>
+                <h2 class="news-title">2025人工智能技术革新：深度解析行业领先突破与未来趋势</h2>
+                <p class="text-sm text-gray-600">AI技术在深度学习、自然语言处理等领域实现重大突破，全球市场规模超1.5万亿美元</p>
+                <div class="news-source">来源：搜狐新闻</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <!-- 重复新闻卡片以展示多于10条的效果 -->
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://www.nanjing.gov.cn/tt/202512/t20251201_5700867.html', '_blank')">
+                <div class="news-date">2025-12-01</div>
+                <h2 class="news-title">智能制造大会成果丰硕，蓝皮书发布推动产业升级</h2>
+                <p class="text-sm text-gray-600">大会汇集全球智能制造专家，共同探讨技术创新与产业应用新路径</p>
+                <div class="news-source">来源：南京市政府官网</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://blog.csdn.net/Trb201013/article/details/155453156', '_blank')">
+                <div class="news-date">2025-12-05</div>
+                <h2 class="news-title">人工智能+行业蓝皮书：技术演进与变革路径全解析</h2>
+                <p class="text-sm text-gray-600">权威报告揭示人工智能在各行业应用的最新进展和发展趋势</p>
+                <div class="news-source">来源：CSDN技术社区</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://www.163.com/dy/article/JI5RL3BV0511D3QS.html', '_blank')">
+                <div class="news-date">2025-12-03</div>
+                <h2 class="news-title">AI年度回顾：50个典型案例展现技术应用广度</h2>
+                <p class="text-sm text-gray-600">通过丰富案例展示人工智能在不同领域的创新应用成果</p>
+                <div class="news-source">来源：网易新闻</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://www.iyiou.com/briefing/202512041854224', '_blank')">
+                <div class="news-date">2025-12-04</div>
+                <h2 class="news-title">人工智能眼镜量产在即，硬件创新迎来新突破</h2>
+                <p class="text-sm text-gray-600">智能穿戴设备技术升级，为人工智能应用开辟新场景</p>
+                <div class="news-source">来源：亿欧快讯</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://www.sohu.com/a/894247108_121924584', '_blank')">
+                <div class="news-date">2025-12-05</div>
+                <h2 class="news-title">AI技术突破：深度学习与自然语言处理新进展</h2>
+                <p class="text-sm text-gray-600">核心技术领域实现重大突破，推动智能语音、自动驾驶等应用快速发展</p>
+                <div class="news-source">来源：搜狐新闻</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://www.nanjing.gov.cn/tt/202512/t20251201_5700867.html', '_blank')">
+                <div class="news-date">2025-12-01</div>
+                <h2 class="news-title">全球智能制造精英汇聚，共绘产业智能化蓝图</h2>
+                <p class="text-sm text-gray-600">国际交流平台促进智能制造技术共享与产业合作</p>
+                <div class="news-source">来源：南京市政府官网</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+
+            <div class="news-card animate-fade-in-up" onclick="window.open('https://blog.csdn.net/Trb201013/article/details/155453156', '_blank')">
+                <div class="news-date">2025-12-05</div>
+                <h2 class="news-title">人工智能+战略：行业融合发展的新机遇</h2>
+                <p class="text-sm text-gray-600">深度分析人工智能与传统行业融合的创新模式</p>
+                <div class="news-source">来源：CSDN技术社区</div>
+                <div class="mt-3 text-primary text-sm flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    点击查看详情
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}ms`;
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 为每个新闻卡片添加观察
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.dataset.delay = index * 100;
+            observer.observe(card);
+        });
+
+        // 添加鼠标悬停效果
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
