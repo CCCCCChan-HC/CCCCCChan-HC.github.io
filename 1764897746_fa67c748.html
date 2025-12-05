@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI前沿动态 - 2025年12月4日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        .news-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+        }
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+        .highlight {
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">🚀 AI前沿动态速递</h1>
+            <p class="text-xl text-gray-600">2025年12月4日 · 最新人工智能进展一览</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- 新闻条目1 -->
+            <a href="http://finance.people.com.cn/n1/2025/1204/c1004-40617473.html" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-robot text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">技术驱动业界聚焦：AI与数字人引领终端应用创新浪潮</h2>
+                </div>
+                <p class="text-gray-700 text-sm">人工智能技术正在重塑终端应用生态，数字人技术实现重大突破...</p>
+                <div class="news-source">来源：人民网·经济科技</div>
+            </a>
+
+            <!-- 新闻条目2 -->
+            <a href="http://finance.people.com.cn/n1/2025/1204/c1004-40617501.html" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-bolt text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">2025人工智能+产业生态大会：AI为传统通信注入新动能</h2>
+                </div>
+                <p class="text-gray-700 text-sm">人工智能正在彻底改变传统通信行业，带来前所未有的发展机遇...</p>
+                <div class="news-source">来源：人民网·经济科技</div>
+            </a>
+
+            <!-- 新闻条目3 -->
+            <a href="http://www.news.cn/world/20251102/de4df6d828854fb0a0bcd573c8548f46/c.html" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-globe text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">全球AI发展盘点：10月重大突破与趋势分析</h2>
+                </div>
+                <p class="text-gray-700 text-sm">全球人工智能领域在10月份实现多项技术突破，产业发展进入新阶段...</p>
+                <div class="news-source">来源：新华网</div>
+            </a>
+
+            <!-- 新闻条目4 -->
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzg3NDc3NzIyNQ==&mid=2247490493&idx=1&sn=c37c5d81a20bc3dd9b40f2727bb1709e" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-pills text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">Nature Medicine综述：AI药物研发迎来革命性突破</h2>
+                </div>
+                <p class="text-gray-700 text-sm">人工智能在药物研发领域取得重大进展，显著提升研发效率...</p>
+                <div class="news-source">来源：Nature Medicine</div>
+            </a>
+
+            <!-- 新闻条目5 -->
+            <a href="http://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251205_2622977.shtml" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-map text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">多省份发布"十五五"规划：加快建设AI创新高地</h2>
+                </div>
+                <p class="text-gray-700 text-sm">各地加快推进人工智能产业发展，打造具有国际竞争力的创新高地...</p>
+                <div class="news-source">来源：中国经济网</div>
+            </a>
+
+            <!-- 新闻条目6 -->
+            <a href="http://www.npc.gov.cn/npc/c2/c30834/202512/t20251204_449807.html" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-industry text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">人大代表崔岩：让"人工智能+"赋能千行百业</h2>
+                </div>
+                <p class="text-gray-700 text-sm">人工智能技术正在深度赋能传统产业，推动数字化转型...</p>
+                <div class="news-source">来源：全国人大网</div>
+            </a>
+
+            <!-- 新闻条目7 -->
+            <a href="https://www.tsinghua.edu.cn/info/1182/122898.htm" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-trophy text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">2025青年最关注的十大变革科技榜单发布</h2>
+                </div>
+                <p class="text-gray-700 text-sm">人工智能位列变革科技榜首，展现年轻一代对AI技术的高度关注...</p>
+                <div class="news-source">来源：清华大学</div>
+            </a>
+
+            <!-- 新闻条目8 -->
+            <a href="https://news.pku.edu.cn/jxky/76a7986c076b4396a388433c7cbfb916.htm" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-flask text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">《自然》报道北大团队在AI科学发现领域重大突破</h2>
+                </div>
+                <p class="text-gray-700 text-sm">北京大学研究团队在人工智能驱动的科学发现方面取得重要进展...</p>
+                <div class="news-source">来源：北京大学新闻网</div>
+            </a>
+
+            <!-- 新闻条目9 -->
+            <a href="https://www.thepaper.cn/newsDetail_forward_32093438" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-microchip text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">AI芯片市场群雄逐鹿！亚马逊自研芯片重磅上新</h2>
+                </div>
+                <p class="text-gray-700 text-sm">全球AI芯片竞争白热化，科技巨头加速布局自研芯片战略...</p>
+                <div class="news-source">来源：澎湃新闻</div>
+            </a>
+
+            <!-- 新闻条目10 -->
+            <a href="https://www.mckinsey.com.cn/%E9%BA%A6%E8%82%AF%E9%94%A1%E5%85%A8%E7%90%83%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%9C%80%E6%96%B0%E8%B0%83%E7%A0%94%EF%BC%9Aai%E5%9C%A8%E4%B8%AD%E5%9B%BD%E4%BC%81%E4%B8%9A%E7%9A%84%E8%90%BD%E5%9C%B0/" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-chart-line text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">麦肯锡调研：AI在中国企业落地进展超预期</h2>
+                </div>
+                <p class="text-gray-700 text-sm">中国企业AI应用水平快速提升，数字化转型成效显著...</p>
+                <div class="news-source">来源：麦肯锡</div>
+            </a>
+
+            <!-- 新闻条目11 -->
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI2MjA3ODk0OQ==&mid=2648099760&idx=1&sn=7f79c305044e2e34e6f9478a1257e38b" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-desktop text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">COMPUTEX 2025重磅发布：全球AI动态一览</h2>
+                </div>
+                <p class="text-gray-700 text-sm">全球最大电脑展发布最新AI技术成果，展现产业发展新趋势...</p>
+                <div class="news-source">来源：行业媒体</div>
+            </a>
+
+            <!-- 新闻条目12 -->
+            <a href="https://www.ncsti.gov.cn/kjdt/ztbd/rgzn/zxjz/" class="news-card block">
+                <div class="flex items-start mb-3">
+                    <i class="fas fa-newspaper text-blue-500 text-xl mr-3 mt-1"></i>
+                    <h2 class="news-title">科技部发布人工智能最新进展专题报道</h2>
+                </div>
+                <p class="text-gray-700 text-sm">国家层面系统梳理人工智能领域最新技术突破和应用成果...</p>
+                <div class="news-source">来源：科技部</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为每个新闻卡片添加动画
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+            observer.observe(card);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, #f8fafc 0%, #ffffff 100%)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'rgba(255, 255, 255, 0.95)';
+            });
+        });
+    </script>
+</body>
+</html>
