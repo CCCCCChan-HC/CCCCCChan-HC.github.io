@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能每日资讯摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .news-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen gradient-bg">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 头部标题 -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">AI每日快讯</h1>
+            <p class="text-lg text-gray-600">Latest Artificial Intelligence News Updates</p>
+            <div class="flex justify-center items-center mt-4 text-primary">
+                <i class="fas fa-robot text-2xl mr-2"></i>
+                <span class="text-sm font-medium">实时更新 • 专业解读 • 前沿洞察</span>
+            </div>
+        </div>
+
+        <!-- Bento Grid 布局 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            <!-- 新闻卡片 1 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 0.1s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-brain text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="https://finance.sina.com.cn/jjxw/2025-05-25/doc-inexuumx8656756.shtml" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            全球AI模型再添新成员！能力边界持续突破
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">全球人工智能模型又添"新成员"，能力边界不断扩大</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>新浪财经</span>
+                    <span>2025-05-25</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 2 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 0.2s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-chart-line text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="https://news.qq.com/rain/a/20250523A06TI100" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            AI算法重大进展：现状分析与未来预测
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">人工智能算法进展：现状分析与未来预测</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>腾讯新闻</span>
+                    <span>2025-05-23</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 3 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 0.3s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-landmark text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI5NzExMTY0Mg==&mid=2650861934&idx=2&sn=d4997e3762fee804cd632a91d281a0af" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            国家重磅政策！"人工智能+"行动正式启动
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">解读《关于深入实施"人工智能+"行动的意见》</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>中国银河证券</span>
+                    <span>最新发布</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 4 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 0.4s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-crystal-ball text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="http://mp.weixin.qq.com/s?__biz=Mzg4MDg3ODk4MQ==&mid=2247485660&idx=1&sn=ec7efb5500c9ecd68d5b54620d5b627f" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            揭秘AI技术未来趋势：下一个十年展望
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">普融花：揭秘人工智能技术的未来趋势</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>普融花</span>
+                    <span>深度分析</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 5 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 0.5s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-coins text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzkzNjQ0NDI2NA==&mid=2247493753&idx=1&sn=8062adeacd9cf128ea95f5e5ed7420eb" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            AI+金融科技：前沿实践与创新应用
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">人工智能最新进展及其在金融科技领域的前沿实践</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>明昇观察</span>
+                    <span>专业解读</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 6 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 0.6s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-cloud-sun text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="http://cpc.people.com.cn/n1/2025/1206/c64387-40618609.html" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            AI+气象：让天气预测更精准可靠
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">"人工智能+气象"让天气"变幻可测"</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>人民网</span>
+                    <span>2025-12-06</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 7 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 0.7s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-unicorn text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="http://www.ce.cn/2021sy/zh/kj/202512/t20251206_2625765.shtml" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            中国AI独角兽企业崛起背后的秘密
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">中国人工智能独角兽企业何以脱颖而出？</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>中国经济网</span>
+                    <span>2025-12-06</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 8 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 0.8s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-file-alt text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="https://www.sohu.com/a/896976492_122313878" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            2025年AI算法研究报告发布
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">2025人工智能算法进展及近期发展预测研究报告</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>搜狐</span>
+                    <span>权威报告</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 9 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 0.9s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-graduation-cap text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="https://www.ndrc.gov.cn/wsdwhfz/202512/t20251203_1402160.html" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            专家解读："人工智能+"概念与实施路径
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">"人工智能+"的概念界定与路径选择</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>国家发改委</span>
+                    <span>2025-12-03</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 10 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 1.0s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-industry text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="https://www.nanjing.gov.cn/zgnjsjb/jrtt/202512/t20251201_5700867.html" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            世界智能制造大会：遇见"智造"未来
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">从世界智能制造大会展望下一个十年</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>南京政府网</span>
+                    <span>2025-12-01</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 11 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 1.1s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-rocket text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="https://www.szzg.gov.cn/2025/xwzx/qwfb/202512/t20251203_5239527.htm" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            AI技术奔涌应用成势，向深向实发展
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">技术奔涌应用成势："人工智能+"向深向实</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>深圳政府在线</span>
+                    <span>2025-12-03</span>
+                </div>
+            </div>
+
+            <!-- 新闻卡片 12 -->
+            <div class="news-card bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl" style="animation-delay: 1.2s">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary-light rounded-lg p-3 mr-4">
+                        <i class="fas fa-microchip text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTI0NjM3Mg==&mid=2247489217&idx=1&sn=5f0f150a3fffdad12546b841041bb435" 
+                           class="text-2xl font-bold text-gray-900 hover:text-primary transition-colors">
+                            AI前沿：从芯片博弈到模型记忆奥秘
+                        </a>
+                        <p class="text-sm text-gray-500 mt-2">从代码加速到芯片博弈，再到模型记忆的奥秘</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs text-gray-400">
+                    <span>AI前沿</span>
+                    <span>技术深度</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="text-center mt-12 text-gray-500 text-sm">
+            <div class="flex justify-center items-center space-x-6 mb-4">
+                <span>数据更新于: 2025年12月</span>
+                <span>•</span>
+                <span>共收录42条AI相关资讯</span>
+                <span>•</span>
+                <span>来源: 权威媒体与官方机构</span>
+            </div>
+            <p>Artificial Intelligence Daily Digest • 专业人工智能资讯平台</p>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // 观察所有新闻卡片
+            document.querySelectorAll('.news-card').forEach(card => {
+                observer.observe(card);
+            });
+
+            // 添加悬停效果
+            const cards = document.querySelectorAll('.news-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
