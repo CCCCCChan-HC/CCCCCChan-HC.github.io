@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能最新动态 - 2025年12月</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': '#60A5FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .bento-item {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+        }
+        
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+        
+        .highlight-gradient {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .section-header {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="section-header">
+            <i class="fas fa-brain mr-4"></i>
+            人工智能最新动态
+            <span class="text-sm font-normal text-gray-500 block mt-2">2025年12月7日更新</span>
+        </h1>
+        
+        <div class="bento-grid">
+            <!-- 政策动态 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 0.1s">
+                <a href="https://www.gov.cn/gongbao/2025/issue_12266/202509/content_7039598.html" class="block">
+                    <div class="news-title">国务院发布"人工智能+"行动纲领</div>
+                    <p class="text-gray-600">全面实施人工智能+行动，推动产业深度变革</p>
+                    <div class="news-source">来源：中国政府网</div>
+                </a>
+            </div>
+            
+            <!-- 产业规模 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 0.2s">
+                <a href="https://www.21jingji.com/article/20251205/herald/1f30413170b2c5e0f44ef497b59989a7.html" class="block">
+                    <div class="news-title">深圳AI产业突破3600亿元大关</div>
+                    <p class="text-gray-600">竞速全球"智"造高地，展现强劲发展势头</p>
+                    <div class="news-source">来源：21世纪经济报道</div>
+                </a>
+            </div>
+            
+            <!-- 技术突破 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 0.3s">
+                <a href="https://finance.sina.com.cn/jjxw/2025-05-25/doc-inexuumx8656756.shtml" class="block">
+                    <div class="news-title">全球AI模型再添新成员</div>
+                    <p class="text-gray-600">能力边界持续扩展，技术创新不断突破</p>
+                    <div class="news-source">来源：新浪财经</div>
+                </a>
+            </div>
+            
+            <!-- 行业大会 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 0.4s">
+                <a href="https://www.93913.com/116667.html" class="block">
+                    <div class="news-title">2025人工智能+大会盛大启幕</div>
+                    <p class="text-gray-600">百人智库集结，发布中国方案</p>
+                    <div class="news-source">来源：93913</div>
+                </a>
+            </div>
+            
+            <!-- 人才需求 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 0.5s">
+                <a href="https://web.shobserver.com/news/detail?id=1031134" class="block">
+                    <div class="news-title">AI人才紧缺指数居高不下</div>
+                    <p class="text-gray-600">算法工程师和产品经理最为紧缺</p>
+                    <div class="news-source">来源：上海观察</div>
+                </a>
+            </div>
+            
+            <!-- 技术应用 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 0.6s">
+                <a href="https://www.szzg.gov.cn/2025/xwzx/qwfb/202512/t20251203_5239527.htm" class="block">
+                    <div class="news-title">人工智能+向深向实发展</div>
+                    <p class="text-gray-600">技术奔涌应用成势，赋能产业升级</p>
+                    <div class="news-source">来源：深圳市政府</div>
+                </a>
+            </div>
+            
+            <!-- 边缘计算 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 0.7s">
+                <a href="http://sohu.com/a/891027404_121924584" class="block">
+                    <div class="news-title">边缘AI技术突破引领产业变革</div>
+                    <p class="text-gray-600">2025年深度解析创新趋势</p>
+                    <div class="news-source">来源：搜狐</div>
+                </a>
+            </div>
+            
+            <!-- 国际动态 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 0.8s">
+                <a href="https://www.cls.cn/detail/2205764" class="block">
+                    <div class="news-title">特朗普推出AI发展新计划</div>
+                    <p class="text-gray-600">大力推进美国人工智能发展</p>
+                    <div class="news-source">来源：财联社</div>
+                </a>
+            </div>
+            
+            <!-- 法律规范 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 0.9s">
+                <a href="https://www.chinanews.com.cn/gn/2025/12-06/10528325.shtml" class="block">
+                    <div class="news-title">涉外法治蓝皮书建议明确AI使用边界</div>
+                    <p class="text-gray-600">规范跨境执法中的人工智能应用</p>
+                    <div class="news-source">来源：中国新闻网</div>
+                </a>
+            </div>
+            
+            <!-- 生态合作 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 1.0s">
+                <a href="https://finance.sina.com.cn/roll/2025-12-06/doc-infzvstm6197283.shtml" class="block">
+                    <div class="news-title">中国电信翼支付AI支付生态合作展区亮相</div>
+                    <p class="text-gray-600">展示数据科技生态合作成果</p>
+                    <div class="news-source">来源：新浪财经</div>
+                </a>
+            </div>
+            
+            <!-- 区域发展 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 1.1s">
+                <a href="http://www.ce.cn/xwzx/gnsz/gdxw/202512/t20251207_2626637.shtml" class="block">
+                    <div class="news-title">南京深耕人工智能产业布局</div>
+                    <p class="text-gray-600">加速推进AI产业集群建设</p>
+                    <div class="news-source">来源：中国经济网</div>
+                </a>
+            </div>
+            
+            <!-- 技术前沿 -->
+            <div class="bento-item highlight-gradient animate-fade-in-up" style="animation-delay: 1.2s">
+                <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTI0NjM3Mg==&mid=2247489217&idx=1&sn=5f0f150a3fffdad12546b841041bb435" class="block">
+                    <div class="news-title">AI前沿：从代码加速到芯片博弈</div>
+                    <p class="text-gray-600">探索模型记忆的奥秘与技术突破</p>
+                    <div class="news-source">来源：微信公众号</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 观察所有bento项目
+        document.querySelectorAll('.bento-item').forEach(item => {
+            observer.observe(item);
+        });
+
+        // 添加悬停效果
+        document.querySelectorAll('.bento-item a').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.parentElement.style.transform = 'translateY(-8px) scale(1.02)';
+                this.parentElement.style.boxShadow = '0 25px 50px -12px rgba(59, 130, 246, 0.25)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.parentElement.style.transform = 'translateY(-5px) scale(1)';
+                this.parentElement.style.boxShadow = '0 20px 25px -5px rgba(59, 130, 246, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>
