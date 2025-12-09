@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI动态日报 - 最新人工智能资讯</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        highlight: 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-top: 0.5rem;
+        }
+        
+        .highlight-gradient {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1F2937 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="section-title">
+            <i class="fas fa-brain mr-4"></i>
+            AI动态日报
+            <span class="text-sm font-normal text-gray-500 block mt-2">最新人工智能资讯速递</span>
+        </h1>
+        
+        <div class="bento-grid">
+            <!-- 新闻卡片 1 -->
+            <a href="https://finance.sina.com.cn/roll/2025-12-09/doc-inhacxht1200026.shtml" class="news-card highlight-gradient">
+                <div class="news-title">🚀 移动终端AI国家基地正式发布</div>
+                <p class="text-gray-600">国家人工智能应用中试基地在移动终端方向取得重大突破</p>
+                <div class="news-source">来源：新浪财经</div>
+            </a>
+
+            <!-- 新闻卡片 2 -->
+            <a href="https://news.dahe.cn/2025/12-09/2029587.html" class="news-card highlight-gradient">
+                <div class="news-title">💾 AI热潮引爆存储产业超级周期</div>
+                <p class="text-gray-600">人工智能需求推动存储产业进入新一轮增长周期</p>
+                <div class="news-source">来源：大河网</div>
+            </a>
+
+            <!-- 新闻卡片 3 -->
+            <a href="https://stcn.com/article/detail/3530714.html" class="news-card highlight-gradient">
+                <div class="news-title">🏥 上市公司竞逐AI+医疗赛道</div>
+                <p class="text-gray-600">医疗人工智能领域迎来上市公司多维创新布局</p>
+                <div class="news-source">来源：证券时报网</div>
+            </a>
+
+            <!-- 新闻卡片 4 -->
+            <a href="https://finance.sina.com.cn/stock/usstock/c/2025-12-09/doc-inhachku3344690.shtml" class="news-card highlight-gradient">
+                <div class="news-title">📈 电网科技股逆势飙升</div>
+                <p class="text-gray-600">尽管AI泡沫担忧，电网科技类股仍展现强劲增长势头</p>
+                <div class="news-source">来源：新浪财经</div>
+            </a>
+
+            <!-- 新闻卡片 5 -->
+            <a href="https://www.cls.cn/detail/2223352" class="news-card highlight-gradient">
+                <div class="news-title">👓 谷歌AI眼镜明年上市</div>
+                <p class="text-gray-600">谷歌宣布首款人工智能眼镜将于2026年正式推出</p>
+                <div class="news-source">来源：财联社</div>
+            </a>
+
+            <!-- 新闻卡片 6 -->
+            <a href="https://www.thepaper.cn/newsDetail_forward_32130774" class="news-card highlight-gradient">
+                <div class="news-title">📱 AI手机引爆生态攻防战</div>
+                <p class="text-gray-600">AI手机挑战大厂生态，护城河攻防战激烈上演</p>
+                <div class="news-source">来源：澎湃新闻</div>
+            </a>
+
+            <!-- 新闻卡片 7 -->
+            <a href="https://www.cls.cn/detail/2200800" class="news-card highlight-gradient">
+                <div class="news-title">⚠️ AI泡沫警告声四起</div>
+                <p class="text-gray-600">企业高管加入华尔街行列，对AI泡沫发出警告</p>
+                <div class="news-source">来源：财联社</div>
+            </a>
+
+            <!-- 新闻卡片 8 -->
+            <a href="http://www.ce.cn/cysc/newmain/yc/jsxw/202512/t20251209_2629845.shtml" class="news-card highlight-gradient">
+                <div class="news-title">🛑 紧急叫停AI培训乱象</div>
+                <p class="text-gray-600">监管部门出手整治AI培训"坑老"不良风气</p>
+                <div class="news-source">来源：中国经济网</div>
+            </a>
+
+            <!-- 新闻卡片 9 -->
+            <a href="https://www.beijing.gov.cn/ywdt/gzdt/202512/t20251209_4329326.html" class="news-card highlight-gradient">
+                <div class="news-title">🏙️ 北京首发AI服务计划</div>
+                <p class="text-gray-600">中关村AI北纬社区推出首个人工智能OPC服务计划</p>
+                <div class="news-source">来源：北京市政府</div>
+            </a>
+
+            <!-- 新闻卡片 10 -->
+            <a href="https://www.shmtu.edu.cn/2025/1206/c12352a284165/page.htm" class="news-card highlight-gradient">
+                <div class="news-title">🚢 AI赋能航运物流升级</div>
+                <p class="text-gray-600">从智能体解决方案到协同生态构建的全面转型</p>
+                <div class="news-source">来源：上海海事大学</div>
+            </a>
+
+            <!-- 新闻卡片 11 -->
+            <a href="https://news.gmw.cn/2025-12/09/content_38465172.htm" class="news-card highlight-gradient">
+                <div class="news-title">🎨 AI与文化建设深度融合</div>
+                <p class="text-gray-600">探索生成式人工智能与文化建设的有效融合机制</p>
+                <div class="news-source">来源：光明网</div>
+            </a>
+
+            <!-- 新闻卡片 12 -->
+            <a href="https://www.cssn.cn/skgz/bwyc/202512/t20251209_5954686.shtml" class="news-card highlight-gradient">
+                <div class="news-title">🇨🇳 数字中国建设全面深化</div>
+                <p class="text-gray-600">数字中国建设步入全面深化新阶段，AI发挥关键作用</p>
+                <div class="news-source">来源：中国社会科学网</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加初始样式和观察
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+            observer.observe(card);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.08) 100%)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%)';
+            });
+        });
+    </script>
+</body>
+</html>
