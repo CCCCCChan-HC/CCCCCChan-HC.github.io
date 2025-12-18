@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI前沿动态 - 2025年12月18日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.8), rgba(59, 130, 246, 0.2));
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-desc {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .news-source {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .featured {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                <span class="text-primary">AI</span>前沿动态
+            </h1>
+            <p class="text-lg text-gray-600">2025年12月18日 · 最新人工智能资讯速递</p>
+        </header>
+
+        <div class="bento-grid">
+            <!-- 特色新闻 -->
+            <a href="https://cj.sina.cn/articles/view/1651428902/v626ece2602001e1jc" class="news-card featured">
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-star text-primary mr-2"></i>
+                    <span class="text-sm font-semibold text-primary">重点报道</span>
+                </div>
+                <h2 class="news-title">2025年人工智能核心产业规模有望突破万亿元大关</h2>
+                <p class="news-desc">最新数据显示，中国人工智能产业迎来爆发式增长，核心产业规模预计将在2025年突破万亿元，成为数字经济重要支柱</p>
+                <div class="news-source">
+                    <i class="fas fa-newspaper"></i>
+                    来源：新浪财经
+                </div>
+            </a>
+
+            <a href="https://www.tsinghua.edu.cn/info/1182/123342.htm" class="news-card">
+                <h2 class="news-title">人工智能开放联盟正式成立，推动产业协同发展</h2>
+                <p class="news-desc">清华大学牵头成立人工智能开放联盟，旨在促进产学研深度融合，加速AI技术在各行业的应用落地</p>
+                <div class="news-source">
+                    <i class="fas fa-university"></i>
+                    来源：清华大学
+                </div>
+            </a>
+
+            <a href="https://www.wuhan.gov.cn/sy/whyw/202512/t20251218_2696782.shtml" class="news-card">
+                <h2 class="news-title">武汉AI产业规模今年有望突破千亿元</h2>
+                <p class="news-desc">武汉人工智能产业快速发展，预计2025年产业规模将突破千亿元，成为中部地区AI产业新高地</p>
+                <div class="news-source">
+                    <i class="fas fa-city"></i>
+                    来源：武汉市人民政府
+                </div>
+            </a>
+
+            <a href="https://news.gmw.cn/2025-12/18/content_38483871.htm" class="news-card">
+                <h2 class="news-title">具身智能成为AI发展关键方向</h2>
+                <p class="news-desc">专家指出，聚焦应用场景发展具身智能尤为关键，将推动AI从虚拟走向实体世界</p>
+                <div class="news-source">
+                    <i class="fas fa-robot"></i>
+                    来源：光明网
+                </div>
+            </a>
+
+            <a href="https://www.stcn.com/article/detail/3545787.html" class="news-card">
+                <h2 class="news-title">AI成为私募量化发展"必选项"</h2>
+                <p class="news-desc">私募基金行业加速拥抱AI技术，业绩与规模齐升，人工智能成为量化投资的核心竞争力</p>
+                <div class="news-source">
+                    <i class="fas fa-chart-line"></i>
+                    来源：证券时报网
+                </div>
+            </a>
+
+            <a href="https://www.microsoft.com/en-us/research/articles/6-ai-trends-in-2025/" class="news-card">
+                <h2 class="news-title">微软发布2025年六大AI趋势展望</h2>
+                <p class="news-desc">微软研究院预测2025年AI发展六大趋势，涵盖生成式AI、可信AI、边缘AI等重要方向</p>
+                <div class="news-source">
+                    <i class="fab fa-microsoft"></i>
+                    来源：Microsoft Research
+                </div>
+            </a>
+
+            <a href="https://news.gmw.cn/2025-12/18/content_38483852.htm" class="news-card">
+                <h2 class="news-title">AI技术奏响生态保护新篇章</h2>
+                <p class="news-desc">人工智能在生态环境保护领域发挥重要作用，为生物多样性保护和环境监测提供新方案</p>
+                <div class="news-source">
+                    <i class="fas fa-leaf"></i>
+                    来源：光明网
+                </div>
+            </a>
+
+            <a href="https://www.hunan.gov.cn/zqt/xmsb/202512/t20251211_33867714.html" class="news-card">
+                <h2 class="news-title">国家启动"人工智能+"能源试点工作</h2>
+                <p class="news-desc">政府部门组织开展人工智能在能源领域的应用试点，推动智慧能源体系建设</p>
+                <div class="news-source">
+                    <i class="fas fa-bolt"></i>
+                    来源：湖南省人民政府
+                </div>
+            </a>
+
+            <a href="https://stcn.com/article/detail/3545961.html" class="news-card">
+                <h2 class="news-title">英矽智能开启招股，预计12月30日挂牌</h2>
+                <p class="news-desc">AI制药企业英矽智能正式启动招股程序，预计将于月底在资本市场亮相</p>
+                <div class="news-source">
+                    <i class="fas fa-pills"></i>
+                    来源：证券时报网
+                </div>
+            </a>
+
+            <a href="http://www.news.cn/info/20251118/9db6c6f6bb6e4f4abe7fe984b6a80e55/c.html" class="news-card">
+                <h2 class="news-title">2025"人工智能+"产业生态大会即将启幕</h2>
+                <p class="news-desc">行业盛会聚焦AI与产业融合，共赴人工智能与传统行业深度结合的新跨越</p>
+                <div class="news-source">
+                    <i class="fas fa-users"></i>
+                    来源：新华网
+                </div>
+            </a>
+
+            <a href="https://www.tsinghua.edu.cn/info/1182/123235.htm" class="news-card">
+                <h2 class="news-title">张亚勤：智能体AI将重塑人工智能发展路径</h2>
+                <p class="news-desc">专家探讨智能体AI如何影响人工智能发展的下一阶段，展望技术演进方向</p>
+                <div class="news-source">
+                    <i class="fas fa-brain"></i>
+                    来源：清华大学
+                </div>
+            </a>
+
+            <a href="https://lib.scu.edu.cn/genai/static/wenjian/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%BA%94%E7%94%A8%E5%8F%91%E5%B1%95%E6%8A%A5%E5%91%8A(2025).pdf" class="news-card">
+                <h2 class="news-title">《中国人工智能应用发展报告(2025)》发布</h2>
+                <p class="news-desc">权威报告全面分析中国AI应用发展现状，为行业发展提供重要参考</p>
+                <div class="news-source">
+                    <i class="fas fa-file-alt"></i>
+                    来源：四川大学
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 初始化卡片动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.news-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                card.style.transitionDelay = `${index * 0.1}s`;
+                
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
