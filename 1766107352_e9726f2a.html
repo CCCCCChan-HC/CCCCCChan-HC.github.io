@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI科技热点速递 | 2025年12月19日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066ff',
+                        'primary-light': 'rgba(0, 102, 255, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 102, 255, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 102, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .news-card:hover::before {
+            left: 100%;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 102, 255, 0.15);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #718096;
+            margin-top: 0.5rem;
+        }
+        
+        .news-time {
+            font-size: 0.75rem;
+            color: #a0aec0;
+            margin-top: 0.25rem;
+        }
+        
+        .highlight-badge {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 102, 255, 0.05) 100%);
+            color: #0066ff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+        
+        .header-gradient {
+            background: linear-gradient(135deg, #0066ff 0%, #00aaff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold header-gradient mb-4">
+                AI科技热点速递
+            </h1>
+            <p class="text-lg text-gray-600">2025年12月19日 · 最新人工智能动态一览</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-4 rounded-full"></div>
+        </header>
+
+        <div class="bento-grid">
+            <!-- 新闻卡片 1 -->
+            <a href="https://finance.sina.com.cn/jjxw/2025-12-19/doc-inhchsqt7890950.shtml" class="news-card block">
+                <div class="highlight-badge">深度报道</div>
+                <h2 class="news-title">AI全面渗透日常生活！2025年智能应用场景大爆发</h2>
+                <p class="text-gray-600 text-sm">人工智能技术正在深刻改变我们的生活方式，从智能家居到智慧出行...</p>
+                <div class="news-source">新浪财经</div>
+                <div class="news-time">12月19日 08:00</div>
+            </a>
+
+            <!-- 新闻卡片 2 -->
+            <a href="https://finance.sina.com.cn/jjxw/2025-12-19/doc-inhchsqv2526492.shtml" class="news-card block">
+                <div class="highlight-badge">行业峰会</div>
+                <h2 class="news-title">AI创新大会：从"单点突围"迈向"生态共进"新时代</h2>
+                <p class="text-gray-600 text-sm">2025人工智能创新大会揭示AI发展新趋势，生态协同成为关键...</p>
+                <div class="news-source">环球时报</div>
+                <div class="news-time">12月19日 07:30</div>
+            </a>
+
+            <!-- 新闻卡片 3 -->
+            <a href="https://www.huawei.com/cn/news/2025/9/hc-intelligent-world-2035" class="news-card block">
+                <div class="highlight-badge">技术趋势</div>
+                <h2 class="news-title">华为发布2035十大技术趋势，AI将重塑智能世界</h2>
+                <p class="text-gray-600 text-sm">华为展望2035年技术发展路径，人工智能成为核心驱动力...</p>
+                <div class="news-source">华为官网</div>
+                <div class="news-time">12月18日 16:00</div>
+            </a>
+
+            <!-- 新闻卡片 4 -->
+            <a href="https://www.stcn.com/article/detail/3547913.html" class="news-card block">
+                <div class="highlight-badge">产业生态</div>
+                <h2 class="news-title">国产AI计算生态协同出击，开放架构破壁而立</h2>
+                <p class="text-gray-600 text-sm">国内AI企业联合打造开放计算架构，推动产业协同发展...</p>
+                <div class="news-source">证券时报</div>
+                <div class="news-time">12月18日 15:20</div>
+            </a>
+
+            <!-- 新闻卡片 5 -->
+            <a href="http://www.news.cn/digital/20251218/0dac9f201a21474a9a943b3e6085854e/c.html" class="news-card block">
+                <div class="highlight-badge">前沿探索</div>
+                <h2 class="news-title">太空AI新赛道开启！2025人工智能破壁时刻来临</h2>
+                <p class="text-gray-600 text-sm">人工智能技术拓展至太空领域，开启全新的应用场景...</p>
+                <div class="news-source">新华网</div>
+                <div class="news-time">12月18日 14:45</div>
+            </a>
+
+            <!-- 新闻卡片 6 -->
+            <a href="https://tvbrics.com/cn/news/china-s-ai-industry-to-exceed-us-170-billion-in-2025-on-rapid-technology-and-policy-driven-growth/" class="news-card block">
+                <div class="highlight-badge">产业规模</div>
+                <h2 class="news-title">中国AI产业规模突破1700亿美元，政策技术双轮驱动</h2>
+                <p class="text-gray-600 text-sm">政策支持与技术突破共同推动中国人工智能产业快速发展...</p>
+                <div class="news-source">金砖国家电视台</div>
+                <div class="news-time">12月18日 13:30</div>
+            </a>
+
+            <!-- 新闻卡片 7 -->
+            <a href="https://www.21jingji.com/article/20251214/herald/eeeaeaf2ad546ffe848ef10b97735939.html" class="news-card block">
+                <div class="highlight-badge">经济影响</div>
+                <h2 class="news-title">AI核心产业规模有望破万亿元，成经济增长新引擎</h2>
+                <p class="text-gray-600 text-sm">人工智能产业对经济发展的贡献日益凸显，市场规模持续扩大...</p>
+                <div class="news-source">21世纪经济报道</div>
+                <div class="news-time">12月18日 12:15</div>
+            </a>
+
+            <!-- 新闻卡片 8 -->
+            <a href="https://www.stcn.com/article/detail/3547687.html" class="news-card block">
+                <div class="highlight-badge">全球视野</div>
+                <h2 class="news-title">2025全球AI态势：机遇、博弈与治理的三重变奏</h2>
+                <p class="text-gray-600 text-sm">全球人工智能发展面临新的机遇与挑战，治理体系亟待完善...</p>
+                <div class="news-source">证券时报</div>
+                <div class="news-time">12月18日 11:00</div>
+            </a>
+
+            <!-- 新闻卡片 9 -->
+            <a href="https://www.nbd.com.cn/articles/2025-12-18/4186411.html" class="news-card block">
+                <div class="highlight-badge">企业合作</div>
+                <h2 class="news-title">商汤科技联手大晓机器人，AI产业强强联合</h2>
+                <p class="text-gray-600 text-sm">头部AI企业达成战略合作，共同推动人工智能技术落地应用...</p>
+                <div class="news-source">每日经济新闻</div>
+                <div class="news-time">12月18日 10:30</div>
+            </a>
+
+            <!-- 新闻卡片 10 -->
+            <a href="https://www.microsoft.com/en-us/research/articles/6-ai-trends-in-2025/" class="news-card block">
+                <div class="highlight-badge">趋势展望</div>
+                <h2 class="news-title">微软发布2025年六大AI趋势，预见技术发展新方向</h2>
+                <p class="text-gray-600 text-sm">从生成式AI到可信AI，微软揭示未来一年人工智能发展重点...</p>
+                <div class="news-source">微软研究院</div>
+                <div class="news-time">12月18日 09:45</div>
+            </a>
+
+            <!-- 新闻卡片 11 -->
+            <a href="http://finance.people.com.cn/n1/2025/1219/c1004-40627878.html" class="news-card block">
+                <div class="highlight-badge">技术升级</div>
+                <h2 class="news-title">2026年我国AI技术将迎升级跃迁，产业迎来新机遇</h2>
+                <p class="text-gray-600 text-sm">赛迪研究院预测明年人工智能技术将实现重大突破...</p>
+                <div class="news-source">人民网</div>
+                <div class="news-time">12月19日 08:30</div>
+            </a>
+
+            <!-- 新闻卡片 12 -->
+            <a href="https://m.thepaper.cn/newsDetail_forward_32199513" class="news-card block">
+                <div class="highlight-badge">用户规模</div>
+                <h2 class="news-title">数字消费用户突破9.58亿，AI核心产业持续扩张</h2>
+                <p class="text-gray-600 text-sm">我国数字经济发展迅速，人工智能应用普及率不断提升...</p>
+                <div class="news-source">澎湃新闻</div>
+                <div class="news-time">12月19日 09:00</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加初始样式和观察
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+            observer.observe(card);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
