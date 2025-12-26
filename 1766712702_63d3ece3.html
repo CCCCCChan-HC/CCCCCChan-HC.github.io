@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI科技热点周报</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': '#60A5FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-source {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+        
+        .highlight-gradient {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .section-header {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #3B82F6, #60A5FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="section-header">
+            <i class="fas fa-brain mr-4"></i>
+            AI科技热点周报
+            <span class="text-lg font-normal text-gray-600 block mt-2">2025年12月第四周</span>
+        </h1>
+        
+        <div class="bento-grid">
+            <!-- 新闻条目 -->
+            <a href="https://finance.sina.com.cn/roll/2025-12-26/doc-inheaqmr2642872.shtml" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">字节AI闪电逆袭：1080天完成AGI全面布局</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-bolt mr-2"></i>
+                    行业巨头动态
+                </div>
+                <div class="news-source">来源：新浪财经</div>
+            </a>
+
+            <a href="https://wap.eastmoney.com/a/202512263602280964.html" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">2030年生成式AI消费将达6990亿美元</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-chart-line mr-2"></i>
+                    市场预测
+                </div>
+                <div class="news-source">来源：东方财富</div>
+            </a>
+
+            <a href="https://www.chinanews.com.cn/cj/2025/12-26/10540584.shtml" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">数字中国建设提速：2025年AI产业规模超1.2万亿</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-flag mr-2"></i>
+                    政策动向
+                </div>
+                <div class="news-source">来源：中国新闻网</div>
+            </a>
+
+            <a href="https://home.wuhan.gov.cn/mtbd/202512/t20251224_2702023.shtml" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">AI深度渗透日常生活：2025年智能应用全面爆发</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-mobile-alt mr-2"></i>
+                    生活应用
+                </div>
+                <div class="news-source">来源：武汉市政府</div>
+            </a>
+
+            <a href="https://finance.sina.com.cn/stock/t/2025-12-25/doc-inhcztfz3115945.shtml" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">专家预测：2026年将成为AI手机元年</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-robot mr-2"></i>
+                    技术趋势
+                </div>
+                <div class="news-source">来源：新浪财经</div>
+            </a>
+
+            <a href="https://www.stcn.com/article/detail/3558818.html" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">消费电子产业链迎来AI驱动，估值有望提升</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-microchip mr-2"></i>
+                    产业链分析
+                </div>
+                <div class="news-source">来源：证券时报</div>
+            </a>
+
+            <a href="https://www.tsinghua.edu.cn/info/1182/123493.htm" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">坚持智能向善：AI技术如何增进人类福祉</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-hand-holding-heart mr-2"></i>
+                    伦理探讨
+                </div>
+                <div class="news-source">来源：清华大学</div>
+            </a>
+
+            <a href="https://hub.baai.ac.cn/view/51025" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">量子位MEET2026：AI行业盛会即将启幕</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    行业活动
+                </div>
+                <div class="news-source">来源：北京智源研究院</div>
+            </a>
+
+            <a href="https://www.ourhkfoundation.org.hk/sc/media/reports/Technology-and-Innovation-Report-2025" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">2025技术创新报告：包容性AI促进全球发展</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-globe mr-2"></i>
+                    全球视野
+                </div>
+                <div class="news-source">来源：香港基金会</div>
+            </a>
+
+            <a href="https://www.nbd.com.cn/articles/2025-12-25/4195499.html" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">人形机器人新突破：明年将完成半程马拉松</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-running mr-2"></i>
+                    机器人技术
+                </div>
+                <div class="news-source">来源：每日经济新闻</div>
+            </a>
+
+            <a href="http://www.news.cn/tech/20251219/d43c3ba9bb9e48a58977cd1332eacdbd/c.html" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">实物见证变迁：AI如何重塑2025年生活方式</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-eye mr-2"></i>
+                    深度观察
+                </div>
+                <div class="news-source">来源：新华网</div>
+            </a>
+
+            <a href="https://www.alm.com/press_release/alm-intelligence-updates-verdictsearch/?s-news-15543081-2025-12-01-quan-qiu-ren--gong-zhi-nihang-shi-fa-zhan-da-guan-2025-12-11-yue-guan-jian-dong-xiang-zong-shu" 
+               class="news-card highlight-gradient animate-fade-in-up hover:border-primary-light">
+                <div class="news-title">全球AI发展大观：11-12月关键动向综述</div>
+                <div class="text-primary text-sm flex items-center">
+                    <i class="fas fa-newspaper mr-2"></i>
+                    月度综述
+                </div>
+                <div class="news-source">来源：ALM Intelligence</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加观察
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.style.animationPlayState = 'paused';
+            observer.observe(card);
+        });
+
+        // 添加悬停效果
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
