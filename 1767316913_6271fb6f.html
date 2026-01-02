@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI每日资讯 - 2026年人工智能前沿动态</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        highlight: 'rgba(59, 130, 246, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .news-en {
+            font-size: 0.875rem;
+            color: #6B7280;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        
+        .news-source {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            border-top: 1px solid #F3F4F6;
+            padding-top: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .highlight-gradient {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.15) 100%);
+        }
+        
+        .section-header {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4">
+        <h1 class="section-header">
+            <i class="fas fa-brain mr-3"></i>
+            AI每日前沿资讯
+            <span class="text-sm font-normal text-gray-500 block mt-2">2026年1月最新动态</span>
+        </h1>
+        
+        <div class="bento-grid">
+            <!-- 新闻卡片1 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://finance.sina.com.cn/stock/usstock/c/2025-12-31/doc-inhetkaf5029296.shtml')">
+                <div class="news-title">人工智能2026年迎来重大变革</div>
+                <div class="news-en">AI Transformation in 2026</div>
+                <div class="news-source">来源：新浪财经</div>
+            </div>
+
+            <!-- 新闻卡片2 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://naipnews.naipo.com/zh-hans/37113/')">
+                <div class="news-title">AI不再只是泡沫！2026年将走进日常生活</div>
+                <div class="news-en">From Smart Glasses to Humanoid Robots</div>
+                <div class="news-source">来源：北美智权报</div>
+            </div>
+
+            <!-- 新闻卡片3 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://www.stcn.com/article/detail/3558934.html')">
+                <div class="news-title">专家预测：2026年将成为AI手机元年</div>
+                <div class="news-en">AI Phone Era Begins</div>
+                <div class="news-source">来源：证券时报网</div>
+            </div>
+
+            <!-- 新闻卡片4 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://m.thepaper.cn/newsDetail_forward_32289816')">
+                <div class="news-title">2026人工智能产业趋势报告发布</div>
+                <div class="news-en">Annual AI Industry Trends</div>
+                <div class="news-source">来源：澎湃新闻</div>
+            </div>
+
+            <!-- 新闻卡片5 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://m.thepaper.cn/newsDetail_forward_32277935')">
+                <div class="news-title">AI教父预警：2026年或将出现失业潮</div>
+                <div class="news-en">Job Market Impact Assessment</div>
+                <div class="news-source">来源：澎湃新闻</div>
+            </div>
+
+            <!-- 新闻卡片6 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://www.stdaily.com/web/gdxw/2026-01/01/content_456509.html')">
+                <div class="news-title">AI代理技术突飞猛进，如何行稳致远？</div>
+                <div class="news-en">Rapid AI Agent Development</div>
+                <div class="news-source">来源：科技日报</div>
+            </div>
+
+            <!-- 新闻卡片7 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://www.tsinghua.edu.cn/info/1182/123677.htm')">
+                <div class="news-title">具身智能：国产机器人为美好生活赋能</div>
+                <div class="news-en">Embodied AI Applications</div>
+                <div class="news-source">来源：清华大学</div>
+            </div>
+
+            <!-- 新闻卡片8 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://www.stdaily.com/web/gjxw/2025-10/21/content_418848.html')">
+                <div class="news-title">2026年：AI向物理世界全面挺进</div>
+                <div class="news-en">AI Enters Physical World</div>
+                <div class="news-source">来源：科技日报</div>
+            </div>
+
+            <!-- 新闻卡片9 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://cn.wicinternet.org/2025-12/02/content_38453332.htm')">
+                <div class="news-title">外媒：人工智能热潮2026年面临重大考验</div>
+                <div class="news-en">Global AI Boom Faces Challenges</div>
+                <div class="news-source">来源：中国网信网</div>
+            </div>
+
+            <!-- 新闻卡片10 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://www.xhby.net/content/s69547424e4b05fbb22fdeee4.html')">
+                <div class="news-title">广电总局部署AI魔改视频专项治理</div>
+                <div class="news-en">AI Content Regulation</div>
+                <div class="news-source">来源：新华报业网</div>
+            </div>
+
+            <!-- 新闻卡片11 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://wallstreetcn.com/articles/3761265')">
+                <div class="news-title">高盛预测2026年十大焦点行业主题</div>
+                <div class="news-en">Goldman Sachs 2026 Outlook</div>
+                <div class="news-source">来源：华尔街见闻</div>
+            </div>
+
+            <!-- 新闻卡片12 -->
+            <div class="news-card highlight-gradient" onclick="window.open('https://hub.baai.ac.cn/view/51452')">
+                <div class="news-title">AI黄金时代：全球九大趋势与创新蓝图</div>
+                <div class="news-en">AI Golden Age Trends</div>
+                <div class="news-source">来源：北京智源研究院</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动动效
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为所有新闻卡片添加初始样式和观察
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
