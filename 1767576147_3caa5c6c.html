@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI资讯速递 | 2026年1月5日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'primary-light': '#60A5FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .news-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12 animate-fade-in-up">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">AI<span class="text-primary">资讯速递</span></h1>
+            <p class="text-lg text-gray-600">2026年1月5日 · 最新人工智能动态</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-primary-light mx-auto mt-4 rounded-full"></div>
+        </header>
+
+        <!-- News Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- News Item 1 -->
+            <a href="http://finance.people.com.cn/n1/2026/0105/c1004-40638996.html" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-microchip text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">AI与生态打开消费电子市场新机遇</h3>
+                </div>
+                <p class="text-gray-600 mb-3">人工智能技术正在重塑消费电子产业格局</p>
+                <span class="text-sm text-primary font-medium">来源：人民网</span>
+            </a>
+
+            <!-- News Item 2 -->
+            <a href="https://finance.sina.com.cn/7x24/2026-01-05/doc-inhfequf8526780.shtml?froms=ggmp" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-chart-line text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">AI行业进入"从1到10"阶段</h3>
+                </div>
+                <p class="text-gray-600 mb-3">国产算力和AI应用胜率较高，产业迎来爆发期</p>
+                <span class="text-sm text-primary font-medium">来源：新浪财经</span>
+            </a>
+
+            <!-- News Item 3 -->
+            <a href="https://finance.sina.com.cn/roll/2026-01-05/doc-inhfffrx8198185.shtml" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-rocket text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">商业航天、AI、脑机接口开年突破不断</h3>
+                </div>
+                <p class="text-gray-600 mb-3">未来产业贯穿2026全年可期，技术融合加速</p>
+                <span class="text-sm text-primary font-medium">来源：方正证券</span>
+            </a>
+
+            <!-- News Item 4 -->
+            <a href="https://www.changzhou.gov.cn/ns_news/93176757385434" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-users text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">2026全国智能体开发者大会在常举行</h3>
+                </div>
+                <p class="text-gray-600 mb-3">汇聚行业精英，共商智能体发展大计</p>
+                <span class="text-sm text-primary font-medium">来源：常州市政府</span>
+            </a>
+
+            <!-- News Item 5 -->
+            <a href="https://www.zgjssw.gov.cn/shixianchuanzhen/suzhou/202601/t20260105_8550234.shtml" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-industry text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">苏州发布"AI+制造"八大行动</h3>
+                </div>
+                <p class="text-gray-600 mb-3">以人工智能擎动"智造之城"建设</p>
+                <span class="text-sm text-primary font-medium">来源：中共江苏省委新闻网</span>
+            </a>
+
+            <!-- News Item 6 -->
+            <a href="http://www.news.cn/liangzi/20260104/80c2c00ebef64b24b8c28f0719fdab2d/c.html" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-brain text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">AI之父：2026年人工智能性能将更强大</h3>
+                </div>
+                <p class="text-gray-600 mb-3">杰弗里·欣顿展望AI技术新突破</p>
+                <span class="text-sm text-primary font-medium">来源：新华网</span>
+            </a>
+
+            <!-- News Item 7 -->
+            <a href="https://www.21jingji.com/article/20260105/herald/dfe37d9196b5d1f12127890ae1986a86.html" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-mobile-alt text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">iPhone国行版AI正灰度测试</h3>
+                </div>
+                <p class="text-gray-600 mb-3">苹果加速AI功能落地，官方回应测试进展</p>
+                <span class="text-sm text-primary font-medium">来源：21世纪经济报道</span>
+            </a>
+
+            <!-- News Item 8 -->
+            <a href="https://www.chinanews.com.cn/cj/2026/01-04/10545922.shtml" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-server text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">国家超算互联网用户突破百万</h3>
+                </div>
+                <p class="text-gray-600 mb-3">算力基础设施迎来重要里程碑</p>
+                <span class="text-sm text-primary font-medium">来源：中国新闻网</span>
+            </a>
+
+            <!-- News Item 9 -->
+            <a href="http://js.people.com.cn/n2/2026/0104/c360300-41463287.html" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-wifi text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">南京聚焦AI与6G深度融合</h3>
+                </div>
+                <p class="text-gray-600 mb-3">"新年第一会"布局下一代通信技术</p>
+                <span class="text-sm text-primary font-medium">来源：人民网</span>
+            </a>
+
+            <!-- News Item 10 -->
+            <a href="https://www.nbd.com.cn/articles/2026-01-04/4206089.html" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-chart-bar text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">百度计划分拆昆仑芯业务港交所IPO</h3>
+                </div>
+                <p class="text-gray-600 mb-3">AI芯片业务独立运营，加速商业化进程</p>
+                <span class="text-sm text-primary font-medium">来源：每日经济新闻</span>
+            </a>
+
+            <!-- News Item 11 -->
+            <a href="http://society.people.com.cn/n1/2026/0105/c1008-40638689.html" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-shield-alt text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">加强AI安全监管促健康发展</h3>
+                </div>
+                <p class="text-gray-600 mb-3">法治聚焦人工智能治理新路径</p>
+                <span class="text-sm text-primary font-medium">来源：人民网</span>
+            </a>
+
+            <!-- News Item 12 -->
+            <a href="https://news.cau.edu.cn/mtndnew/70b9840987544072be4b4876d32b65af.htm" 
+               class="news-card rounded-2xl p-6 shadow-lg border border-gray-100 animate-fade-in-up hover:border-primary-light">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-trophy text-primary text-xl mr-3 mt-1"></i>
+                    <h3 class="text-xl font-bold text-gray-900">海尔揽获颠覆性技术创新大赛3项大奖</h3>
+                </div>
+                <p class="text-gray-600 mb-3">行业唯一！科技创新实力再获认可</p>
+                <span class="text-sm text-primary font-medium">来源：中国农业大学</span>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-8">
+            <p>AI资讯摘要 · 数据更新于2026年1月5日</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <i class="fas fa-sync-alt"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-cog"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}ms`;
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // 为每个新闻卡片添加动画延迟
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.dataset.delay = (index % 6) * 100;
+            observer.observe(card);
+        });
+
+        // 鼠标悬停效果增强
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
