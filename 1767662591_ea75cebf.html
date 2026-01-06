@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 浪潮 | 2026 前沿趋势洞察</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #1a202c;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(180px, auto);
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .bento-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1.5rem;
+            padding: 1.75rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(229, 231, 235, 0.7);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .bento-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.9), rgba(59, 130, 246, 0.3), transparent);
+        }
+        .bento-item:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15), 0 10px 20px rgba(0, 0, 0, 0.08);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        .news-title {
+            font-weight: 800;
+            font-size: 1.75rem;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            color: #111827;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .news-source {
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 400;
+            margin-top: auto;
+            padding-top: 0.75rem;
+            border-top: 1px dashed #e5e7eb;
+        }
+        .news-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #3b82f6;
+            opacity: 0.8;
+        }
+        .section-header {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .section-header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        .section-header p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .highlight-tag {
+            display: inline-block;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            color: #3b82f6;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            margin-bottom: 0.75rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        .footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 2rem;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            border-top: 1px solid #f3f4f6;
+            margin-top: 2rem;
+        }
+        @media (max-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(8, 1fr);
+                padding: 1.5rem;
+                gap: 1.25rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(4, 1fr);
+                padding: 1rem;
+                gap: 1rem;
+            }
+            .section-header h1 {
+                font-size: 2.5rem;
+            }
+            .news-title {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-white to-blue-50/30">
+    <div class="bento-grid">
+        <header class="section-header">
+            <h1>AI 浪潮 · 2026</h1>
+            <p>前沿趋势 · 硬核科技 · 产业变革 · 每日速递</p>
+            <div class="mt-6 text-sm text-blue-600">
+                <i class="fas fa-sync-alt mr-2"></i>实时更新 | 数据驱动 | 深度洞察
+            </div>
+        </header>
+
+        <a href="https://m.thepaper.cn/newsDetail_forward_32289816" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 2;">
+            <div>
+                <span class="highlight-tag">年度报告</span>
+                <div class="news-icon"><i class="fas fa-chart-line"></i></div>
+                <h2 class="news-title">重磅发布！2026人工智能产业趋势全景图</h2>
+                <p class="text-gray-700 text-lg">大模型之家年度专题报告揭示未来三年AI技术演进与商业落地核心路径，涵盖芯片、算法、应用生态关键洞察。</p>
+            </div>
+            <div class="news-source">来源：澎湃新闻 · The Paper</div>
+        </a>
+
+        <a href="https://www.stcn.com/article/detail/3558934.html" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">硬件革命</span>
+                <div class="news-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h2 class="news-title">AI手机元年将至！2026或成行业分水岭</h2>
+                <p class="text-gray-700">专家预测，端侧智能算力爆发将重新定义移动终端，AI手机从概念走向普及。</p>
+            </div>
+            <div class="news-source">来源：证券时报网</div>
+        </a>
+
+        <a href="https://finance.sina.com.cn/stock/usstock/c/2025-12-31/doc-inhetkaf5029296.shtml" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">年度展望</span>
+                <div class="news-icon"><i class="fas fa-bolt"></i></div>
+                <h2 class="news-title">人工智能的2026：一场深度变革即将到来</h2>
+                <p class="text-gray-700">从技术范式到产业格局，分析AI在新一年的核心突破方向与潜在颠覆性影响。</p>
+            </div>
+            <div class="news-source">来源：新浪财经</div>
+        </a>
+
+        <a href="https://finance.sina.cn/2026-01-06/detail-inhfikqv1502846.d.html" target="_blank" class="bento-item" style="grid-column: span 3; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">资本风向</span>
+                <div class="news-icon"><i class="fas fa-glasses"></i></div>
+                <h2 class="news-title">10亿资本押注！AI眼镜赛道再传重磅消息</h2>
+                <p class="text-gray-700">开年即获巨额融资，混合现实与AI融合的穿戴设备迎来商业化加速期。</p>
+            </div>
+            <div class="news-source">来源：新浪财经</div>
+        </a>
+
+        <a href="http://finance.people.com.cn/n1/2026/0101/c1004-40637188.html" target="_blank" class="bento-item" style="grid-column: span 3; grid-row: span 2;">
+            <div>
+                <span class="highlight-tag">能源未来</span>
+                <div class="news-icon"><i class="fas fa-atom"></i></div>
+                <h2 class="news-title">AI加速可控核聚变商业化进程</h2>
+                <p class="text-gray-700 text-lg">人工智能在等离子体控制、材料模拟等领域的关键突破，为“人造太阳”的商业化落地按下快进键。</p>
+            </div>
+            <div class="news-source">来源：人民网</div>
+        </a>
+
+        <a href="https://www.stdaily.com/web/gdxw/2026-01/01/content_456509.html" target="_blank" class="bento-item" style="grid-column: span 3; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">技术前沿</span>
+                <div class="news-icon"><i class="fas fa-robot"></i></div>
+                <h2 class="news-title">突飞猛进的AI代理，如何行稳致远？</h2>
+                <p class="text-gray-700">探讨自主智能体在复杂任务中的能力边界、安全风险与治理框架。</p>
+            </div>
+            <div class="news-source">来源：科技日报</div>
+        </a>
+
+        <a href="https://www.nbd.com.cn/articles/2026-01-06/4208252.html" target="_blank" class="bento-item" style="grid-column: span 3; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">芯片与开源</span>
+                <div class="news-icon"><i class="fas fa-microchip"></i></div>
+                <h2 class="news-title">AI超级芯片Rubin投产，开源自动驾驶模型发布</h2>
+                <p class="text-gray-700">算力基础设施与关键模型开源同步推进，降低行业创新门槛。</p>
+            </div>
+            <div class="news-source">来源：每日经济新闻</div>
+        </a>
+
+        <a href="https://www.tsinghua.edu.cn/info/1182/123677.htm" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">具身智能</span>
+                <div class="news-icon"><i class="fas fa-hands-helping"></i></div>
+                <h2 class="news-title">国产机器人崛起，用“具身智能”赋能美好生活</h2>
+                <p class="text-gray-700">从实验室到家庭工厂，智能机器人正成为物理世界与数字智能融合的关键载体。</p>
+            </div>
+            <div class="news-source">来源：清华大学</div>
+        </a>
+
+        <a href="https://news.sciencenet.cn/htmlnews/2026/1/558229.shtm" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">AI社会学</span>
+                <div class="news-icon"><i class="fas fa-users"></i></div>
+                <h2 class="news-title">在实验室里运行一个“社会”：复旦AI团队的颠覆性实验</h2>
+                <p class="text-gray-700">利用大规模多智能体模拟社会动态，为公共政策、经济模型提供全新研究工具。</p>
+            </div>
+            <div class="news-source">来源：科学网</div>
+        </a>
+
+        <a href="https://www.bjnews.com.cn/detail/1767623104129682.html" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">政策信号</span>
+                <div class="news-icon"><i class="fas fa-city"></i></div>
+                <h2 class="news-title">北京新年AI第一会，释放了哪些关键信号？</h2>
+                <p class="text-gray-700">解读首都加快建设全球人工智能创新高地的战略布局与产业扶持新动向。</p>
+            </div>
+            <div class="news-source">来源：新京报</div>
+        </a>
+
+        <a href="https://wallstreetcn.com/articles/3761265" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">投资焦点</span>
+                <div class="news-icon"><i class="fas fa-search-dollar"></i></div>
+                <h2 class="news-title">高盛预测：2026年十大焦点行业主题</h2>
+                <p class="text-gray-700">自动驾驶出行渐行渐近，AI与生物科技、绿色能源等位列投资主题前列。</p>
+            </div>
+            <div class="news-source">来源：华尔街见闻</div>
+        </a>
+
+        <a href="https://www.mittrchina.com/news/detail/15716" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">创新力量</span>
+                <div class="news-icon"><i class="fas fa-award"></i></div>
+                <h2 class="news-title">2026年“35岁以下科技创新35人”亚太区报名开启</h2>
+                <p class="text-gray-700">寻找并表彰推动AI及其他前沿科技发展的青年领军人才。</p>
+            </div>
+            <div class="news-source">来源：MIT科技评论</div>
+        </a>
+
+        <a href="http://world.people.com.cn/n1/2026/0106/c1002-40639520.html" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="highlight-tag">全球化</span>
+                <div class="news-icon"><i class="fas fa-plane-departure"></i></div>
+                <h2 class="news-title">从“开源引领”到“应用出海”，中国AI的全球新角色</h2>
+                <p class="text-gray-700">中国人工智能技术正通过开源与商业化应用，深度参与并塑造全球创新生态。</p>
+            </div>
+            <div class="news-source">来源：人民网国际频道</div>
+        </a>
+
+        <footer class="footer">
+            <p>AI 浪潮 · 信息摘要 | 数据截止至 2026年1月6日 | 设计灵感源于 Bento Grid & Apple</p>
+            <p class="mt-2 text-sm">本页面内容来源于公开新闻报道，仅供参考。点击标题可跳转至原文。</p>
+        </footer>
+    </div>
+
+    <script>
+        // 简单的滚动视差效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const bentoItems = document.querySelectorAll('.bento-item');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            bentoItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+
+            // 鼠标跟随高光效果（增强科技感）
+            document.body.addEventListener('mousemove', (e) => {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+
+                bentoItems.forEach(item => {
+                    const rect = item.getBoundingClientRect();
+                    const itemX = rect.left + rect.width / 2;
+                    const itemY = rect.top + rect.height / 2;
+                    const distance = Math.sqrt(Math.pow(e.clientX - itemX, 2) + Math.pow(e.clientY - itemY, 2));
+                    const maxDistance = 300;
+                    const intensity = Math.max(0, 1 - distance / maxDistance);
+
+                    item.style.setProperty('--mouse-intensity', intensity);
+                    item.style.boxShadow = `0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 ${intensity * 60}px rgba(59, 130, 246, ${intensity * 0.15})`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
