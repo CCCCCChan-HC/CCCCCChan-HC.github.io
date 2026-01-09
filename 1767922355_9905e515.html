@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026全球科技展望 | AI一周要闻速览</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0) 50%);
+        }
+        .highlight-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+        }
+        .bento-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 8px 10px -6px rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        .news-source {
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.08), transparent);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- 主容器 -->
+    <main class="min-h-screen w-full px-4 py-8 md:px-8 md:py-12 lg:px-16 lg:py-20 max-w-7xl mx-auto">
+        <!-- 标题区 -->
+        <header class="mb-12 md:mb-16 text-center section">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 tracking-tight">
+                2026全球科技<span class="text-blue-600">展望</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                聚焦人工智能、深空探索与未来生活 · 过去一周的<span class="font-semibold text-blue-600">关键动态</span>与<span class="font-semibold text-blue-600">趋势洞察</span>
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center items-center gap-4 text-sm text-gray-500">
+                <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-medium"><i class="fas fa-robot mr-1"></i> AI Weekly Digest</span>
+                <span class="px-3 py-1 rounded-full bg-gray-100 font-medium"><i class="far fa-calendar-alt mr-1"></i> Jan 9, 2026</span>
+                <span class="px-3 py-1 rounded-full bg-gray-100 font-medium"><i class="fas fa-bolt mr-1"></i> 实时更新</span>
+            </div>
+        </header>
+
+        <!-- Bento Grid 新闻区 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-6 auto-rows-[minmax(180px,auto)]">
+            <!-- Item 1 -->
+            <a href="https://www.news.cn/world/20260108/a6291ff2eca94acc8d10236a5ffb396f/c.html" target="_blank" class="bento-item gradient-bg highlight-glow rounded-2xl p-6 col-span-1 md:col-span-2 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">特稿</span>
+                        <i class="fas fa-external-link-alt text-gray-400 text-sm"></i>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-3 leading-tight">生命、家园、深空与智能——2026全球科技全景图</h2>
+                    <p class="text-gray-600 text-sm md:text-base">新华网特稿勾勒未来一年科技发展的四大核心支柱，揭示人类探索边界的最新蓝图。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：新华网</p>
+                </div>
+            </a>
+
+            <!-- Item 2 -->
+            <a href="http://www.news.cn/tech/20260109/dcc38ee3e5d34d2e93f57208f19d011d/c.html" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">应用落地</span>
+                    <h2 class="text-xl font-black text-gray-900 mb-3 leading-tight">AI技术加速渗透，应用落地全面开花</h2>
+                    <p class="text-gray-600 text-sm">从实验室到生产线，人工智能正以前所未有的速度改变各行各业的生产方式。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：新华网科技</p>
+                </div>
+            </a>
+
+            <!-- Item 3 -->
+            <a href="https://www.chinanews.com.cn/cj/2026/01-09/10548704.shtml" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">CES 2026</span>
+                    <h2 class="text-xl font-black text-gray-900 mb-3 leading-tight">“中国智造”闪耀CES，AI硬件引领消费新浪潮</h2>
+                    <p class="text-gray-600 text-sm">在美国消费电子展上，来自中国的创新产品成为焦点，展现全球科技竞争新格局。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：中国新闻网</p>
+                </div>
+            </a>
+
+            <!-- Item 4 -->
+            <a href="https://m.thepaper.cn/newsDetail_forward_32317179" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 md:col-span-2 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">趋势报告</span>
+                        <i class="fas fa-chart-line text-gray-400 text-sm"></i>
+                    </div>
+                    <h2 class="text-2xl font-black text-gray-900 mb-3 leading-tight">Agentic AI十大关键趋势：技术、应用与治理三位一体</h2>
+                    <p class="text-gray-600 text-sm">自主智能体将成为AI进化的下一站，报告揭示其发展路径及必须面对的伦理与治理挑战。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：澎湃新闻</p>
+                </div>
+            </a>
+
+            <!-- Item 5 -->
+            <a href="https://www.tsinghua.edu.cn/info/1182/123235.htm" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">专家观点</span>
+                    <h2 class="text-xl font-black text-gray-900 mb-3 leading-tight">张亚勤：智能体AI如何塑造人工智能的下一程？</h2>
+                    <p class="text-gray-600 text-sm">清华大学教授深度解读智能体技术的核心价值与对未来社会经济的深远影响。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：清华大学</p>
+                </div>
+            </a>
+
+            <!-- Item 6 -->
+            <a href="https://wallstreetcn.com/articles/3762504" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">产业分析</span>
+                    <h2 class="text-xl font-black text-gray-900 mb-3 leading-tight">2026年AI主线清晰：算力打底、手机破局，四大爆点就位</h2>
+                    <p class="text-gray-600 text-sm">华尔街见闻分析指出，基础设施与终端应用的协同突破将定义新一年的AI产业格局。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：华尔街见闻</p>
+                </div>
+            </a>
+
+            <!-- Item 7 -->
+            <a href="https://www.news.cn/tech/20260108/b99127c88a4640bbab49e5c6294264d2/c.html" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">趋势发布</span>
+                    <h2 class="text-xl font-black text-gray-900 mb-3 leading-tight">智源研究院发布2026十大AI技术趋势</h2>
+                    <p class="text-gray-600 text-sm">从大模型优化到神经符号推理，权威机构预测本年度最具潜力的研究方向。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：智源研究院</p>
+                </div>
+            </a>
+
+            <!-- Item 8 -->
+            <a href="https://blogs.nvidia.cn/blog/nvidia-gtc-washington-dc-2025-news/" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">行业动态</span>
+                        <i class="fab fa-nvidia text-gray-400 text-sm"></i>
+                    </div>
+                    <h2 class="text-xl font-black text-gray-900 mb-3 leading-tight">NVIDIA GTC 直击：AI未来发展的实时动态与路线图</h2>
+                    <p class="text-gray-600 text-sm">在华盛顿特区的盛会上，英伟达分享了其在算力、开发生态与行业应用的最新进展。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：NVIDIA 官方博客</p>
+                </div>
+            </a>
+
+            <!-- Item 9 -->
+            <a href="https://www.longshidata.com/blog/c/c2026010601.html" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 md:col-span-2 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">巨头洞察</span>
+                    <h2 class="text-2xl font-black text-gray-900 mb-3 leading-tight">谷歌发布《2026 AI智能体趋势报告》，揭示五大核心方向</h2>
+                    <p class="text-gray-600 text-sm">科技巨头谷歌从技术、产品与市场角度，系统性预测了自主智能体的发展脉络。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：龙石数据</p>
+                </div>
+            </a>
+
+            <!-- Item 10 -->
+            <a href="https://wallstreetcn.com/articles/3762706" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">领袖愿景</span>
+                    <h2 class="text-xl font-black text-gray-900 mb-3 leading-tight">马斯克的2026预言：我们已处于“技术奇点”前夕</h2>
+                    <p class="text-gray-600 text-sm">特斯拉与SpaceX创始人断言，AI与机器人的融合将不可逆转地重塑文明进程。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：华尔街见闻</p>
+                </div>
+            </a>
+
+            <!-- Item 11 -->
+            <a href="https://www.ndrc.gov.cn/wsdwhfz/202511/t20251118_1401696.html" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">政策解读</span>
+                    <h2 class="text-xl font-black text-gray-900 mb-3 leading-tight">“人工智能+”行动总体部署出炉，明确发展机理与路径</h2>
+                    <p class="text-gray-600 text-sm">国家发改委发布权威解读，为AI与实体经济深度融合提供战略指引与政策框架。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：国家发改委</p>
+                </div>
+            </a>
+
+            <!-- Item 12 -->
+            <a href="https://cj.sina.com.cn/articles/view/5953190046/162d6789e06702iqpe?froms=ggmp" target="_blank" class="bento-item gradient-bg rounded-2xl p-6 col-span-1 row-span-1 flex flex-col justify-between section">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">展会前瞻</span>
+                    <h2 class="text-xl font-black text-gray-900 mb-3 leading-tight">CES 2026：AI走向“情境感知”，三大展区进入倒计时</h2>
+                    <p class="text-gray-600 text-sm">今年的消费电子展将重点展示能够理解并适应环境的下一代情境感知人工智能。</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500 font-medium news-source px-2 py-1 rounded inline-block">来源：新浪财经</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- 页脚 -->
+        <footer class="mt-16 pt-8 border-t border-gray-200 text-center section">
+            <p class="text-gray-500 text-sm mb-2">
+                <i class="fas fa-sync-alt mr-1"></i> 信息摘要基于过去一周公开新闻，持续更新中
+            </p>
+            <p class="text-gray-400 text-xs">
+                设计灵感源于Bento Grid与Apple官网 · 使用Tailwind CSS与Font Awesome图标
+                <br>© 2026 全球科技展望摘要 | 本页面仅为信息聚合，不代表任何官方立场
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        // 滚动动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // 可选：添加延迟显示，创造交错效果
+                        // const delay = entry.target.dataset.delay || 0;
+                        // setTimeout(() => {
+                        //     entry.target.classList.add('visible');
+                        // }, delay);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach((section, index) => {
+                // 可以给不同的section设置不同的延迟，创造交错动画
+                // section.dataset.delay = index * 100;
+                observer.observe(section);
+            });
+
+            // 页面加载后先显示标题
+            setTimeout(() => {
+                document.querySelector('header.section').classList.add('visible');
+            }, 300);
+        });
+    </script>
+</body>
+</html>
