@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 前沿动态 | 今日摘要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #ffffff;
+            color: #1a202c;
+            overflow-x: hidden;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(180px, auto);
+            gap: 24px;
+            padding: 40px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .bento-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 82, 204, 0.08);
+            border: 1px solid rgba(224, 242, 254, 0.8);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .bento-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.7), rgba(59, 130, 246, 0));
+        }
+        .bento-item:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(0, 82, 204, 0.15);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        .bento-item:hover::before {
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 1), rgba(59, 130, 246, 0.5));
+        }
+        .news-title {
+            font-weight: 800;
+            font-size: 1.8rem;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            color: #1e293b;
+            background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .news-source {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px dashed #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .news-source i {
+            color: #3b82f6;
+        }
+        .news-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            color: #3b82f6;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        .highlight-text {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .section-header {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section-header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #1e293b, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .date-badge {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .scroll-hint {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #94a3b8;
+            font-size: 0.9rem;
+            animation: bounce 2s infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+            40% {transform: translateY(-10px) translateX(-50%);}
+            60% {transform: translateY(-5px) translateX(-50%);}
+        }
+        @media (max-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(6, 1fr);
+                padding: 20px;
+                gap: 20px;
+            }
+            .news-title {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 640px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                padding: 16px;
+            }
+            .section-header h1 {
+                font-size: 2.5rem;
+            }
+            .date-badge {
+                top: 15px;
+                right: 15px;
+                font-size: 0.9rem;
+                padding: 10px 18px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-white to-blue-50 min-h-screen">
+    <div class="date-badge">
+        <i class="fas fa-calendar-alt"></i>
+        <span>2026年1月12日 · 今日动态</span>
+    </div>
+
+    <div class="section-header">
+        <h1>AI 前沿速递</h1>
+        <p>聚焦人工智能领域最新趋势、突破与应用，把握未来科技脉搏。</p>
+    </div>
+
+    <main class="bento-grid">
+        <!-- 新闻条目 1 -->
+        <a href="https://www.ncsti.gov.cn/kjdt/xwjj/202601/t20260109_234835.html" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 2;">
+            <div>
+                <span class="news-tag">趋势预测</span>
+                <h2 class="news-title">范式变革！智源发布2026十大AI技术趋势</h2>
+                <p class="highlight-text">北京智源人工智能研究院重磅发布年度报告，揭示从大模型走向通用智能的关键路径，指明AI架构、物理AI等前沿方向。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：北京市科学技术委员会、中关村科技园区管理委员会</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 2 -->
+        <a href="https://www.huawei.com/cn/news/2025/9/hc-intelligent-world-2035" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="news-tag">战略展望</span>
+                <h2 class="news-title">华为描绘智能世界2035十大技术趋势</h2>
+                <p class="highlight-text">华为发布面向2035的宏观技术展望，AI与通信、计算、感知的深度融合将重塑社会与产业。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：华为新闻中心</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 3 -->
+        <a href="https://finance.sina.com.cn/jjxw/2026-01-12/doc-inhfyxex8551737.shtml" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="news-tag">行业监管</span>
+                <h2 class="news-title">印尼暂时封禁马斯克旗下AI聊天机器人</h2>
+                <p class="highlight-text">因数据安全和内容合规问题，印度尼西亚成为最新对特定AI服务采取限制措施的国家。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：新浪财经</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 4 -->
+        <a href="http://www.news.cn/tech/20260109/dcc38ee3e5d34d2e93f57208f19d011d/c.html" target="_blank" class="bento-item" style="grid-column: span 3; grid-row: span 1;">
+            <div>
+                <span class="news-tag">应用落地</span>
+                <h2 class="news-title">AI技术加速渗透千行百业</h2>
+                <p class="highlight-text">从智能制造到智慧城市，人工智能解决方案正在多个行业场景中实现规模化应用。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：新华网</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 5 -->
+        <a href="https://www.nbd.com.cn/articles/2026-01-11/4215326.html" target="_blank" class="bento-item" style="grid-column: span 3; grid-row: span 1;">
+            <div>
+                <span class="news-tag">大佬观点</span>
+                <h2 class="news-title">马斯克预言：通用人工智能2026年实现</h2>
+                <p class="highlight-text">埃隆·马斯克再次抛出重磅预测，称AGI（通用人工智能）可能在明年成为现实。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：每日经济新闻</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 6 -->
+        <a href="http://cpc.people.com.cn/n1/2026/0112/c64387-40643264.html" target="_blank" class="bento-item" style="grid-column: span 3; grid-row: span 2;">
+            <div>
+                <span class="news-tag">产业融合</span>
+                <h2 class="news-title">政策推动工业互联网与AI深度融合</h2>
+                <p class="highlight-text">权威文章强调，需推动工业互联网和人工智能融合，为制造业数字化转型赋能。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：人民网</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 7 -->
+        <a href="https://www.microsoft.com/en-us/research/articles/whats-next-in-ai/?lang=zh-cn&locale=zh-cn" target="_blank" class="bento-item" style="grid-column: span 3; grid-row: span 1;">
+            <div>
+                <span class="news-tag">研究前沿</span>
+                <h2 class="news-title">微软研究院发布2026年前沿观察</h2>
+                <p class="highlight-text">微软顶级研究团队分享对AI未来一年在可靠性、多模态、推理能力等方面的关键洞察。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：Microsoft Research</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 8 -->
+        <a href="https://www.beijing.gov.cn/ywdt/gzdt/202601/t20260112_4422060.html" target="_blank" class="bento-item" style="grid-column: span 3; grid-row: span 1;">
+            <div>
+                <span class="news-tag">公共服务</span>
+                <h2 class="news-title">北京引入AI，知识产权服务平台年内试运行</h2>
+                <p class="highlight-text">北京市利用AI技术升级知识产权服务，打造更高效、智能的公共管理平台。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：北京市人民政府</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 9 -->
+        <a href="https://news.dayoo.com/guangzhou/202601/12/139995_54915716.htm" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="news-tag">工业应用</span>
+                <h2 class="news-title">AI点亮“慧眼”，CAD秒辨万图</h2>
+                <p class="highlight-text">广州企业利用AI进行工业图纸识别与处理，快步迈向“工业互联+AI”新阶段。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：大洋网</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 10 -->
+        <a href="https://m.thepaper.cn/newsDetail_forward_32351849" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="news-tag">年度展望</span>
+                <h2 class="news-title">2026 AI行业：应用爆发、架构突破、物理AI崛起</h2>
+                <p class="highlight-text">深度分析指出，新的一年将是AI从实验室走向广阔天地的关键一年，三大主线值得关注。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：澎湃新闻</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 11 -->
+        <a href="https://www.cls.cn/detail/2254203" target="_blank" class="bento-item" style="grid-column: span 4; grid-row: span 1;">
+            <div>
+                <span class="news-tag">商业动态</span>
+                <h2 class="news-title">AI21 Labs否认英伟达收购传闻</h2>
+                <p class="highlight-text">以色列明星AI初创公司澄清市场传言，凸显了当前AI领域并购活动的活跃与关注度。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：财联社</span>
+            </div>
+        </a>
+
+        <!-- 新闻条目 12 -->
+        <a href="https://openai.com/zh-Hans-CN/index/ai-progress-and-recommendations/" target="_blank" class="bento-item" style="grid-column: span 6; grid-row: span 1;">
+            <div>
+                <span class="news-tag">发展策略</span>
+                <h2 class="news-title">OpenAI探讨AI发展趋势及全球应对策略</h2>
+                <p class="highlight-text">OpenAI发布见解，呼吁国际社会就AI的快速发展建立合作框架与治理原则。</p>
+            </div>
+            <div class="news-source">
+                <i class="fas fa-external-link-alt"></i>
+                <span>来源：OpenAI</span>
+            </div>
+        </a>
+    </main>
+
+    <div class="scroll-hint">
+        <i class="fas fa-chevron-down"></i>
+        <span>Scroll to explore</span>
+    </div>
+
+    <script>
+        // 滚动视差效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const bentoItems = document.querySelectorAll('.bento-item');
+
+            // 初始设置一些偏移，创造错落感
+            bentoItems.forEach((item, index) => {
+                const delay = index * 0.05;
+                item.style.animationDelay = `${delay}s`;
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+            });
+
+            // 滚动触发动画
+            function checkVisibility() {
+                bentoItems.forEach(item => {
+                    const rect = item.getBoundingClientRect();
+                    const isVisible = (rect.top <= window.innerHeight * 0.85);
+                    if(isVisible) {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                        item.style.transition = 'opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.1)';
+                    }
+                });
+            }
+
+            // 初始检查
+            checkVisibility();
+            window.addEventListener('scroll', checkVisibility);
+
+            // 为每个item添加点击音效（模拟）和更明显的反馈
+            bentoItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // 添加一个微妙的点击效果
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
